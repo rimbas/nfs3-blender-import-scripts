@@ -1,0 +1,1990 @@
+<style>body{max-width:1250px;}body,table,td {font-size:14px; font-family: Arial, Helvetica, sans-serif;}</style><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!--font table contains 12 fonts total-->
+</head>
+<body><div id='divhlpmain'><sup>$</sup><sup>#</sup><sup>K</sup><font face="Helv"><b><font size="3">T3ED Help Index<font size="2"><br>
+</font></font></b></font><font face="Helvetica"><br>
+<b>This is Vers<sup>K</sup>ion 0.06 of T3ED, released on July 16, 1999.</b></font><br>
+T3ED is Copyright (c) Denis Auroux, 1998-99 (e-mail&nbsp;: auroux@math.polytechnique.fr).<br>
+Special thanks to Vitaly Kootin for some NFSHS file format i<sup>K</sup>nformation.<br>
+<br>
+<font face="Helv"><b>How To ...<br>
+</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>What<font face="Times New Roman"><font face="Helv">s new in this version ?</font></font></u><u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</u><u>Downloading the latest version of T3ED</u><u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</u><u>Frequently asked questions</u><u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</u><u>NFS3 Tracks Overview</u><u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</u><u>NFS3 Track File Formats</u><u><br>
+</u><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</u><u>NFS HS Track File Formats</u><u><br>
+</u><br>
+<b>Commands<br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>File menu</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>View menu</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Edit-Modes menu</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Edit-Tools menu</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Help menu</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Toolbar</u><br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b><font size="3">What<font face="Times New Roman"><font face="Helv">s new in this version&nbsp;?<font size="2"><br>
+</font></font></font></font></b><font face="Helvetica"><br>
+<b>This is Version 0.06 of T3ED, released on July 16, 1999.</b></font><br>
+T3ED is Copyright (c) Denis Auroux, 1998-99 (e-mail&nbsp;: auroux@math.polytechnique.fr).<br>
+<br>
+<b>Added in Version 0.06&nbsp;:</b><br>
+- Erase all function.<br>
+- New handling of track polygons&nbsp;; should fix a lot of bugs&nbsp;; adding new track sections should now work correctly (within the game engine<font face="Times New Roman"><font face="Helvetica">s limitations)&nbsp;; see the specific <u><font face="Helv">help page</font></u></font></font><font face="Helvetica"> on this feature.<br>
+</font>- Additions to the NFS HS file format specifications by Vitaly Kootin.<br>
+<br>
+<b>Added in Version 0.05&nbsp;:</b><br>
+- Support of NFS High Stakes track files (special thanks to Vitaly Kootin for some info about file formats)<br>
+<br>
+<b>Added in Version 0.04&nbsp;:</b><br>
+- Adjust road width command (to remove the uncrossable walls on either side of the track).<br>
+- Light sources are moved (when using Move tools in block or extended point modes).<br>
+- File format specs additions (in part by Vitaly Kootin).<br>
+<br>
+<b>Added in Version 0.03&nbsp;:</b><br>
+- <u>Track file format specifications</u>.<br>
+- Delete command for polygons.<br>
+- Duplicate command for polygons (multi-resolution) (see the <u><font face="Helv">FAQ</font></u> about adding new road sections)<font face="Helvetica">.<br>
+- Support of road lane polygon textures.<br>
+- Polygon virtual road flags dialog box&nbsp;: allows control of object and wall collisions (see the <u><font face="Helv">FAQ</font></u></font> for more details).<br>
+<font face="Helvetica">- Merge tool in Point mode.<br>
+- Split tool in Point mode.<br>
+- Completed help file.<br>
+</font><br>
+<b>Added in Version 0.02&nbsp;:</b><br>
+- Smoothing properties dialog box for Block mode and Extended Point mode.<br>
+- Extra smoothing option for the Move XY and Move Z tools in Block mode<font face="Helv">.<br>
+- Move XY and Move Z tools also work in Polygon mode.<br>
+<font face="Helvetica">- Delete command for objects.<br>
+- Duplicate command for objects.<br>
+- Creation of new objects (using the New/Duplicate command with no selected object).<br>
+- Texture browser and polygon texture selection.<br>
+- Help file (still incomplete).<br>
+</font></font><br>
+<b>Features still missing&nbsp;:</b><br>
+- Optional modeless texture display palette in Polygon mode<br>
+- Special light effects (handled as points [move] and as objects [move, delete/duplicate]).<br>
+- Rotating tool for object mode.<br>
+- Improved handling of objects when track blocks are moved.<br>
+- Multiple selection (in Point, Object and Polygon modes).<br>
+- Properties dialog boxes (all modes).<br>
+- Tool for banking the road.<br>
+<br>
+<b>Extra suggestions&nbsp;:</b><br>
+- object action after crash (road signs and some fences lie down when touched)<br>
+- &quot;magnet&quot; function to keep objects on the ground<br>
+- special light effects positions&nbsp;; replay camera positions<br>
+- modifying texture affectation table<br>
+- opponent car AI data (optimal speed, etc...)<br>
+- conversion between NFS3 and NFSHS formats<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><font face="Helv"><b><font size="3">Downloading the latest version of T3ED<font size="2"><br>
+</font></font></b></font><font face="Helvetica"><br>
+<b>This is Version 0.06 of T3ED, released on July 16, 1999.<br>
+</b></font>T3ED is Copyright (c) Denis Auroux, 1998-99 (e-mail&nbsp;: auroux@math.polytechnique.fr).<br>
+<br>
+The latest version of T3ED is available from the new official T3ED site at<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://www.math.polytechnique.fr/cmat/auroux/nfs/<br>
+<br>
+New versions will also be announced and made available from NFSCheats (http://www.nfscheats.com/).<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><font face="Helv"><b><font size="3">NFS3 Tracks Overview</font></b></font><font face="Helvetica"><font size="2"><br>
+<br>
+This help page describes the basic concepts involved in the structure of a NFS3 track. For technical information on the NFS3 file formats, please refer to the page on <u><font face="Helv">NFS3 Track File Formats</font></u></font></font>.<u><br>
+</u><font face="Helvetica"><br>
+<b>Track structure</b></font><br>
+NFS3 tracks are subdivided into track blocks (ca. 200-300 of them), each of which consists of track vertices, polygons, objects and virtual road data. The corresponding data are mostly stored in a file with extension .FRD, and also in a companion file with .COL extension.<br>
+<br>
+<b>Vertices</b><br>
+These are the points which make up the track. They can belong either to the main track structure, or to an &quot;extra object&quot; (see below).<br>
+<br>
+<b>Polygons</b><br>
+A track block consists of three series of polygons, corresponding to various resolutions (the low and medium resolutions are only used to save computing time when the car is still far away). To every polygon corresponds a texture, and the high-resolution series of polygons is also associated with virtual road information.<br>
+<br>
+<b>Objects</b><br>
+There are two types of objects&nbsp;: the <i>polygon objects</i> (displayed in blue in T3ED) make use of the same list of vertices as the main track structure, while the <i>extra objects</i> (displayed in green in T3ED) have separate vertex information structures. The polygon objects are fixed and cannot be collided with, while the extra objects feature collision detection and can be animated as well.<br>
+<br>
+<b>Virtual Road</b><br>
+The virtual road is all the information used by NFS3 in order to compute the behavior of the various cars (player, police, opponents or traffic). This includes, in particular, a sequence of &quot;virtual nodes&quot; stored in the associated .COL file&nbsp;; virtual forward and normal vectors associated to every high resolution track polygon&nbsp;; etc...<br>
+<br>
+<b>Textures</b><br>
+The track textures are stored in a companion file with .QFS extension. Four files are provided for each track&nbsp;: the files whose names end with a <font face="Times New Roman"><font face="Helvetica">0<font face="Times New Roman"><font face="Helvetica"> correspond to normal racing, while those which contain a <font face="Times New Roman"><font face="Helvetica">1<font face="Times New Roman"><font face="Helvetica"> correspond to mirrored tracks. The files with a <font face="Times New Roman"><font face="Helvetica">_8<font face="Times New Roman"><font face="Helvetica"> suffix in their name correspond to 256-color textures, while the others correspond to 65536-color textures.<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup></font></font></font></font></font></font></font></font></font></font></font></font><font face="Helv"><b><font size="3">NFS3 Track File Formats - V0.04, (c) Denis Auroux 1998-99</font></b></font><font face="Helvetica"><font size="2"><br>
+<br>
+This help page describes the structure of NFS3 track files. It is intended as reference information for other NFS3 developers&nbsp;; if you don<font face="Times New Roman"><font face="Helvetica">t intend to program your own track editor, then the <u><font face="Helv">NFS3 Tracks Overview</font></u></font></font></font></font> page is probably more appropriate.<br>
+<br>
+<i>Some of the information in this document was contributed by Vitaly Kootin.</i><br>
+<br>
+<b>DISCLAIMER&nbsp;: </b>The information below is unofficial, and may be inexact by some aspects. It is only intended as reference information to help other NFS3 developers, and comes with no warranty. It may not be used for commercial purposes. It is forbidden to distribute a modified version of this document.<br>
+<br>
+<b>Contents&nbsp;:</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Basic structures</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Track blocks</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Polygon blocks</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Extra-object blocks</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>FRD files</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>COL files</u><br>
+<br>
+<br>
+<sup>#</sup><b><font size="3">I. Basic structures</font></b><font size="2"><br>
+<br>
+<b>1. FLOATPT structure</b></font> (size&nbsp;: 12 bytes)<b><br>
+</b><br>
+<font face="Courier">typedef struct FLOATPT {<br>
+ float x,z,y;<br>
+} FLOATPT;<br>
+</font><font face="Helv"><br>
+This structure is used to store the three coordinates of a vertex. Each of the components is stored as a floating-point number (IEEE single-precision format). The x and y axes are horizontal, while the z axis is vertical and points upwards.<br>
+<br>
+<b>2. INTPT structure</b></font> (size&nbsp;: 12 bytes)<b><br>
+</b><br>
+<font face="Courier">typedef struct INTPT {<br>
+ long x,z,y;<br>
+} INTPT;<br>
+</font><font face="Helv"><br>
+This is another way to store the three coordinates of a vertex (less frequently used than the FLOATPT structure). Each of the components is stored as a 32-bit integer, and must be divided by 2^16 in order to obtain the corresponding floating-point value (in other words, the coordinates are 16.16 fixed precision numbers).<br>
+<br>
+<b>3. POLYGONDATA structure</b></font> (size&nbsp;: 14 bytes)<br>
+<br>
+<font face="Courier">typedef struct POLYGONDATA {<br>
+ short vertex[4];<br>
+ short texture;<br>
+ short unknown1;<br>
+ unsigned char flags;<br>
+ unsigned char unknown2;<br>
+} POLYGONDATA;<br>
+</font><font face="Helv"><br>
+This structure describes a polygon. The <font face="Courier">vertex<font face="Helv"> member refers to four entries in the vertex table associated with the polygon (either the vertex table of the TRKBLOCK structure in the case of a POLYBLOCK polygon, or that of the XOBJDATA structure in the case of an XOBJDATA polygon), describing the coordinates of the four polygon vertices. The <font face="Courier">texture<font face="Helv"> member points to one of TEXTUREBLOCK structures in the FRD file and describes the polygon texture. The significance of the <font face="Courier">unknown1<font face="Helv"> and <font face="Courier">unknown2<font face="Helv"> members apparently has to do with animated textures (resp. first texture number and animation speed&nbsp;?) or with the special road lane textures. A non-zero value of <font face="Courier">flags&amp;0x04<font face="Helv"> indicates that the polygon has an animated texture, and a non-zero value of <font face="Courier">flags&amp;0x10<font face="Helv"> indicates that the polygon is two-sided.<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+<font face="Helvetica"><br>
+<sup>#</sup><b><font size="3">II. Track blocks</font></b></font><font size="2"><br>
+<br>
+<b>1. TRKBLOCK structure </b></font>(variable size)<br>
+<br>
+<font face="Courier">typedef struct TRKBLOCK<br>
+{<br>
+ struct FLOATPT ptCentre;<br>
+ struct FLOATPT ptBounding[4];<br>
+ long nVertices;<br>
+ long nHiResVert,nLoResVert,nMedResVert;<br>
+ long nVerticesDup;<br>
+ long nObjectVert;<br>
+ struct FLOATPT vertices[nVertices];<br>
+</font> long shadingVertices[nVertices];<br>
+ struct NEIGHBORDATA nbdData[0x12C];<br>
+ long nStartPosition;<br>
+ long nPositions;<br>
+ long nPolygons,nVroad,nXobj,nPolyobj;<br>
+ long nSoundsrc,nLightsrc;<br>
+ struct POSITIONDATA posData[nPositions];<br>
+ struct POLYVROADDATA polyData[nPolygons];<br>
+ struct VROADDATA vroadData[nVroad];<br>
+ struct REFXOBJ xobj[nXobj];<br>
+ struct REFPOLYOBJ polyobj[nPolyobj];<br>
+ char padding[];<br>
+ struct SOUNDSRC soundsrc[nSoundsrc];<br>
+ struct LIGHTSRC lightsrc[nLightsrc];<br>
+} TRKBLOCK;<br>
+<font face="Helvetica"><br>
+This structure describes a track block&nbsp;; it contains the track vertices, virtual road information, and miscellaneous reference tables, but does not include the track polygons nor the objects. The <font face="Courier">ptCentre<font face="Helvetica"> member provides the coordinates of a central reference point around which the block is built. The <font face="Courier">ptBounding<font face="Helvetica"> member provides the coordinates of four bounding points for the block vertices&nbsp;: these points delimit a horizontal rectangle inside which all the block<font face="Times New Roman"><font face="Helvetica">s elements fit.<br>
+</font></font></font></font></font></font></font><br>
+The <font face="Courier">nVertices<font face="Helvetica"> and <font face="Courier">nVerticesDup<font face="Helvetica"> values are always equal, and give the total number of vertices stored in the <font face="Courier">vertices<font face="Helvetica"> member of the TRKBLOCK structure. Vertices <font face="Courier">0<font face="Helvetica"> to <font face="Courier">nObjectVert-1<font face="Helvetica"> are the vertices used by the polygon objects (see OBJPOLYBLOCK structure). Vertices <font face="Courier">nObjectVert<font face="Helvetica"> to <font face="Courier">nLoResVert-1<font face="Helvetica"> are used in chunks 0 and 1 of the POLYBLOCK structure, and correspond to the track vertices in low resolution. Vertices <font face="Courier">nLoResVert<font face="Helvetica"> to <font face="Courier">nMedResVert-1<font face="Helvetica"> are the additional vertices used in chunks 2 and 3 of the POLYBLOCK structure, and correspond to the track vertices in medium resolution (the low-resolution vertices are also used in medium resolution). Vertices <font face="Courier">nMedResVert<font face="Helvetica"> to <font face="Courier">nHiResVert-1<font face="Helvetica"> are the additional vertices used in chunks 4 and 5 of the POLYBLOCK structure, and correspond to the track vertices in high resolution (the low- and medium-resolution vertices are also used in high resolution). Finally, vertices <font face="Courier">nHiResVert<font face="Helvetica"> to <font face="Courier">nVertices-1<font face="Helvetica"> are used in chunk 6 of the POLYBLOCK structure, and correspond to the road lanes&nbsp;; after each road lane, a hole is usually left with four unreferenced vertices. The <font face="Courier">shadingVertices<font face="Helvetica"> member describes the shading applied to each vertex&nbsp;: for each vertex, the least significant byte is the blue component, the next byte is the green component, the next byte is the red component, and finally the most significant byte is the alpha value.<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+The <font face="Courier">nStartPosition<font face="Helvetica"> member indicates where the block is located along the track, in units of &quot;nodes&quot; (see the COLVROAD structure in COL file). Normally each block corresponds to 8 node positions, except the last one&nbsp;: the number of nodes in the block is given by the <font face="Courier">nPositions<font face="Helvetica"> member. The <font face="Courier">nPolygons<font face="Helvetica"> member indicates the total number of high-resolution track polygons (i.e. the same as the size of chunk 4 of the POLYBLOCK structure). The <font face="Courier">nXobj<font face="Helvetica"> member indicates the total number of non-animated (type 4) extra-objects stored in the four extra-object chunks associated with the track block. The <font face="Courier">nPolyobj<font face="Helvetica"> member indicates the total number of objects (both polygon-objects and extra-objects) in object chunk 0 (this normally corresponds to length of OBJPOLYBLOCK chunk 0 in the POLYBLOCK structure, except if there are only extra-objects).<br>
+</font></font></font></font></font></font></font></font></font></font><br>
+In addition, the <font face="Courier">nPositions<font face="Helvetica">, <font face="Courier">nPolygons<font face="Helvetica">, <font face="Courier">nVroad<font face="Helvetica">, <font face="Courier">nXobj<font face="Helvetica">, <font face="Courier">nPolyobj<font face="Helvetica">, <font face="Courier">nSoundsrc<font face="Helvetica"> and <font face="Courier">nLightsrc<font face="Helvetica"> members describe the number of entries in the various corresponding substructures (see below). As the REFPOLYOBJ structure exists in two variants (16-byte or 20-byte long depending on object type), extra padding is added in the .FRD file just after the <font face="Courier">polyobj<font face="Helvetica"> substructure, in order to obtain a total size of <font face="Courier">20*nPolyobj<font face="Helvetica"> in all cases for the REFPOLYOBJ table. Apart from this there is no padding anywhere.<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+<b>2. NEIGHBORDATA structure</b> (size&nbsp;: 4 bytes)<br>
+<br>
+<font face="Courier">typedef struct NEIGHBORDATA {<br>
+ short block;<br>
+ short unused;<br>
+} NEIGHBORDATA;<br>
+</font><font face="Helvetica"><br>
+This structure is used to list the block numbers corresponding to the neighbors of the currently described block, starting with the closest ones. There are always 0x12C such entries in the TRKBLOCK structure, but for obvious reasons most of these entries are unused and just contain -1 in the <font face="Courier">block<font face="Helvetica"> member.<br>
+<br>
+<b>3. POSITIONDATA structure</b></font></font></font> (size&nbsp;: 8 bytes)<br>
+<br>
+<font face="Courier">typedef struct POSITIONDATA {<br>
+ short polygon;<br>
+ unsigned char nPolygons;<br>
+ char unknown;<br>
+ short extraNeighbor[2];<br>
+} POSITIONDATA;<br>
+</font><font face="Helvetica"><br>
+This structure is used to indicate which track polygons are attached to a given node. The <font face="Courier">polygon<font face="Helvetica"> member refers to an entry in the POLYVROADDATA structure (or in chunk 4 of the POLYBLOCK structure)&nbsp;; all entries between this one and the one pointed to in the following POSITIONDATA structure correspond to the high-resolution track polygons attached to the same node. The <font face="Courier">nPolygons<font face="Helvetica"> member indicates the number of polygons attached to this node. The two <font face="Courier">extraNeighbor<font face="Helvetica"> values are usually equal to -1, but can be used to specify up to two neighbouring nodes other than the previous node and the following node (e.g. if there are shortcuts).<br>
+</font></font></font></font></font></font></font><br>
+<b>4. POLYVROADDATA structure</b> (size&nbsp;: 8 bytes)<br>
+<br>
+<font face="Courier">typedef struct POLYVROADDATA {<br>
+ unsigned char vroadEntry;<br>
+ unsigned char flags;<br>
+ unsigned char unknown[6];<br>
+} POLYVROADDATA;<br>
+</font><font face="Helvetica"><br>
+This structure describes the virtual road properties of a track polygon&nbsp;: each entry corresponds to a polygon in chunk 4 of the POLYBLOCK structure (high-resolution track polygons). The <font face="Courier">vroadEntry<font face="Helvetica"> member refers to a VROADDATA structure which describes the virtual road vectors associated with the polygon. <br>
+The <font face="Courier">flags<font face="Helvetica"> member describes the behavior of the polygon&nbsp;: a non-zero value of <font face="Courier">flags&amp;0x80<font face="Helvetica"> indicates that collisions with walls should be handled, i.e. that some of the neighboring polygons are not passable. A non-zero value of <font face="Courier">flags&amp;0x40<font face="Helvetica"> indicates that collisions with extra-objects should be handled, i.e. that some extra-objects might be present over the polygon. The next two bits in <font face="Courier">flags<font face="Helvetica"> are unused. Finally, <font face="Courier">flags&amp;0x0f<font face="Helvetica"> describes the behavior of the polygon when driven over&nbsp;: values of 0 and 14 correspond to a polygon over which cars cannot pass&nbsp;; a value of 2 corresponds to a polygon which emits gravel when driven over&nbsp;; values 4 and 11 correspond to emission of leaves, 5 and 13 to emission of dust, 9 and 15 to emission of snow. All other values correspond to plain passable polygons.<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+<b>5. VROADDATA structure</b> (size&nbsp;: 12 bytes)<br>
+<br>
+<font face="Courier">typedef struct VROADDATA {<br>
+ short xNorm,zNorm,yNorm;<br>
+ short xForw,zForw,yForw;<br>
+} VROADDATA;<br>
+</font><font face="Helvetica"><br>
+This structure describes the virtual road vectors associated with a track polygon&nbsp;; several track polygons can share the same VROADDATA structure. The <font face="Courier">xNorm,zNorm,yNorm<font face="Helvetica"> members describe the coordinates of the normal vector (normalized to length 2^15) while the <font face="Courier">xForw,zForw,yForw<font face="Helvetica"> members contain the coordinates of the forward vector (normalized to length 2^15).<br>
+<br>
+<b>6. REFXOBJ structure</b></font></font></font></font></font> (size&nbsp;: 20 bytes)<br>
+<br>
+<font face="Courier">typedef struct REFXOBJ {<br>
+ struct INTPT pt;<br>
+ short unknown1;<br>
+ short globalno;<br>
+ short unknown2;<br>
+ char crossindex;<br>
+ char unknown3;<br>
+} REFXOBJ;<br>
+</font><font face="Helvetica"><br>
+This structure lists the properties of an extra-object. There is one entry for each non-animated (type 4) extra-object, regardless of the chunk to which it belongs&nbsp;; there are no entries for animated objects. The <font face="Courier">pt<font face="Helvetica"> member contains the coordinates of the object<font face="Times New Roman"><font face="Helvetica">s reference point (see XOBJDATA structure). The <font face="Courier">globalno<font face="Helvetica"> member is a unique sequence number characterizing the object among all of the track<font face="Times New Roman"><font face="Helvetica">s extra-objects. The <font face="Courier">crossindex<font face="Helvetica"> member indicates the position of the extra-object in the first POLYOBJ chunk&nbsp;; it is equal to 0 when the object does not belong to the first chunk.<br>
+</font></font></font></font></font></font></font></font></font></font></font><br>
+<b>7. REFPOLYOBJ structure</b> (size&nbsp;: 16 or 20 bytes)<br>
+<br>
+This structure, which lists the properties of an object, exists in two versions&nbsp;: the version for polygon objects is 16-bytes long and has the following structure&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct REFPOLYOBJ {<br>
+ short entrysize;<br>
+ char type;<br>
+ char no;<br>
+ struct INTPT pt;<br>
+} REFPOLYOBJ;<font face="Helvetica"><br>
+</font></font><br>
+For polygon objects, the <font face="Courier">entrysize<font face="Helvetica"> member equals 16 and the <font face="Courier">type<font face="Helvetica"> member equals 1. The <font face="Courier">no<font face="Helvetica"> member is a serial number among the block<font face="Times New Roman"><font face="Helvetica">s objects&nbsp;; it is apparently not used by NFS3. The used numbers are not consecutive because the four POLYOBJ chunks are interleaved and only the first chunk is described by the REFPOLYOBJ structures. The <font face="Courier">pt<font face="Helvetica"> member contains the reference position of the object.<br>
+<br>
+In the case of extra-objects, the structure is 20-bytes long&nbsp;:<br>
+</font></font></font></font></font></font></font></font></font></font><br>
+<font face="Courier">typedef struct REFPOLYOBJ {<br>
+ short entrysize;<br>
+ char type;<br>
+ char no;<br>
+ struct INTPT pt;<br>
+ long crossindex;<br>
+} REFPOLYOBJ;<font face="Helvetica"><br>
+</font></font><br>
+The <font face="Courier">entrysize<font face="Helvetica"> member is now equal to 20, and the <font face="Courier">type<font face="Helvetica"> member equals 4 (there are no animated extra-objects in the first chunk). The added <font face="Courier">crossindex<font face="Helvetica"> member indicates the number of the corresponding REFXOBJ structure.<br>
+<br>
+There is one REFPOLYOBJ structure (of either type) for every object (either polygon object or extra-object) in the first POLYOBJ chunk. The three other POLYOBJ chunks are not listed. Also note that, unlike the POLYOBJ chunk, this structure remains present even when there are only extra-objects. The various REFPOLYOBJ structures of a track block are stored consecutively in the .FRD file&nbsp;; the .FRD files contains padding just after the REFPOLYOBJ structures, in order to obtain a total size of <font face="Courier">20*nPolyobj<font face="Helvetica"> in all cases for the REFPOLYOBJ table.<br>
+</font></font></font></font></font></font></font></font><br>
+<b>8. SOUNDSRC structure </b>(size&nbsp;: 16 bytes)<br>
+<br>
+<font face="Courier">typedef struct SOUNDSRC {<br>
+ struct INTPT refpoint;<br>
+ long type;<br>
+} SOUNDSRC;<font face="Helvetica"><br>
+</font></font><br>
+This structure describes the position and type of a sound source (water stream, etc...).<br>
+<br>
+<b>9. LIGHTSRC structure </b>(size&nbsp;: 16 bytes)<br>
+<br>
+<font face="Courier">typedef struct LIGHTSRC {<br>
+ struct INTPT refpoint;<br>
+ long type;<br>
+} LIGHTSRC;<font face="Helvetica"><br>
+</font></font><br>
+This structure describes the position and type of a light source (special lighting effect).<br>
+<br>
+<br>
+<sup>#</sup><b><font size="3">III. Polygon blocks</font></b><font size="2"><br>
+<br>
+<b>1. POLYGONBLOCK structure </b></font>(variable size)<br>
+<br>
+<font face="Courier">typedef struct POLYGONBLOCK {<br>
+ struct POLYGONCHUNK poly[7];<br>
+ struct OBJPOLYBLOCK obj[4]; <br>
+} POLYGONBLOCK;<font face="Helvetica"><br>
+</font></font><br>
+This structure lists the polygons making up a track block&nbsp;; the <font face="Courier">vertex<font face="Helvetica"> members of the contained POLYGONDATA structures refer to the vertex table of the corresponding TRKBLOCK. The POLYGONBLOCK structure contains seven POLYGONCHUNK substructures listing the track polygons, while the polygon objects are stored in the four OBJPOLYBLOCK substructures. Polygon chunk 0 lists the low-resolution track polygons&nbsp;; chunk 2 lists the medium-resolution track polygons&nbsp;; chunk 4 lists the high-resolution track polygons&nbsp;; and chunk 6 lists the polygons making up the lines between road lanes. Chunks 1, 3 and 5 are unused in most cases&nbsp;; occasionally they contain polygons making up fences and other transparent stuff&nbsp;: chunk 1 corresponds to low resolution, chunk 3 to medium resolution, and chunk 5 to high resolution. Also note that the OBJPOLYBLOCK substructures are non-empty only if there are polygon objects&nbsp;; if there are only extra-objects in an object chunk, the OBJPOLYBLOCK structure is left empty (the first object chunk is anyway described in the TRKBLOCK structure).<br>
+</font></font><br>
+<b>2. POLYGONCHUNK structure</b> (variable size)<br>
+<br>
+<font face="Courier">typedef struct POLYGONCHUNK {<br>
+ long sz,szdup;<br>
+ struct POLYGONDATA poly[sz];<br>
+} POLYGONCHUNK;<br>
+</font><font face="Helvetica"><br>
+The <font face="Courier">sz<font face="Helvetica"> member lists the number of polygons in the polygon chunk&nbsp;; if it equals zero, then only the <font face="Courier">sz<font face="Helvetica"> member is stored and the structure is only 4 bytes long. If <font face="Courier">sz<font face="Helvetica"> is non-zero, its value is duplicated in the <font face="Courier">szdup<font face="Helvetica"> member. The <font face="Courier">poly<font face="Helvetica"> member then lists the polygons themselves.<br>
+<br>
+<b>3. OBJPOLYBLOCK structure</b></font></font></font></font></font></font></font></font></font></font></font> (variable size)<br>
+<br>
+<font face="Courier">typedef struct OBJPOLYBLOCK {<br>
+ long nPolygons;<br>
+ long nObjects;<br>
+ struct POLYOBJDATA obj[nObjects];<br>
+} OBJPOLYBLOCK;<font face="Helvetica"><br>
+</font></font><br>
+The <font face="Courier">nPolygons<font face="Helvetica"> member contains the total number of polygons referenced in the various polygon objects of the OBJPOLYBLOCK structure. If it equals zero, then only the <font face="Courier">nPolygons<font face="Helvetica"> member is stored and the structure is only 4 bytes long. This is in particular the case when all objects are extra-objects. If <font face="Courier">nPolygons<font face="Helvetica"> is non-zero, the <font face="Courier">nObjects<font face="Helvetica"> member indicates the total number of objects in the chunk (both polygon objects and extra-objects), and the objects themselves are stored in the <font face="Courier">obj<font face="Helvetica"> substructure.<br>
+</font></font></font></font></font></font></font></font></font></font><br>
+<b>4. POLYOBJDATA structure </b>(variable size)<br>
+<br>
+This structure exists in two different versions. In the case of extra-objects, the structure is 4-bytes long&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct POLYOBJDATA {<br>
+ long type;<br>
+} POLYOBJDATA;<font face="Helvetica"><br>
+</font></font><br>
+The <font face="Courier">type<font face="Helvetica"> member equals 4 for a basic extra-object, and 3 for an animated extra-object. Since extra-objects are stored in separate XOBJDATA structures, the POLYOBJDATA structure contains no other information in that case. For polygon objects, the structure contains more information&nbsp;:<br>
+<br>
+</font></font><font face="Courier">typedef struct POLYOBJDATA {<br>
+ long type;<br>
+ long numpoly;<br>
+ struct POLYGONDATA poly[numpoly];<br>
+} POLYOBJDATA;<font face="Helvetica"><br>
+</font></font><br>
+The <font face="Courier">type<font face="Helvetica"> member equals 1 for a polygon object. The <font face="Courier">numpoly<font face="Helvetica"> member lists the number of polygons in the object, and the polygons themselves are stored in the <font face="Courier">poly<font face="Helvetica"> substructure.<br>
+<br>
+<br>
+<sup>#</sup><b><font size="3">IV. Extra-object blocks</font></b></font></font></font></font></font></font><font size="2"><br>
+<br>
+<b>1. XOBJBLOCK structure </b></font>(variable size)<br>
+<br>
+<font face="Courier">typedef struct XOBJBLOCK {<br>
+ long nobj;<br>
+ struct XOBJDATA obj[nobj];<br>
+} XOBJBLOCK;<font face="Helvetica"><br>
+</font></font><br>
+This structure is used to store extra-objects. There are actually four XOBJBLOCKs for every track block, each corresponding to one of the four object chunks. The FRD file also contains an extra XOBJBLOCK devoted to global animated extra-objects.<br>
+<br>
+<b>2. XOBJDATA structure </b>(variable size)<br>
+<br>
+This structure is used to describe an extra-object&nbsp;; it exists in two different versions, one for static objects (type 4) and one for animated objects (type 3). In the case of static objects, the structure is the following&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct XOBJDATA {<br>
+ long type;<br>
+ long crossno;<br>
+ long unknown;<br>
+ struct FLOATPT ptRef;<br>
+ long unknown2;<br>
+ long nVertices;<br>
+ struct FLOATPT vert[nVertices];<br>
+ long shadingVertices[nVertices];<br>
+ long nPolygons;<br>
+ struct POLYGONDATA polyData[nPolygons];<br>
+} XOBJDATA;<br>
+</font><font face="Helvetica"><br>
+The <font face="Courier">type<font face="Helvetica"> member equals 4 for static extra-objects. The <font face="Courier">crossno<font face="Helvetica"> member references the REFXOBJ structure corresponding to the object in the TRKBLOCK structure of the appropriate track block. The <font face="Courier">ptRef<font face="Helvetica"> member contains the coordinates of the object<font face="Times New Roman"><font face="Helvetica">s reference point. The <font face="Courier">nVertices<font face="Helvetica"> value is the number of vertices contained in the extra-object&nbsp;; the coordinates of these vertices are stored in the <font face="Courier">vert<font face="Helvetica"> member. All coordinates are <i>relative to the reference point</i></font></font></font></font></font></font></font></font></font></font></font></font></font>. The <font face="Courier">shadingVertices<font face="Helvetica"> member describes the shading applied to each vertex&nbsp;: the least significant byte is the blue component, the next byte is the green component, the next byte is the red component, and finally the most significant byte is the alpha value. The <font face="Courier">nPolygon<font face="Helvetica"> value is the number of polygons making up the extra-object, and the polygons themselves are stored in the <font face="Courier">polyData<font face="Helvetica"> member.<br>
+</font></font></font></font></font></font><br>
+For animated extra-objects, the XOBJDATA structure becomes&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct XOBJDATA {<br>
+ long type;<br>
+ long crossno;<br>
+ long unknown;<br>
+ short unknown2[9];<br>
+ char type3,objno;<br>
+ short nAnimLength,unknown3;<br>
+ struct ANIMDATA animData[nAnimLength];<br>
+ long nVertices;<br>
+ struct FLOATPT vert[nVertices];<br>
+ long shadingVertices[nVertices];<br>
+ long nPolygons;<br>
+ struct POLYGONDATA polyData[nPolygons];<br>
+} XOBJDATA;<br>
+</font><font face="Helvetica"><br>
+The <font face="Courier">type<font face="Helvetica"> member equals 3 for animated extra-objects. The <font face="Courier">type3<font face="Helvetica"> member also equals 3, while the<font face="Courier"> objno<font face="Helvetica"> member contains the object<font face="Times New Roman"><font face="Helvetica">s sequence number inside the track block. The <font face="Courier">nAnimLength<font face="Helvetica"> member stores the length of the animation sequence&nbsp;; the successive object positions are stored in the ANIMDATA substructures contained in the <font face="Courier">animData<font face="Helvetica"> member.<br>
+<br>
+The <font face="Courier">nVertices<font face="Helvetica"> value is the number of vertices in the object&nbsp;; the coordinates of these vertices are stored in the <font face="Courier">vert<font face="Helvetica"> member. All coordinates are <i>relative to the reference points specified in the animation data</i></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font>. The <font face="Courier">nPolygon<font face="Helvetica"> value is the number of polygons making up the object, and the polygons themselves are stored in the <font face="Courier">polyData<font face="Helvetica"> member.<br>
+</font></font></font></font><br>
+<b>3. ANIMDATA structure</b> (size&nbsp;: 20 bytes)<br>
+<br>
+<font face="Courier">typedef struct ANIMDATA {<br>
+ struct INTPT pt;<br>
+ float costheta,sintheta;<br>
+} ANIMDATA;<font face="Helvetica"><br>
+</font></font><br>
+This structure describes the position of an animated extra-object. The <font face="Courier">pt<font face="Helvetica"> member provides the position of the object<font face="Times New Roman"><font face="Helvetica">s reference point (it is similar to the <font face="Courier">ptRef<font face="Helvetica"> member of a static extra-object XOBJDATA structure, but in the case of an animated object the reference point moves during animation). The <font face="Courier">costheta<font face="Helvetica"> and <font face="Courier">sintheta<font face="Helvetica"> members describe the rotation to be applied to the object (this rotation always occurs in the XY plane, the Z coordinate is not affected).<br>
+</font></font></font></font></font></font></font></font></font></font><br>
+<br>
+<sup>#</sup><b><font size="3">V. FRD files</font></b><font size="2"><br>
+<br>
+<b>1. FRD file structure</b></font><br>
+<br>
+<font face="Courier">typedef struct FRDFILE {<br>
+ char header[28];<br>
+ long nBlocks;<br>
+ struct TRKBLOCK trk[nBlocks+1];<br>
+ struct POLYGONBLOCK poly[nBlocks+1];<br>
+ struct XOBJBLOCK xobj[4*(nBlocks+1)+1];<br>
+ long nTextures;<br>
+ struct TEXTUREBLOCK texture[nTextures];<br>
+} FRDFILE;<font face="Helvetica"><br>
+</font></font><br>
+FRD files start with a 28-byte header, followed by the number of the last track block. The actual number of blocks is <font face="Courier">nBlocks+1<font face="Helvetica"> rather than <font face="Courier">nBlocks<font face="Helvetica">. The first TRKBLOCK structure is at offset 32 in the file&nbsp;; the TRKBLOCK structures are followed by the POLYGONBLOCK structures (one per track block), and the XOBJBLOCK structures (four per track block, plus one for global objects). These data are followed by the number <font face="Courier">nTextures<font face="Helvetica"> of track textures, and by TEXTUREBLOCK structures which describe how these textures are obtained from the bitmaps stored in the QFS files.<br>
+</font></font></font></font></font></font><br>
+<b>2. TEXTUREBLOCK structure</b> (size&nbsp;: 47 bytes)<br>
+<br>
+<font face="Courier">typedef struct TEXTUREBLOCK {<br>
+ short width,height;<br>
+ long unknown;<br>
+ float corners[4][2];<br>
+ long unknown2;<br>
+ char islane;<br>
+ short texture;<br>
+} TEXTUREBLOCK;<font face="Helvetica"><br>
+</font></font><br>
+This structure stores the properties of a track texture&nbsp;; the polygon textures described in POLYGONDATA structures always refer to one of these structures rather than directly to a QFS bitmap. The <font face="Courier">width<font face="Helvetica"> and <font face="Courier">height<font face="Helvetica"> members indicate the size of the bitmap in pixels. The <font face="Courier">corners<font face="Helvetica"> member is a series of four planar coordinates, used to describe the positions of the four texture corners with respect to the QFS bitmap&nbsp;; these coordinates are often larger than 1, which makes it possible to tile several copies of a QFS bitmap into a single track texture. The <font face="Courier">islane<font face="Helvetica"> member equals 1 if this texture is used to display road lanes (in which case it is <i>not</i></font></font></font></font></font></font></font></font> connected to a QFS file texture), and 0 in all other cases. Finally, the <font face="Courier">texture<font face="Helvetica"> member indicates the relevant entry in the QFS file (except in the case of road lane textures where it represents the number of the relevant predefined texture).<br>
+</font></font><br>
+The textures used for road lanes (i.e. those for which <font face="Courier">islane<font face="Helvetica"> equals 1) correspond to 14 standard predefined textures rather than QFS textures&nbsp;: texture 0 is a yellow solid line, texture 1 is a yellow dotted line, texture 2 is a double yellow solid line, textures 3 and 4 are double yellow lines (one solid line with one dashed line). Textures 5 to 9 are identical to textures 0 to 4 but are white instead of yellow. Textures 10 and 11 are solid tire marks, 12 and 13 are lighter tire marks.<br>
+</font></font><br>
+<b>WARNING&nbsp;</b>: the TEXTUREBLOCK structure causes byte-alignment problems with the default options of most compilers, as its members are not aligned on even addresses&nbsp;; beware of this when writing track editing software.<br>
+<br>
+<br>
+<sup>#</sup><b><font size="3">VI. COL files</font></b><font size="2"><br>
+<br>
+<b>1. COL file structure</b></font><br>
+<br>
+<font face="Courier">typedef struct COLFILE {<br>
+ char collID[4];<br>
+ long version;<br>
+ long fileLength;<br>
+ long nBlocks;<br>
+ long xbTable[nBlocks];<br>
+ struct XBCOLBLOCK xb[nBlocks];<br>
+} COLFILE;<font face="Helvetica"><br>
+</font></font><br>
+The COL file has a structure comparable to the COL files of NFS2, but nearly all XBCOLBLOCK structures have changed. The only really useful information in COL files is the virtual road information, which is not redundant with what can be found in FRD files&nbsp;; the other structures are used to describe animated global objects, and their interest is no longer clear now that extra-objects can be animated too... however it turns out that some of the NFS3 tracks have their global objects described in the COL file rather than in the FRD file, so the description below is still necessary.<br>
+<br>
+The <font face="Courier">collID<font face="Helvetica"> member contains the characters <font face="Times New Roman"><font face="Helvetica">COLL<font face="Times New Roman"><font face="Helvetica">&nbsp;; the <font face="Courier">version<font face="Helvetica"> member equals 11. The <font face="Courier">fileLength<font face="Helvetica"> member contains the length of the COL file. The file contents are stored in XBCOLBLOCK structures, which serve various purposes depending on their XBID identifier. The offset of each XBCOLBLOCK structure in the COL file is stored in the <font face="Courier">xbTable<font face="Helvetica"> member&nbsp;; these offsets are <i>relative to the beginning of the XB table</i></font></font></font></font></font></font></font></font></font></font></font></font>, so one must add 16 in order to get an absolute offset in the COL file.<br>
+<br>
+The number of blocks is either 2 if there are no global objects in the COL file, or 4 or 5 if there are global objects. The first block is used for a texture table, providing the conversion between QFS bitmaps and animated COL object textures&nbsp;; it is always present, even when there are no animated COL objects, and its contents are not related in any way with the texture table stored in the FRD file. The next blocks are only present if there are animated COL objects&nbsp;: first a block containing the 3D structures of the COL objects, followed by one or two blocks containing the objects themselves. The last block, which is always present, contains important virtual road information.<br>
+<br>
+<b>2. XBCOLBLOCK structure</b> (variable size)<br>
+<br>
+<font face="Courier">typedef struct XBCOLBLOCK {<br>
+ long size;<br>
+ short xbid;<br>
+ short nrec;<br>
+ struct (COLTEXTUREINFO|<br>
+ COLSTRUCT3D|<br>
+ COLOBJECT|<br>
+ COLVROAD) data[nrec];<br>
+} XBCOLBLOCK;<font face="Helvetica"><br>
+</font></font><br>
+The <font face="Courier">size<font face="Helvetica"> member contains the total length in bytes of the XBCOLBLOCK. The <font face="Courier">xbid<font face="Helvetica"> member is an identifier which describes the meaning of the block<font face="Times New Roman"><font face="Helvetica">s contents&nbsp;; the <font face="Courier">nrec<font face="Helvetica"> member contains the number of data records in the XBCOLBLOCK. The meaning of these data records depends on the XBID value.<br>
+<br>
+The following XBCOLBLOCK types are legal in NFS3 COL files (in their order of apparition in the COL file)&nbsp;:<br>
+<br>
+<b>a) COL texture information (XBID 2)</b></font></font></font></font></font></font></font></font> (8-byte data records)<b><br>
+</b><br>
+<font face="Courier">typedef struct COLTEXTUREINFO {<br>
+ short texture;<br>
+ short unknown1;<br>
+ short unknown2;<br>
+ short unknown3;<br>
+} COLTEXTUREINFO;<font face="Helvetica"><br>
+</font></font><br>
+These records store the description of a COL texture in terms of a QFS bitmap. The <font face="Courier">texture<font face="Helvetica"> member refers to an entry in the QFS file.<br>
+<br>
+<b>b) COL 3D-structure information (XBID 8)</b></font></font> (variable size records)<b><br>
+</b><br>
+Before describing a COL 3D-structure record, we start with two auxiliary structures (vertices and polygons)&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct COLVERTEX {<br>
+ struct FLOATPT pt;<br>
+ long unknown;<br>
+} COLVERTEX;<br>
+</font><font face="Helvetica"><br>
+This structure describes a vertex of a COL 3D structure. The <font face="Courier">pt<font face="Helvetica"> member contains coordinates relative to the reference position stored in the COL object information block.<br>
+<br>
+</font></font></font><font face="Courier">typedef struct COLPOLYGON {<br>
+ short texture;<br>
+ char vert[4];<br>
+} COLPOLYGON;<br>
+</font><font face="Helvetica"><br>
+This structure describes a polygon of a COL 3D structure. The <font face="Courier">texture<font face="Helvetica"> member refers to an element in the COL texture information block, while the <font face="Courier">v<font face="Helvetica"> member contains the numbers of the four vertices making up the polygon.<br>
+<br>
+</font></font></font></font></font><font face="Courier">typedef struct COLSTRUCT3D {<br>
+ long size;<br>
+ short nVert,nPoly;<br>
+ struct COLVERTEX vertex[nVert];<br>
+ struct COLPOLYGON polygon[nPoly];<br>
+} COLSTRUCT3D;<font face="Helvetica"><br>
+</font></font><br>
+The <font face="Courier">size<font face="Helvetica"> member stores the size of the data record&nbsp;; the <font face="Courier">nVert<font face="Helvetica"> and <font face="Courier">nPoly<font face="Helvetica"> members contain the numbers of vertices and polygons respectively. The vertices and polygons themselves are stored in the <font face="Courier">vertices<font face="Helvetica"> and <font face="Courier">polygon<font face="Helvetica"> members.<br>
+<br>
+<b>c) COL object information (XBID 7 or 18)</b></font></font></font></font></font></font></font></font></font></font> (variable size records)<b><br>
+</b><br>
+These data records contain the description of a COL object&nbsp;; however the 3D structures (vertices and polygons) themselves are stored in the COL 3D structure block. There are two versions depending on whether the object is static or animated. For static objects the structure is the following&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct COLOBJECT {<br>
+ short size;<br>
+ char type;<br>
+ char struct3D;<br>
+ struct INTPT ptRef;<br>
+} COLOBJECT;<font face="Helvetica"><br>
+</font></font><br>
+For static objects, the <font face="Courier">size<font face="Helvetica"> member is equal to 16 and the <font face="Courier">type<font face="Helvetica"> member is 1. The <font face="Courier">struct3D<font face="Helvetica"> member refers to the relevant data record in the previous XBCOLBLOCK (3D structure information), and the <font face="Courier">ptRef<font face="Helvetica"> member contains the object<font face="Times New Roman"><font face="Helvetica">s reference position.<br>
+<br>
+For animated objects, the structure becomes <br>
+<br>
+</font></font></font></font></font></font></font></font></font></font><font face="Courier">typedef struct COLOBJECT {<br>
+ short size;<br>
+ char type;<br>
+ char struct3D;<br>
+ short animLength;<br>
+ short unknown;<br>
+ struct ANIMDATA animData[animLength];<br>
+} COLOBJECT;<font face="Helvetica"><br>
+</font></font><br>
+For animated objects, the <font face="Courier">size<font face="Helvetica"> member contains the size of the record, and the <font face="Courier">type<font face="Helvetica"> member is 3. The <font face="Courier">struct3D<font face="Helvetica"> member refers to the relevant data record in the previous XBCOLBLOCK (3D structure information). The <font face="Courier">animLength<font face="Helvetica"> member contains the length of the object<font face="Times New Roman"><font face="Helvetica">s animation, and the successive object positions are sored in the <font face="Courier">animData<font face="Helvetica"> member (the ANIMDATA structures are the same ones as in the description of animated FRD extra-objects).<br>
+</font></font></font></font></font></font></font></font></font></font></font></font><br>
+<b>d) COL virtual-road information (XBID 15)</b> (36-byte data records)<b><br>
+</b><br>
+The following structure is used to store a vector in a COL file&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct COLVECTOR {<br>
+ signed char x,z,y,unused;<br>
+} COLVECTOR;<font face="Helvetica"><br>
+</font></font><br>
+The three vector components are normalized so the vector has length 128.<br>
+<br>
+<font face="Courier">typedef struct COLVROAD {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+struct INTPT refPt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+long unknown;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+struct COLVECTOR normal,forward,right;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+long leftWall,rightWall;<br>
+} COLVROAD;<font face="Helvetica"><br>
+</font></font><br>
+There is one COL virtual-road data record for each track node&nbsp;; there are usually 8 track nodes (and therefore 8 COLVROAD records) for each FRD track block (see the <font face="Courier">nStartPos<font face="Helvetica"> and <font face="Courier">nPositions<font face="Helvetica"> members in TRKBLOCK structures).<br>
+<br>
+The <font face="Courier">refPt<font face="Helvetica"> member stores the coordinates of the node<font face="Times New Roman"><font face="Helvetica">s reference point (a point along the road). The <font face="Courier">normal<font face="Helvetica"> vector points upwards, the <font face="Courier">forward<font face="Helvetica"> vector points forward, the <font face="Courier">right<font face="Helvetica"> vector points to the right.<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font></font>The <font face="Courier">leftWall<font face="Helvetica"> and <font face="Courier">rightWall<font face="Helvetica"> members indicate the distance between the node<font face="Times New Roman"><font face="Helvetica">s reference point and the left and right track walls (this distance is counted along the direction pointed by the <font face="Courier">right<font face="Helvetica"> vector)&nbsp;; as cars can<font face="Times New Roman"><font face="Helvetica">t cross these track walls, it is necessary to ensure that all passable road polygons lie inbetween.<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup></font></font></font></font></font></font></font></font></font></font><font face="Helv"><b><font size="3">NFS HS Track File Formats - V0.03, (c) Denis Auroux and Vitaly Kootin 1999</font></b></font><font face="Helvetica"><font size="2"><br>
+<br>
+This help page describes the structure of NFS High Stakes track files.<br>
+<br>
+<font face="Helv"><b>DISCLAIMER&nbsp;: </b></font></font></font>The information below is unofficial, and may be inexact by some aspects. It is only intended as reference information to help other NFS developers, and comes with no warranty. It may not be used for commercial purposes. It is forbidden to distribute a modified version of this document.<br>
+<br>
+<b>Contents&nbsp;:</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Basic structures</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Block headers</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Track block data</u><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>FRD file</u><br>
+<br>
+<br>
+<sup>#</sup><b><font size="3">I. Basic structures</font></b><font size="2"><br>
+<br>
+<b>1. FLOATPT structure</b></font> (size&nbsp;: 12 bytes)<b><br>
+</b><br>
+<font face="Courier">typedef struct FLOATPT {<br>
+ float x,z,y;<br>
+} FLOATPT;<br>
+</font><font face="Helv"><br>
+This structure is used to store the three coordinates of a vertex. Each of the components is stored as a floating-point number (IEEE single-precision format). The x and y axes are horizontal, while the z axis is vertical and points upwards.<br>
+<br>
+<b>2. INTPT structure</b></font> (size&nbsp;: 12 bytes)<b><br>
+</b><br>
+<font face="Courier">typedef struct INTPT {<br>
+ long x,z,y;<br>
+} INTPT;<br>
+</font><font face="Helv"><br>
+This is another way to store the three coordinates of a vertex (less frequently used than the FLOATPT structure). Each of the components is stored as a 32-bit integer, and must be divided by 2^16 in order to obtain the corresponding floating-point value (in other words, the coordinates are 16.16 fixed precision numbers).<br>
+<br>
+<b>3. POLYGONDATA structure</b></font> (size&nbsp;: 13 bytes)<br>
+<br>
+<font face="Courier">typedef struct POLYGONDATA {<br>
+ short vertex[4];<br>
+ short texture;<br>
+ short flags;<br>
+ unsigned char animInfo;<br>
+} POLYGONDATA;<br>
+</font><font face="Helv"><br>
+This structure describes a polygon. The <font face="Courier">vertex<font face="Helv"> member refers to four entries in the vertex table associated with the polygon (either the vertex table of the TRKBLOCK structure in the case of a POLYBLOCK polygon, or that of the XOBJDATA structure in the case of an XOBJDATA polygon), describing the coordinates of the four polygon vertices. The <font face="Courier">texture<font face="Helv"> member directly references a texture in the QFS file.<br>
+<br>
+If <font face="Courier">texture<font face="Helv"> is greater than 2047, it is to be interpreted as a road lane texture (dotted or solid line,<br>
+</font></font></font></font></font></font></font>yellow or white)&nbsp;: after subtracting 2048 to the texture number one gets the code of the road lane texture (see NFS3). Otherwise, the texture number directly points to an entry in the QFS file. However, some of the textures in the QFS file are to be skipped, namely those which contain after their local palette a comment (i.e. a piece starting with header ID 0x6F) whose text is the string &quot;&lt;mirrored&gt;&quot;&nbsp;; the correct texture is therefore the <font face="Courier">texture<font face="Helv">-th bitmap of the QFS file which does not have the &quot;&lt;mirrored&gt;&quot; comment.<br>
+</font></font><br>
+Unlike NFS3 where the first vertex of a track polygon is forward left, followed by forward right, backward right and backward left, the NFS HS ordering is forward right, forward left, backward left, backward right (the mirror image).<br>
+<br>
+The flags are as follows&nbsp;: <font face="Courier New">(flags&gt;&gt;2)&amp;3<font face="Helv"> indicates the multiple of 90° by which the texture should be rotated (0 for no rotation, 1 for 90°, 2 for 180°, 3 for 270°)&nbsp;; a non-zero value of <font face="Courier New">flags&amp;0x10 <font face="Helv">indicates that the texture is horizontally flipped&nbsp;; a non-zero value of <font face="Courier New">flags&amp;0x20 <font face="Helv">indicates that the texture is vertically flipped. The value of <font face="Courier New">(flags&gt;&gt;6)&amp;7<font face="Helv"> indicates the scaling factor&nbsp;: 0 is no scaling&nbsp;; 1 means that the texture is tiled twice horizontally&nbsp;; 2 that the texture is tile twice vertically&nbsp;; 3 indicates 4x horizontal tiling, 4 indicates 4x vertical tiling. Finally, a non-zero value of <font face="Courier New">flags&amp;0x8000<font face="Helv"> indicates that the polygon is one-sided. <br>
+</font></font></font></font></font></font></font></font></font></font><br>
+The texture is animated if the <font face="Courier New">animInfo<font face="Helv"> member is non-zero&nbsp;; in that case the LSB part indicates the length of the animation, and the MSB part indicates the periodicity.<br>
+<br>
+<b>4. ARRAYPTR structure</b></font></font> (size&nbsp;: 8 bytes)<br>
+<br>
+<font face="Courier">typedef struct ARRAYPTR {<br>
+ long nObjects;<br>
+ void* pObjects;<br>
+} ARRAYPTR;<br>
+</font><font face="Helv"><br>
+This structure is used to describe a collection of objects&nbsp;: the <font face="Courier">nObjects<font face="Helv"> member contains the number of objects, while the <font face="Courier">pObjects<font face="Helv"> member merely contains a 32-bit space to be filled with a pointer to the objects themselves (which are stored elsewhere in the file).<br>
+<font face="Helvetica"><br>
+<br>
+<sup>#</sup><b><font size="3">II. Block headers</font></b></font></font></font></font></font></font><font size="2"><br>
+<br>
+<b>1. VROADBLOCK structure </b></font>(size&nbsp;: 84 bytes)<br>
+<br>
+This structure stores the virtual road data (road position, width, orientation) for a track position.<br>
+<br>
+<font face="Courier">typedef struct VROADBLOCK {<br>
+ struct FLOATPT nodePt;<br>
+ struct FLOATPT normal,forward,right;<br>
+ float leftWall,rightWall;<br>
+ float unknown[2];<br>
+ short extraNeighbors[2];<br>
+ long unknown[4]; // first 2 are lane widths, last 2 are flags<br>
+} VROADBLOCK;<font face="Helvetica"><br>
+</font></font><br>
+There is one virtual-road block record for each track node&nbsp;; there are usually 8 track nodes (and therefore 8 VROADBLOCK records) for each FRD track block.<br>
+<br>
+The <font face="Courier">refPt<font face="Helvetica"> member stores the coordinates of the node<font face="Times New Roman"><font face="Helvetica">s reference point (a point along the road). The <font face="Courier">normal<font face="Helvetica"> vector points upwards, the <font face="Courier">forward<font face="Helvetica"> vector points forward, the <font face="Courier">right<font face="Helvetica"> vector points to the right&nbsp;; their components are now three floating-point numbers, with normalization to unit length (note that these values are multiples of 1/128). The <font face="Courier">leftWall<font face="Helvetica"> and <font face="Courier">rightWall<font face="Helvetica"> members indicate the distance between the node<font face="Times New Roman"><font face="Helvetica">s reference point and the left and right track walls (this distance is counted along the direction pointed by the <font face="Courier">right<font face="Helvetica"> vector).<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+The two <font face="Courier">extraNeighbor<font face="Helvetica"> values are usually equal to -1, but can be used to specify up to two neighbouring nodes other than the previous node and the following node (e.g. if there are shortcuts).<br>
+<br>
+<b>2. TRKBLOCK structure </b></font></font>(size&nbsp;: 1512 bytes)<br>
+<br>
+<font face="Courier">typedef struct TRKBLOCK<br>
+{<br>
+ long nPolygons[11];<br>
+ POLYGONDATA* pPolygons[11];<br>
+ long nVertices;<br>
+ long nHiResVert,nLoResVert,nMedResVert;<br>
+ long nVerticesDup;<br>
+ long nObjectVert;<br>
+ FLOATPT* vertices;<br>
+</font> long* shadingVertices;<br>
+ struct FLOATPT ptCentre;<br>
+ struct FLOATPT ptBounding[4];<br>
+ struct NEIGHBORDATA nbdData[300];<br>
+ struct ARRAYPTR xobj[4];<br>
+ long nVroad;<br>
+ struct FLOATPT minPt,maxPt;<br>
+ POLYVROADDATA* pVroad;<br>
+ long nPositions;<br>
+ struct ARRAYPTR refxobj;<br>
+ struct ARRAYPTR refobj0;<br>
+ struct ARRAYPTR soundsrc;<br>
+ struct ARRAYPTR lightsrc;<br>
+ long neighbors[8];<br>
+} TRKBLOCK;<br>
+<font face="Helvetica"><br>
+This structure describes a track block&nbsp;; it describes how many items of each type the block contains, and provides pointers to these data. Note that in order to speed up file access the data structure stored in the FRD file contains 32-bit memory pointers&nbsp;; these values are to be ignored and replaced by return values of subsequent malloc() calls at load time.<br>
+<br>
+The structure starts with eleven polygon chunks&nbsp;: seven for the track structure, and four for the track<font face="Times New Roman"><font face="Helvetica">s polygon objects. Polygon chunk 0 lists the low-resolution track polygons&nbsp;; chunk 2 lists the medium-resolution track polygons&nbsp;; chunk 4 lists the high-resolution track polygons&nbsp;; and chunk 6 lists the polygons making up the lines between road lanes. Chunks 1, 3 and 5 contain polygons making up fences and other transparent stuff&nbsp;: chunk 1 corresponds to low resolution, chunk 3 to medium resolution, and chunk 5 to high resolution. Chunks 7, 8, 9 and 10 correspond to the polygon objects. The<font face="Courier"> nPolygons<font face="Helvetica"> member contains the number of polygons in each chunk, while the <font face="Courier">pPolygons<font face="Helvetica"> member provides room for pointer storage.<br>
+</font></font></font></font></font></font></font><br>
+The <font face="Courier">nVertices<font face="Helvetica"> and <font face="Courier">nVerticesDup<font face="Helvetica"> values are always equal, and give the total number of vertices to be stored in the <font face="Courier">vertices<font face="Helvetica"> member of the TRKBLOCK structure. Vertices <font face="Courier">0<font face="Helvetica"> to <font face="Courier">nObjectVert-1<font face="Helvetica"> are the vertices used by the polygon objects (chunks 7,8,9,10). Vertices <font face="Courier">nObjectVert<font face="Helvetica"> to <font face="Courier">nLoResVert-1<font face="Helvetica"> are used in polygon chunks 0 and 1, and correspond to the track vertices in low resolution. Vertices <font face="Courier">nLoResVert<font face="Helvetica"> to <font face="Courier">nMedResVert-1<font face="Helvetica"> are the additional vertices used in chunks 2 and 3, and correspond to the track vertices in medium resolution (the low-resolution vertices are also used in medium resolution). Vertices <font face="Courier">nMedResVert<font face="Helvetica"> to <font face="Courier">nHiResVert-1<font face="Helvetica"> are the additional vertices used in chunks 4 and 5, and correspond to the track vertices in high resolution (the low- and medium-resolution vertices are also used in high resolution). Finally, vertices <font face="Courier">nHiResVert<font face="Helvetica"> to <font face="Courier">nVertices-1<font face="Helvetica"> are used in chunk 6, and correspond to the road lanes. The <font face="Courier">shadingVertices<font face="Helvetica"> member describes the shading applied to each vertex&nbsp;: for each vertex, the least significant byte is the blue component, the next byte is the green component, the next byte is the red component, and finally the most significant byte is the alpha value. The structure contains two pointers used to access the vertex coordinate table and the vertex shading table.<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+The <font face="Courier">ptCentre<font face="Helvetica"> member provides the coordinates of a central reference point around which the block is built. The <font face="Courier">ptBounding<font face="Helvetica"> member provides the coordinates of four bounding points for the block vertices&nbsp;: these points delimit a horizontal rectangle inside which all the block<font face="Times New Roman"><font face="Helvetica">s elements fit.<br>
+<br>
+The four <font face="Courier">xobj<font face="Helvetica"> array-pointers indicate how many extra-objects are contained in each of the four extra-object chunks associated with the track block, and provide the corresponding pointer space.<br>
+</font></font></font></font></font></font></font></font><br>
+The <font face="Courier">nVroad<font face="Helvetica"> member indicates how many POLYVROADDATA structures are used in the block to describe the virtual road parameters of the track polygons&nbsp;; the <font face="Courier">pVroad<font face="Helvetica"> member provides pointer space.<br>
+<br>
+Normally each block corresponds to 8 node positions, except the last one&nbsp;: the number of nodes in the block is given by the <font face="Courier">nPositions<font face="Helvetica"> member. The node positions refer to the VROADBLOCK records at the beginning of the FRD file.<br>
+<br>
+The four array-pointers <font face="Courier">refxobj, refobj0, soundsrc<font face="Helvetica"> and <font face="Courier">lightsrc<font face="Helvetica"> are used to access the various corresponding substructures of types REFXOBJ, REFPOLYOBJ, SOUNDSRC and LIGHTSRC respectively (see below). The number of REFXOBJ entries is the number of non-animated (type 4) extra-objects stored in the four extra-object chunks associated with the track block. The number of REFPOLYOBJ entries is the total number of objects (both polygon-objects and extra-objects) in object chunk 0. <br>
+</font></font></font></font></font></font></font></font></font></font><br>
+The <font face="Courier">neighbors<font face="Helvetica"> member lists blocks with which the current block is in direct contact. Usually these are the previous block and the following block. The unused entries contain -1.<br>
+<br>
+The <font face="Courier New">minPt<font face="Helvetica"> and <font face="Courier New">maxPt<font face="Helvetica"> members, whose z coordinates are unused, store in their x components respectively the minimum and maximum x coordinates of any vertex belonging to a non-type14 high-resolution road polygon (i.e. a polygon for which there is a POLYVROADDATA entry). Similarly the y components of <font face="Courier New">minPt<font face="Helvetica"> and <font face="Courier New">maxPt<font face="Helvetica"> contain the minimum and maximum y coordinates of any vertex belonging to a non-type14 high resolution road polygon. These two members are used by the POLYVROADDATA entries.<br>
+</font></font></font></font></font></font></font></font></font></font><br>
+<b>3. NEIGHBORDATA structure</b> (size&nbsp;: 4 bytes)<br>
+<br>
+<font face="Courier">typedef struct NEIGHBORDATA {<br>
+ short block;<br>
+ short unused;<br>
+} NEIGHBORDATA;<br>
+</font><font face="Helvetica"><br>
+This structure is used to list the block numbers corresponding to the neighbors of the currently described block, starting with the closest ones. There are always 300 such entries in the TRKBLOCK structure, but for obvious reasons most of these entries are unused and just contain -1 in the <font face="Courier">block<font face="Helvetica"> member.<br>
+<br>
+<br>
+<sup>#</sup><b><font size="3">III. Track block data</font></b></font></font></font><font size="2"><br>
+<br>
+<b>1. TRKBLOCKDATA structure</b></font> (size&nbsp;: variable)<br>
+<br>
+This structure stores the various data blocks referenced by the TRKBLOCK structure (above).<br>
+<br>
+<font face="Courier">typedef struct TRKBLOCKDATA {<br>
+ struct FLOATPT vertices[];<br>
+ long shadingVertices[];<br>
+ struct POLYVROADDATA vroad[];<br>
+ struct REFXOBJ refxobj[];<br>
+ struct REFPOLYOBJ refobj0[];<br>
+ char padding[];<br>
+ struct SOUNDSRC soundsrc[];<br>
+ struct LIGHTSRC lightsrc[];<br>
+ struct POLYGONDATA polygons[11][];<br>
+ struct XOBJCHUNK xobj[4];<br>
+} TRKBLOCKDATA;<br>
+</font><font face="Helvetica"><br>
+The number of <font face="Courier">vertices<font face="Helvetica"> and <font face="Courier">shadingVertices<font face="Helvetica"> entries corresponds to the <font face="Courier">nVertices<font face="Helvetica"> member of the TRKBLOCK structure. These contain respectively the coordinates and shading RGBA values of the track vertices.<br>
+<br>
+The number of POLYVROADDATA structures (see below) is given by the <font face="Courier">nVroad<font face="Helvetica"> member of the TRKBLOCK structure.<br>
+<br>
+The number of REFXOBJ, REFPOLYOBJ, SOUNDSRC and LIGHTSRC structures (see below) is given by the corresponding array-pointers in the TRKBLOCK structure.<br>
+</font></font></font></font></font></font></font></font></font><br>
+The REFPOLYOBJ structures have variable size (16 or 20 bytes)&nbsp;; the .FRD file contains padding just after the REFPOLYOBJ structures, in order to obtain a total size of <font face="Courier">20*nPolyobj<font face="Helvetica"> in all cases for the REFPOLYOBJ table.<br>
+<br>
+The <font face="Courier">polygons<font face="Helvetica"> member contains 11 series of POLYGONDATA structures, making up the 11 polygon chunks of the track block. The length of each chunk is given at the beginning of the TRKBLOCK structure. These structures contain all polygons both for the track structure and polygon objects.<br>
+</font></font></font></font><br>
+The four <font face="Courier">xobj<font face="Helvetica"> members contain the block<font face="Times New Roman"><font face="Helvetica">s extra-objects (4 chunks). The number of XOBJHEAD and XOBJDATA structures for each chunk are the number of objects of each xobj chunk, stored in the <font face="Courier">xobj<font face="Helvetica"> array-pointers of the TRKBLOCK structure.<br>
+<br>
+<b>2. POLYVROADDATA structure</b></font></font></font></font></font></font> (size&nbsp;: 24 bytes)<br>
+<br>
+<font face="Courier">typedef struct POLYVROADDATA {<br>
+ unsigned char minY,maxY,minX,maxX;<br>
+ char isEdge[4];<br>
+ char flags;<br>
+ char unknown;<br>
+ short polygon;<br>
+ short xNorm,zNorm,yNorm;<br>
+ short xForw,zForw,yForw;<br>
+} POLYVROADDATA;<br>
+</font><font face="Helvetica"><br>
+This structure describes the virtual road properties of a track polygon (i.e. a polygon in chunk 4). There is one entry for each driveable polygon (non-driveable polygons of type 14 do not have an entry). The polygon<font face="Times New Roman"><font face="Helvetica">s position in chunk 4 is given by the <font face="Courier">polygon<font face="Helvetica"> member. The <font face="Courier">xNorm,zNorm,yNorm<font face="Helvetica"> members describe the coordinates of the normal vector (normalized to length 2^15) while the <font face="Courier">xForw,zForw,yForw<font face="Helvetica"> members contain the coordinates of the forward vector (normalized to length 2^15).<br>
+</font></font></font></font></font></font></font></font></font><br>
+The <font face="Courier">minY,maxY,minX,maxX<font face="Helvetica"> members give bounds on the x and y coordinates of the four vertices making up the polygon, and are used by NFSHS to determine which polygon the car hits as it moves. These values are scaled relatively to the <font face="Courier New">minPt<font face="Helvetica"> and <font face="Courier New">maxPt<font face="Helvetica"> members of the corresponding TRKBLOCK structure, by a linear transformation&nbsp;: 0 stands for the <font face="Courier New">minPt<font face="Helvetica"> value, and 255 stands for the <font face="Courier New">maxPt<font face="Helvetica"> value. For example, denoting by v[i] the four vertices of the polygon,<br>
+</font></font></font></font></font></font></font></font></font></font><br>
+<font face="Courier">minX = 255*(min(v[i].x,i=0..3) - minPt.x) / (maxPt.x - minPt.x)<font face="Helvetica"><br>
+</font></font><br>
+The <font face="Courier">isEdge<font face="Helvetica"> array indicates along which of the sides of the polygon there are neighboring track polygons&nbsp;: the first value corresponds to the front edge, followed by the left edge, the back edge, and the right edge. These values are 0xFF if there is no adjacent track polygon along this edge, 0 if there is one.<br>
+<br>
+The <font face="Courier">flags<font face="Helvetica"> member describes the behavior of the polygon&nbsp;: a non-zero value of <font face="Courier">flags&amp;0x80<font face="Helvetica"> indicates that collisions with walls should be handled, i.e. that some of the neighboring polygons are not passable. A non-zero value of <font face="Courier">flags&amp;0x40<font face="Helvetica"> indicates that collisions with extra-objects should be handled, i.e. that some extra-objects might be present over the polygon. <font face="Courier">Flags&amp;0x20<font face="Helvetica"> seems to be set for the first row of polygons in a track block. Finally, <font face="Courier">flags&amp;0x0f<font face="Helvetica"> describes the behavior of the polygon when driven over&nbsp;: a value of 0 corresponds to a polygon over which cars cannot pass (14 is unused in NFSHS, see above)&nbsp;; a value of 2 corresponds to a polygon which emits gravel when driven over&nbsp;; values 4 and 11 correspond to emission of leaves, 5 and 13 to emission of dust, 9 and 15 to emission of snow. All other values correspond to plain passable polygons.<br>
+</font></font></font></font></font></font></font></font></font></font></font></font><br>
+<b>3. REFXOBJ structure</b> (size&nbsp;: 20 bytes)<br>
+<br>
+<font face="Courier">typedef struct REFXOBJ {<br>
+ struct INTPT pt;<br>
+ short unknown;<br>
+ short globalno;<br>
+ char unknown[4];<br>
+} REFXOBJ;<br>
+</font><font face="Helvetica"><br>
+This structure lists the properties of an extra-object. There is one entry for each non-animated (type 4) extra-object, regardless of the chunk to which it belongs&nbsp;; there are no entries for animated objects. The <font face="Courier">pt<font face="Helvetica"> member contains the coordinates of the object<font face="Times New Roman"><font face="Helvetica">s reference point (see XOBJDATA structure). The <font face="Courier">globalno<font face="Helvetica"> member is a unique sequence number characterizing the object among all of the track<font face="Times New Roman"><font face="Helvetica">s extra-objects. There are also entries for type 6 objects&nbsp;; however these objects are not stored among the track block<font face="Times New Roman"><font face="Helvetica">s extra-objects, so type 6 entries should mostly be ignored.<br>
+</font></font></font></font></font></font></font></font></font></font></font><br>
+<b>4. REFPOLYOBJ structure</b> (size&nbsp;: 16 or 20 bytes)<br>
+<br>
+This structure, which lists the properties of an object, exists in two versions&nbsp;: the version for polygon objects is 16-bytes long and has the following structure&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct REFPOLYOBJ {<br>
+ short head;<br>
+ char type;<br>
+ char no;<br>
+ struct INTPT pt;<br>
+} REFPOLYOBJ;<font face="Helvetica"><br>
+</font></font><br>
+For polygon objects, the <font face="Courier">head<font face="Helvetica"> member equals 4 and the <font face="Courier">type<font face="Helvetica"> member equals 1. The <font face="Courier">no<font face="Helvetica"> member is a serial number among the block<font face="Times New Roman"><font face="Helvetica">s objects&nbsp;; it is apparently not used by NFS. The <font face="Courier">pt<font face="Helvetica"> member contains the reference position of the object.<br>
+<br>
+In the case of non-animated extra-objects, the structure is 20-bytes long&nbsp;:<br>
+<br>
+</font></font></font></font></font></font></font></font></font></font><font face="Courier">typedef struct REFPOLYOBJ {<br>
+ short head;<br>
+ char type;<br>
+ char no;<br>
+ struct INTPT pt;<br>
+ char crossindex; // ?<br>
+ char unknown[3];<br>
+} REFPOLYOBJ;<font face="Helvetica"><br>
+</font></font><br>
+The <font face="Courier">head<font face="Helvetica"> member is still equal to 4, and the <font face="Courier">type<font face="Helvetica"> member equals 2 or 4. The <font face="Courier">crossindex<font face="Helvetica"> member refers to the corresponding REFXOBJ entry (?)<br>
+<br>
+There is one REFPOLYOBJ structure (of either type) for every object (either polygon object or extra-object) in the first object chunk. The three other chunks are not listed. The various REFPOLYOBJ structures of a track block are stored consecutively in the .FRD file&nbsp;; the .FRD files contains padding just after the REFPOLYOBJ structures, in order to obtain a total size of <font face="Courier">20*nPolyobj<font face="Helvetica"> in all cases for the REFPOLYOBJ table. <br>
+</font></font></font></font></font></font></font></font><br>
+There are also variants for type 3 and 6 extra-objects&nbsp;; type 6 extra-objects have 16 bytes like for polygon objects&nbsp;; type 3 objects contain animation data (see XOBJDATA below) which quickly fills up the space for REFPOLYOBJ structures, so that most of the table is actually lost. In any case, this table is not used by NFS, so it can safely be erased.<br>
+<br>
+<b>5. SOUNDSRC structure </b>(size&nbsp;: 16 bytes)<br>
+<br>
+<font face="Courier">typedef struct SOUNDSRC {<br>
+ struct INTPT refpoint;<br>
+ long type;<br>
+} SOUNDSRC;<font face="Helvetica"><br>
+</font></font><br>
+This structure describes the position and type of a sound source (water stream, etc...).<br>
+<br>
+<b>6. LIGHTSRC structure </b>(size&nbsp;: 16 bytes)<br>
+<br>
+<font face="Courier">typedef struct LIGHTSRC {<br>
+ struct INTPT refpoint;<br>
+ long type;<br>
+} LIGHTSRC;<font face="Helvetica"><br>
+</font></font><br>
+This structure describes the position and type of a light source (special lighting effect).<br>
+<b><br>
+7. XOBJCHUNK structure </b>(variable size)<br>
+<br>
+This structure stores the data of an extra-object chunk (4 chunks per track block, plus two more chunks at the end of the file for global objects). It has the following structure&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct XOBJCHUNK {<br>
+ struct XOBJHEAD xobj[];<br>
+ struct XOBJDATA xobjdata[];<br>
+} XOBJCHUNK;<br>
+</font><font face="Helvetica"><br>
+The number of XOBJHEAD and XOBJDATA structures are given in the TRKBLOCK header structure.<br>
+<br>
+<b>8. XOBJHEAD structure </b></font>(52 bytes long)<br>
+<b><br>
+</b>This structure is used to describe an extra-object&nbsp;; it exists in different versions, depending on the object<font face="Times New Roman"><font face="Helvetica">s type&nbsp;: static object (type 2 or 4), animated object (type 3), static global object (type 1), complex-behavior global object (type 6). The structure is the following (52 bytes long)&nbsp;:<br>
+<br>
+</font></font><font face="Courier">typedef struct XOBJHEAD {<br>
+ long type;<br>
+ long crossno;<br>
+ long unknown;<br>
+ struct FLOATPT ptRef;<br>
+ long dataSize;<br>
+ void *data;<br>
+ long nVertices;<br>
+ FLOATPT* vertices;<br>
+ long* shadingVertices;<br>
+ long nPolygons;<br>
+ POLYGONDATA* polygons;<br>
+} XOBJHEAD;<br>
+</font><font face="Helvetica"><br>
+The <font face="Courier">type<font face="Helvetica"> member equals 2 or 4 for static extra-objects, 3 for animated objects, 1 for static global objects, 6 for complex-behavior objects. The only difference between type 2 and type 4 objects is that type 2 objects do not appear in the REFXOBJ table (they cannot be collided with). Type 3 objects do not appear in the REFXOBJ table either&nbsp;; they are non-interactive animated objects, i.e. they follow a prescribed trajectory that can<font face="Times New Roman"><font face="Helvetica">t be affected by cars. Type 1 objects are static objects like type 2 objects, but do not belong to any track block (they<font face="Times New Roman"><font face="Helvetica">re used in the final xobj chunks of the FRD file). Finally, type 6 objects are static objects which can be knocked over by the cars, resulting in a complex behavior&nbsp;: e.g. the crates in Route Adonf, cones in raceway tracks, etc...&nbsp;; these objects are stored in the final xobj chunks of the FRD file, although they are referred to in the REFXOBJ tables of the individual track blocks (they<font face="Times New Roman"><font face="Helvetica">re not present in the xobj data of the block but postponed to the end of the file instead).<br>
+</font></font></font></font></font></font></font></font></font><br>
+The <font face="Courier">crossno<font face="Helvetica"> member is only used for objects which appear in the REFXOBJ table, i.e. type 4 static objects (and type 6 global objects)&nbsp;; it then references the entry in the REFXOBJ structure corresponding to the object. <br>
+<br>
+The <font face="Courier">ptRef<font face="Helvetica"> member contains the coordinates of the object<font face="Times New Roman"><font face="Helvetica">s reference point (only in the case of type 2, 4 or 6&nbsp;; for type 3 a sequence of animation positions is used instead, and type 1 objects have global coordinates). <br>
+<br>
+The <font face="Courier">dataSize<font face="Helvetica"> member contains the length in bytes of the object<font face="Times New Roman"><font face="Helvetica">s type-specific extra data, only non-zero for type 3 and 6 objects&nbsp;; the data is to be accessed via the <font face="Courier New">data<font face="Helvetica"> pointer member. For type 3 objects this data contains the animation<font face="Times New Roman"><font face="Helvetica">s successive positions, and for type 6 objects this data is always 72 bytes long and stores the object<font face="Times New Roman"><font face="Helvetica">s position and orientation.<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+The <font face="Courier">nVertices<font face="Helvetica"> value is the number of vertices contained in the extra-object&nbsp;; the coordinates of these vertices are to be stored in the <font face="Courier">vertices<font face="Helvetica"> member (pointer space only). All coordinates are <i>relative to the reference point</i></font></font></font></font>, except for type 1 global objects where these are absolute coordinates. The <font face="Courier">shadingVertices<font face="Helvetica"> member is pointer space to store the shading applied to each vertex. The <font face="Courier">nPolygon<font face="Helvetica"> value is the number of polygons making up the extra-object, and the polygons themselves are to be accessed via the <font face="Courier">polygons<font face="Helvetica"> pointer. <br>
+</font></font></font></font></font></font><br>
+<b>9. XOBJDATA structure </b>(variable size)<br>
+<br>
+The XOBJDATA structure is&nbsp;:<br>
+<br>
+<font face="Courier">typedef struct XOBJDATA {<br>
+ struct SPECIFICDATA data;<br>
+ struct FLOATPT vertices[];<br>
+ long shadingVertices[];<br>
+ struct POLYGONDATA polygons[];<br>
+} XOBJDATA;<br>
+</font><font face="Helvetica"><br>
+The sizes of these tables are contained in the corresponding XOBJHEAD structure (<font face="Courier">nVertices<font face="Helvetica"> and <font face="Courier">nPolygons<font face="Helvetica"> members). All coordinates are <i>relative to the reference point</i></font></font></font></font></font> (except for type 1 objects). <br>
+<br>
+The <font face="Courier New">data<font face="Helvetica"> member is empty for type 1, 2 or 4 objects (static objects). In the case of an animated (type 3) object, the specific data structure is&nbsp;:<br>
+<br>
+</font></font><font face="Courier">typedef struct SPECIFICDATA {<br>
+ short head;<br>
+ char type;<br>
+ char no;<br>
+ short animLength;<br>
+ short unknown;<br>
+ struct ANIMDATA animData[animLength];<br>
+} SPECIFICDATA;<br>
+</font><font face="Helvetica"><br>
+The extra information describing the animation looks much like a REFPOLYOBJ structure&nbsp;: <font face="Courier">head<font face="Helvetica"> equals 4, <font face="Courier">type<font face="Helvetica"> equals 3, <font face="Courier">no<font face="Helvetica"> is an object number. The <font face="Courier">animLength<font face="Helvetica"> member indicates how many ANIMDATA structures are stored.<br>
+<br>
+In the case of a type 6 object (last chunk only), it becomes&nbsp;:<br>
+<br>
+</font></font></font></font></font></font></font></font></font><font face="Courier">typedef struct SPECIFICDATA {<br>
+ struct FLOATPT ptRef;<br>
+ float weight;<br>
+ struct FLOATPT Xdir,Ydir,Zdir;<br>
+ struct FLOATPT dimensions;<br>
+ long unknown;<br>
+ short unknown2,unknown3;<br>
+} SPECIFICDATA;<br>
+</font><font face="Helvetica"><br>
+The <font face="Courier">ptRef<font face="Helvetica"> field contains the object<font face="Times New Roman"><font face="Helvetica">s reference point (it is used instead of the one given in the XOBJHEAD)&nbsp;; the <font face="Courier">weight<font face="Helvetica"> member contains the object<font face="Times New Roman"><font face="Helvetica">s weight. The three vectors <font face="Courier">Xdir, Ydir, Zdir<font face="Helvetica"> indicate the orientation of the object and contain respectively the world coordinates of the X, Y and Z axes of the object<font face="Times New Roman"><font face="Helvetica">s coordinate frame. These vectors are mutually orthogonal and have unit length. The components of the <font face="Courier">dimensions<font face="Helvetica"> member provide information on the object<font face="Times New Roman"><font face="Helvetica">s size along the various axes. The value of <font face="Courier">unknown2<font face="Helvetica"> is related to the object<font face="Times New Roman"><font face="Helvetica">s shape (cube, pyramid, ...)<br>
+</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+<b>9. ANIMDATA structure</b> (size&nbsp;: 20 bytes)<br>
+<br>
+<font face="Courier">typedef struct ANIMDATA {<br>
+ struct INTPT pt;<br>
+ float costheta,sintheta;<br>
+} ANIMDATA;<font face="Helvetica"><br>
+</font></font><br>
+This structure describes the position of an animated extra-object. The <font face="Courier">pt<font face="Helvetica"> member provides the position of the object<font face="Times New Roman"><font face="Helvetica">s reference point (it is similar to the <font face="Courier">ptRef<font face="Helvetica"> member of a static extra-object XOBJDATA structure, but in the case of an animated object the reference point moves during animation). The <font face="Courier">costheta<font face="Helvetica"> and <font face="Courier">sintheta<font face="Helvetica"> members describe the rotation to be applied to the object (this rotation always occurs in the XY plane, the Z coordinate is not affected).<br>
+</font></font></font></font></font></font></font></font></font></font><br>
+<br>
+<sup>#</sup><b><font size="3">IV. FRD file structure</font></b><font size="2"><br>
+<br>
+</font><font face="Courier">typedef struct FRDFILE {<br>
+ char header[28];<br>
+ long nLastBlock;<br>
+ long nNodes;<br>
+ struct VROADBLOCK vroad[nNodes];<br>
+ struct TRKBLOCK trk[nLastBlock+1];<br>
+ struct TRKBLOCKDATA data[nLastBlock+1];<br>
+ struct GLOBALXOBJ global_xobj[2];<br>
+ // anything else&nbsp;?<br>
+} FRDFILE;<font face="Helvetica"><br>
+</font></font><br>
+FRD files start with a 28-byte header, followed by the number of the last track block. The actual number of blocks is <font face="Courier">nLastBlock+1<font face="Helvetica">. Besides the data corresponding to blocks (as described above), the final part of the FRD file is devoted to global (animated) objects. The following structure is used&nbsp;:<br>
+<br>
+</font></font><font face="Courier">typedef struct GLOBALXOBJ {<br>
+ long nObj;<br>
+ struct XOBJHEAD xobj[nObj];<br>
+ struct XOBJDATA xobjdata[nObj];<br>
+} GLOBALXOBJ;<font face="Helvetica"><br>
+</font></font><br>
+This is the typical place where animated objects are stored&nbsp;; object types are widely variable in these two final XOBJ chunks. The first chunk can contain objects of type 1 or 3&nbsp;; the second one can contain objects of type 6.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><font face="Helv"><b><font size="3">Frequently Asked Questions<font size="2"><br>
+</font></font></b></font><font face="Helvetica"><br>
+<u><b>General questions</b></u></font><b><u><br>
+Editing tips</u></b><b><u><br>
+Troubleshooting</u></b><b></b><u><br>
+</u><br>
+<br>
+<sup>#</sup><i><b>1. General questions</b></i><i><br>
+</i><br>
+<b>When does the final version of T3ED come out&nbsp;?</b><br>
+It all depends on how much time I can spare for working on T3ED. No further release is planned before October 1, 1999.<br>
+<br>
+<b>Does T3ED require any specific DLLs in order to work&nbsp;?</b><br>
+Some Microsoft DLLs are required by T3ED : notably MFC42.DLL and MSVCRT.DLL. These files are very widespread and it is extremely likely that they are already installed on your system. If not, they are quite easy to find as they are distributed with many recent programs, and they might even be available on Microsoft<font face="Times New Roman"><font face="Helvetica">s web site.<br>
+</font></font><br>
+<b>Where do I find the track files I<font face="Times New Roman"><font face="Helvetica">m supposed to edit in T3ED&nbsp;?</font></font></b><br>
+The track files are located in the GAMEDATA\TRACKS\TRK00x subdirectories of your NFS3 installation directory. If there is no GAMEDATA\TRACKS subdirectory in your NFS3 directory, you must reinstall NFS3 in order to have the tracks loaded from the hard disk rather than from the CD-ROM.<br>
+In NFS High Stakes, track files are similarly located in the subdirectories of the DATA\TRACKS subdirectory of your NFS HS installation directory.<br>
+<br>
+<b>Can I have both edited tracks and the original tracks at the same time in NFS&nbsp;?</b><br>
+No. Unlike cars, tracks cannot be added to NFS, so any edited track has to replace an original track.<br>
+<br>
+<b>How can I revert back to the original tracks&nbsp;?</b><br>
+Simply copy the .FRD and .COL files from the GAMEDATA\TRACKS\TRK00x subdirectory of your NFS3 CD-ROM back into the corresponding subdirectory of your hard disk NFS3 installation directory. In order to be able to modify again these files with T3ED, you will need to remove the Read-only attribute set by Windows when they<font face="Times New Roman"><font face="Helvetica">re copied from the CD-ROM.<br>
+</font></font>In NFS High Stakes, proceed similarly with the DATA\TRACKS\... subdirectories&nbsp;; there is no .COL file, so only the .FRD file needs to be replaced.<br>
+<br>
+<b>How can I distribute a modified track&nbsp;?</b><br>
+Just create a ZIP file containing both the .FRD and .COL files. People will be able to install the modified tracks simply by unzipping that file in the correct directory. In NFS HS there is no .COL file, so you just need to distribute the .FRD file.<br>
+<br>
+<b>Is it possible to convert NFS2 tracks to NFS3&nbsp;?</b><br>
+This is an extremely complicated task which requires the development of specific tools. Vitaly Kootin (vitaly_necromancer@yahoo.com) is working on this.<br>
+<br>
+<b>Is it possible to convert NFS3 tracks to NFS HS and vice-versa&nbsp;?</b><br>
+Although this is much easier than conversion between NFS2 and NFS3, this feature is not yet offered in T3ED because of the large number of remaining bugs in the conversion code. It might become available in a later release.<br>
+<br>
+<b>Can I create a new track from scratch&nbsp;?</b><br>
+This is not possible with T3ED, since it is not possible to modify the table of track textures or the track length. However you can use the &quot;Erase All&quot; function in the Edit-Tools menu to remove nearly everything from an existing track, which allows you to start again almost from scratch.<br>
+<br>
+<sup>#</sup><i><b>2. Editing tips</b></i><br>
+<br>
+<b>How can I make an oval (or a high-speed ring, or a straightened track)&nbsp;?</b><br>
+First select Block mode in the Edit-Modes menu, and use the Smoothing properties dialog box (Alt-S) in order to activate the Extra-Smoothing option and to select a large value for the width of the smoothing zone (500 ought to be fine). Select the Move XY tool. By clicking on a track block and slightly dragging the mouse, you can remove all turns over a huge track section at once. Repeat this process two or three times on various track blocks in order to smoothen all the track. Next, select the Move Z tool, and repeat the process to remove the slopes.<br>
+In v0.06 there is a new easier way to make a circle track&nbsp;: simply use the &quot;Erase All&quot; function in the Edit-Tools menu to remove the track shape and road elevations.<br>
+<br>
+<b>Is it possible to modify textures or create new textures&nbsp;?</b><br>
+T3ED is not a texture editor. You need to download a texture converter such as the QFS Editing Suite (available at http://www.math.polytechnique.fr/cmat/auroux/nfs/), which will let you convert QFS files into plain Windows bitmaps that you can edit using your favorite software.<br>
+<br>
+<b>I moved an extra-object, and the cars pass through it as if didn't exist...</b><br>
+Collisions with extra-objects (displayed in green) are only detected over specific track polygons. In order to allow a moved object to be detected, you must modify the track polygon properties accordingly. First choose the High-resolution view, and switch to Polygon mode. Select the track polygon over which the object lies&nbsp;; use the Polygon Flags command in the Edit-Tools menu (or press Control+Enter), and check the &quot;Extra-object collision detection&quot; option. If the object lies across several polygons, repeat this operation for every polygon to enable object detection.<br>
+<br>
+<b>I moved a polygon object, and I get an invisible wall where it used to be...</b><br>
+Collisions with polygon objects are not handled by NFS&nbsp;; rather, the track polygons over which the object lies (and the ones beyond in the case of a fence or a wall) are marked as impassable for the cars. The procedure to change the polygon properties (passable or not, etc...) is the following&nbsp;: first chose the High-resolution view, and switch to Polygon mode. Select the track polygon, and use the Polygon Flags command in the Edit-Tools menu (or press Control+Enter)&nbsp;; choose the relevant option in the &quot;Drive-over behavior&quot; list to change the passable status of a polygon. Also note that collisions with impassable polygons are handled only if all neighboring polygons have the &quot;Wall collision detection&quot; flag set&nbsp;; normally this flag is automatically set by T3ED when a polygon is made impassable. Also use the Adjust Road Width command in the Edit-Tools menu to adjust the virtual road width.<br>
+<br>
+<b>Is it possible to add extra road sections&nbsp;?</b><br>
+It is not possible to extend the number of track blocks in the track. However it is now possible to add road polygons to a track block. This is an advanced feature, not intended for beginner users. See the specific <u><font face="Helv">help page</font></u><font face="Helvetica"> on this feature.<br>
+<br>
+<b>When I race in NFS, my car is stopped by an invisible wall even after making all polygons passable.</b></font><br>
+In addition to the passable/impassable flag for each track polygon, NFS also puts invisible walls on both sides of the track in order to delimitate the driveable area. A track polygon, even if marked passable, can be driven over only if it lies between the two boundaries. To adjust the track width, use the Adjust Road Width command in the Edit-Tools menu. Also see the page on See the specific <u><font face="Helv">adding track polygons</font></u><font face="Helvetica"> page for more tips.<br>
+</font><br>
+<sup>#</sup><i><b>3. Troubleshooting</b></i><br>
+<br>
+<b>I get an error message when attempting to save a modified track. What happens&nbsp;?</b><br>
+T3ED is not able to create the modified track files. First of all, check that you are not trying to save your track on the CD-ROM drive. Also, both the .FRD and .COL files must have the Read-only flag cleared&nbsp;; be especially careful with this if you have copied the files back from their CD-ROM version. The Read-only status of a file can be modified in its properties box, obtained by right-clicking on the file.<br>
+In some instances, the track files of NFS HS come with the Read-only flag set&nbsp;: you need to clear this flag before you can overwrite the tracks.<br>
+<br>
+<b>The textures displayed in the texture browser look very bad. What can I do&nbsp;?</b><br>
+Check that your Windows display is configured with a sufficient color depth. High-color or true-color modes (at least 16-bit depth, i.e. 65536 colors) are required in order for the texture browser to display textures correctly. In 256-color mode you will get garbled textures, even if you try working with the 8-bit textures.<br>
+<br>
+<b>I can<font face="Times New Roman"><font face="Helvetica">t view the textures because the QFS file has the wrong format. What happens&nbsp;?</font></font></b><br>
+Some of the QFS texture files have an abnormal compression format, and cannot be decoded by T3ED. This is in particular the case with the 8-bit mode textures for the Summit track. When this happens, you should try loading a different texture file. In particular the 16-bit mode texture files take longer to load, but do not suffer from this problem.<br>
+<br>
+<b>Why can<font face="Times New Roman"><font face="Helvetica">t I use some of the tools&nbsp;?</font></font></b><br>
+Since this is still a preliminary version of T3ED, some features are not yet implemented. Also, most commands are only available in specific editing modes (e.g. texture browsing is only possible in polygon mode).<b><br>
+<br>
+When I race in NFS, there are lots of display bugs. Why&nbsp;?</b><br>
+First of all you should be aware that display bugs are partly unavoidable, because the track file formats are not yet fully understood and some of the necessary information is not known. However, the following general tips can be helpful&nbsp;:<br>
+- Never create sharp bends in the track which would cause some of the track polygons to overlap with each other. If you accidentally create such a sharp turn, you should use the Undo command to restore a correct track structure, and modify the Smoothing properties in order to increase the amount of smoothing.<br>
+- Use block mode whenever possible rather than the extended point mode. Block mode is the only mode in which all the relevant virtual road information gets updated when you move things around.<br>
+- Avoid creating slopes that are too steep, or things will tend to disappear in front of you when you race the modified track.<br>
+<br>
+<b>When I race in NFS, my car is stopped by an invisible wall even after making all polygons passable.</b><br>
+See above, in <i>Editing tips</i> section.<br>
+<br>
+<b>It doesn<font face="Times New Roman"><font face="Helvetica">t work, what can I do&nbsp;?</font></font></b><br>
+You can send me a precise description of your problem by e-mail (auroux@math.polytechnique.fr). Due to my limited available time, I will only help people who state clearly their problem and whose questions are not answered in this help file. If you get an error message, please state its exact contents. If you get suspicious behaviour, please indicate exactly what actions you performed and what happened.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><sup>K</sup><font face="Helv"><b>Adding track polygons<br>
+</b></font><br>
+<font face="Helvetica">The procedure to add track polygons has been changed since previous versions, and is now slightly less flexible but is now almost bug-free (now it should work&nbsp;!)&nbsp;:<br>
+<br>
+1. Switch to high-resolution view and point mode&nbsp;; select the Split/Merge tool.<br>
+2. Split the vertices around the polygons you want to duplicate.<br>
+3. Switch to polygon mode&nbsp;; select the polygon you want to duplicate, and use the Edit-Tools Duplicate to split it into as many pieces as necessary. In order to avoid bugs, it is no longer possible to move a polygon from a track node (a &quot;row&quot;) to another one.<br>
+</font>3. Switch back to point mode&nbsp;; move and merge the vertices to fit the intended disposition.<br>
+4. Switch back to polygon mode&nbsp;; set the passable/non-passable properties for each newly created polygon, if they differ from those of the originally duplicated polygon&nbsp;; similarly for the textures. In the case of a High Stakes track, don<font face="Times New Roman"><font face="Helvetica">t forget to properly check the &quot;no forward/backward neighbor&quot; buttons in the Polygon Properties dialog box if necessary.<br>
+5. Switch to half-resolution view, and modify its contents if necessary (polygon deletion and duplication work like in versions up to 0.05).<br>
+</font></font>6. Repeat the previous step in low-resolution view.<br>
+<br>
+NOTE&nbsp;: the structure of the track polygons imposed by the NFS game engine is extremely strict. You should always ensure the following&nbsp;:<br>
+<br>
+- each of the 8 track nodes within each track block should correspond to a single row of polygons, ordered from left to right and adjacent to each other along a common edge. Starting with v0.06, T3ED ensures this automatically in most cases, but you should be careful when importing tracks edited with older versions.<br>
+- each track polygon should be facing upwards and with the correct orientation. Once again, this is automatic in version 0.06 and above, but you should be careful when importing tracks edited with older versions.<br>
+- the track polygon type (Polygon Flags dialog box) should be set to 0 for non-passable polygons lying in the middle of the track, and to 14 instead for non-passable polygons lying to the side of the track&nbsp;; the polygons with type not equal to 14 should form a single row for each track node.<br>
+- each passable polygon should have the collision detection flags set correctly&nbsp;; in NFSHS the absence of passable neighbor also has to be indicated (in the Polygon Flags dialog box for forward and backward neighbors&nbsp;; automatically handled for left and right neighbors).<br>
+- the road width should be adjusted in order to avoid invisible walls.<br>
+<br>
+If any of the above fails, the track is likely to contain invisible walls and other bugs&nbsp;; remember, adding track polygons is a complicated process, so be sure to check carefully what you do.<br>
+<br>
+A final note&nbsp;: if you want to create a track which branches into two separate ways, it is still necessary to keep track polygons between the two parts of the track (remember each track node should be a single row of adjacent polygons)&nbsp;; you can either give them the proper textures, or even in some cases make them transparent (select a proper empty texture).<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><font face="Helv"><b>File menu commands</b></font><br>
+<br>
+The File menu offers the following commands:<br>
+<br>
+<table border="2">
+<tr><td><u>Open</u><u></u></td>
+<td>Opens an existing track file.<br>
+</td>
+</tr>
+<tr><td><u>Save</u><u></u></td>
+<td>Saves the opened track using the same file name.<br>
+</td>
+</tr>
+<tr><td><u>Save As</u><u></u></td>
+<td>Saves the opened track to a specified file name.<br>
+</td>
+</tr>
+<tr><td><u>Exit</u><u></u></td>
+<td>Exits T3ED.<br>
+</td>
+</tr>
+<br>
+<p><hr><p>
+<tr><td><sup>$</sup><sup>#</sup><b>View menu commands</b><br>
+<br>
+The View menu offers the following commands:<br>
+<br>
+<u>Toolbar</u><u></u></td>
+<td>Shows or hides the toolbar.<br>
+</td>
+</tr>
+<tr><td><u>Status Bar</u><u></u></td>
+<td>Shows or hides the status bar.<br>
+</td>
+</tr>
+<tr><td><u>Zoom In</u><u></u></td>
+<td>Zoom in.<br>
+</td>
+</tr>
+<tr><td><u>Zoom Out</u><u></u></td>
+<td>Zoom out.<br>
+</td>
+</tr>
+<tr><td><u>Translation mode</u><u></u></td>
+<td>Sets the translation mode&nbsp;: the scrollbars can be used to scroll the track view.<br>
+</td>
+</tr>
+<tr><td><u>Rotation mode</u><u></u></td>
+<td>Sets the rotation mode&nbsp;: the scrollbars control the observer<font face="Times New Roman"><font face="Helv">s viewpoint.<br>
+</font></font></td>
+</tr>
+<tr><td><u>Resolution</u><u></u></td>
+<td>Choose one of the three possible display resolutions.<br>
+</td>
+</tr>
+<tr><td><u>Show Objects</u><u></u></td>
+<td>Shows or hides the track objects<br>
+</td>
+</tr>
+<tr><td><u>Show Lanes</u><u></u></td>
+<td>Shows or hides the road lanes<br>
+</td>
+</tr>
+<tr><td><u>Re-center</u><u></u></td>
+<td>Center view on the current selection<br>
+</td>
+</tr>
+<tr><td><u>Refresh</u><u></u></td>
+<td>Redraw screen<br>
+</td>
+</tr>
+<p><hr><p>
+<tr><td><sup>$</sup><sup>#</sup><b>Edit-Modes menu commands</b><br>
+<br>
+The Edit-Modes menu offers the following commands:<br>
+<br>
+<u>Block</u><u></u></td>
+<td>Selects block mode (the selection is a whole track block).<br>
+</td>
+</tr>
+<tr><td><u>Point</u><u></u></td>
+<td>Selects point mode (the selection is a single point).<br>
+</td>
+</tr>
+<tr><td><u>Xtended Point</u><u></u></td>
+<td>Selects extended point mode (the selection is a single point, with automatic smoothing).<br>
+</td>
+</tr>
+<tr><td><u>Object</u><u></u></td>
+<td>Selects object mode (the selection is an object).<br>
+</td>
+</tr>
+<tr><td><u>Polygon</u><u></u></td>
+<td>Selects polygon mode (the selection is a polygon).<br>
+</td>
+</tr>
+<tr><td><u>Smoothing</u><u></u></td>
+<td>Modify the smoothing parameters for block mode or extended point mode.<br>
+</td>
+</tr>
+<tr><td><u>Extra Smoothing</u><u></u></td>
+<td>Enable or disable extra smoothing for the move tools in block mode.<br>
+</td>
+</tr>
+<p><hr><p>
+<tr><td><sup>$</sup><sup>#</sup><b>Edit-Tools menu commands</b><br>
+<br>
+The Edit-Tools menu offers the following commands:<br>
+<br>
+<u>Undo</u><u></u></td>
+<td>Cancels the last modification of the track.<br>
+</td>
+</tr>
+<tr><td><u>Move XY</u><u></u></td>
+<td>Selects the Move XY tool&nbsp;: drag the mouse in order to move the selection along horizontal directions.<br>
+</td>
+</tr>
+<tr><td><u>Move Z</u><u></u></td>
+<td>Selects the Move Z tool&nbsp;: drag the mouse in order to move the selection along the vertical direction.<br>
+</td>
+</tr>
+<tr><td><u>Delete</u><u></u></td>
+<td>Delete an object or a polygon.<br>
+</td>
+</tr>
+<tr><td><u>New/Duplicate</u><u></u></td>
+<td>Create or duplicate an object or a polygon.<br>
+</td>
+</tr>
+<tr><td><u>Merge/Split</u><u></u></td>
+<td>Selects the Merge/Split tool&nbsp;: control-left-click in order to merge vertices or adjacent polygons&nbsp;; right-click in order to split vertices (<i>This command has not yet been implemented for polygons</i>).<br>
+</td>
+</tr>
+<tr><td><u>Texture</u><u></u></td>
+<td>View and modify the texture of a polygon.<br>
+</td>
+</tr>
+<tr><td><u>Properties</u><u></u></td>
+<td>Display the properties of currently selected object (<i>This command is not yet implemented</i>).<br>
+</td>
+</tr>
+<tr><td><u>Polygon flags</u><u></u></td>
+<td>Modify the virtual road properties of a track polygon (collision detection, passability, ...)<br>
+</td>
+</tr>
+<tr><td><u>Adjust road width</u><u></u></td>
+<td>Adjust the virtual road width to remove the invisible walls on either side of the track.<br>
+</td>
+</tr>
+<tr><td><u>Erase all</u><u></u></td>
+<td>Clear selectively track shape, objects and textures.<br>
+</td>
+</tr>
+<tr><td><u></u></td>
+<td></td>
+</tr>
+<p><hr><p>
+<tr><td><sup>$</sup><sup>#</sup><b>Help menu commands</b><br>
+<br>
+The Help menu offers the following commands: <br>
+<br>
+<u>Help Topics</u><u></u></td>
+<td>Offers you an index to topics on which you can get help.<br>
+</td>
+</tr>
+<tr><td><u>About</u><u></u></td>
+<td>Displays the version number of this application.<br>
+</td>
+</tr>
+<br>
+<br>
+<p><hr><p>
+<tr><td><sup>$</sup><sup>#</sup><b>Open command (File menu)</b><br>
+<br>
+Use this command to open an existing track file. A dialog box will appear to let you choose the file to open. <br>
+<br>
+<b>IMPORTANT&nbsp;: </b><i>Although you are prompted only for a .FRD track file, T3ED also simultaneously loads a companion file with .COL extension, which contains miscellaneous track data. If the .COL file is not available, T3ED will be unable to open the track file.</i><br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm0.bmp" title="bm0.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+O<br>
+<br>
+<p><hr><p>
+</td>
+</tr>
+</table>
+<sup>#</sup><b>File Open dialog box<br>
+</b><br>
+The following options allow you to specify which file to open:<br>
+<b>File Name<br>
+</b>Type or select the filename you want to open. This box lists files with the extension you select in the List Files of Type box. <br>
+<b>List Files of Type<br>
+</b>Select the type of file you want to open:<br>
+*.FRD&nbsp;: NFS3 track files.<br>
+<b>Drives<br>
+</b>Select the drive in which T3ED stores the file that you want to open. <br>
+<b>Directories<br>
+</b>Select the directory in which T3ED stores the file that you want to open.<br>
+<b>Network...<br>
+</b>Choose this button to connect to a network location, assigning it a new drive letter. <br>
+<br>
+<b>IMPORTANT&nbsp;: </b><i>Although you are prompted only for a .FRD track file, T3ED also simultaneously loads a companion file with .COL extension, which contains miscellaneous track data. If the .COL file is not available, T3ED will be unable to open the track file.</i><br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Save command (File menu)</b><br>
+<br>
+Use this command to save the edited track to its current name and directory. If you want to change the name and directory of a track before you save it, choose the <u>Save As command</u>.<br>
+<br>
+<b>IMPORTANT&nbsp;: </b><i>Besides the .FRD track file, T3ED also simultaneously saves a companion file with .COL extension, which contains miscellaneous track data. If you want to distribute the saved track, you must provide both the .FRD file and the .COL file. Also, both these files must be writeable in order for the save operation to be successful.<br>
+</i><br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm1.bmp" title="bm1.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+S<br>
+<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Save As command (File menu)</b><br>
+<br>
+Use this command to save and rename the edited track. T3ED displays the <u>Save As dialog box</u> so you can name your track file. <br>
+<br>
+To save a track with its existing name and directory, use the <u>Save command</u>.<br>
+<br>
+<b>IMPORTANT&nbsp;: </b><i>Besides the .FRD track file, T3ED also simultaneously saves a companion file with .COL extension, which contains miscellaneous track data. If you want to distribute the saved track, you must provide both the .FRD file and the .COL file. Also, both these files must be writeable in order for the save operation to be successful.<br>
+<p><hr><p>
+<sup>#</sup></i><b>File Save As dialog box<br>
+</b><br>
+The following options allow you to specify the name and location of the file you're about to save:<br>
+<b>File Name<br>
+</b>Type a new filename to save a track with a different name. T3ED adds the extension you specify in the Save File As Type box.<br>
+<b>Drives<br>
+</b>Select the drive in which you want to store the document.<br>
+<b>Directories<br>
+</b>Select the directory in which you want to store the document.<br>
+<b>Network...<br>
+</b>Choose this button to connect to a network location, assigning it a new drive letter. <br>
+<br>
+<b>IMPORTANT&nbsp;: </b><i>Besides the .FRD track file, T3ED also simultaneously saves a companion file with .COL extension, which contains miscellaneous track data. If you want to distribute the saved track, you must provide both the .FRD file and the .COL file. Also, both these files must be writeable in order for the save operation to be successful.<br>
+<p><hr><p>
+<sup>#</sup></i><b>1, 2, 3, 4 command (File menu)</b><br>
+<br>
+Use the numbers and filenames listed at the bottom of the File menu to open the last four documents you closed. Choose the number that corresponds with the document you want to open.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Exit command (File menu)</b><br>
+<br>
+Use this command to exit T3ED. T3ED prompts you to save the edited track if changes have been made since the last time it was saved.<br>
+<font face="Tms Rmn"><br>
+<font face="Helv"><b>Shortcuts<br>
+</b></font></font>Mouse:&nbsp;&nbsp;
+Double-click the application's Control menu button.<br>
+Keys:&nbsp;&nbsp;&nbsp;
+ALT+F4<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Undo command (Edit-Tools menu)</b><br>
+<br>
+Use this command to reverse the last editing action, if possible. Up to 8 actions can be successively undone. Undoing is no longer possible once the changes have been saved to disk.<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm2.bmp" title="bm2.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+Z or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ALT-BACKSPACE<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Toolbar command (View menu)</b><br>
+<br>
+Use this command to display and hide the Toolbar, which includes buttons for some of the most common commands in T3ED. A check mark appears next to the menu item when the Toolbar is displayed.<br>
+<br>
+See <u>Toolbar</u> for help on using the toolbar.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Toolbar</b><br>
+<img data="bm3.bmp" title="bm3.bmp"><br>
+<br>
+The toolbar is displayed across the top of the application window, below the menu bar. The toolbar provides quick mouse access to the most frequently used commands in T3ED.<br>
+<br>
+To hide or display the Toolbar, choose Toolbar from the View menu (ALT, V, T).<br>
+<br>
+<b>Click&nbsp;&nbsp;&nbsp;
+To</b><br>
+<img data="bm0.bmp" title="bm0.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Open an existing track.<br>
+<br>
+<img data="bm1.bmp" title="bm1.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Save the active track with its current name.<br>
+<br>
+<img data="bm4.bmp" title="bm4.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Zoom in.<br>
+<br>
+<img data="bm5.bmp" title="bm5.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Zoom out.<br>
+<br>
+<img data="bm6.bmp" title="bm6.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Select <u>translation mode</u>, where the scrollbars scroll the track view.<br>
+<br>
+<img data="bm7.bmp" title="bm7.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Select <u>rotation mode</u>, where the scrollbars control the observer<font face="Times New Roman"><font face="Helv">s view point.<br>
+<br>
+<img data="bm8.bmp" title="bm8.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Select <u>block mode</u></font></font>.<br>
+<br>
+<img data="bm9.bmp" title="bm9.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Select <u>point mode</u>.<br>
+<br>
+<img data="bm10.bmp" title="bm10.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+Select <u>extended point mode</u> (single point with automatic smoothing).<br>
+<br>
+<img data="bm11.bmp" title="bm11.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+Select <u>object mode</u>.<br>
+<br>
+<img data="bm12.bmp" title="bm12.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+Select <u>polygon mode</u>.<br>
+<br>
+<img data="bm2.bmp" title="bm2.bmp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Reverse the last editing action.<br>
+<br>
+<img data="bm13.bmp" title="bm13.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+Select the <u>move XY tool</u>.<br>
+<br>
+<img data="bm14.bmp" title="bm14.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+Select the <u>move Z tool</u>.<br>
+<br>
+<img data="bm15.bmp" title="bm15.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+View and modify a polygon <u>texture</u>.<br>
+<br>
+<img data="bm16.bmp" title="bm16.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Delete</u> an object or a polygon.<br>
+<br>
+<img data="bm17.bmp" title="bm17.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Create or duplicate</u> an object or a polygon.<br>
+<br>
+<img data="bm18.bmp" title="bm18.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+Select the <u>merge/split</u> tool for editing vertices or polygons.<br>
+<br>
+<img data="bm19.bmp" title="bm19.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+Display the About dialog box.<br>
+<br>
+<img data="bm20.bmp" title="bm20.bmp">&nbsp;&nbsp;&nbsp;&nbsp;
+Contextual help.<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Status Bar command (View menu)<br>
+</b><br>
+Use this command to display and hide the Status Bar, which describes the action to be executed by the selected menu item or depressed toolbar button, as well as basic status information. A check mark appears next to the menu item when the Status Bar is displayed.<br>
+<br>
+See <u>Status Bar</u> for help on using the status bar.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Status Bar</b><br>
+<br>
+The status bar is displayed at the bottom of the T3ED window. To display or hide the status bar, use the Status Bar command in the View menu.<br>
+<br>
+The left area of the status bar describes actions of menu items as you use the arrow keys to navigate through menus. This area similarly shows messages that describe the actions of toolbar buttons as you depress them, before releasing them. If after viewing the description of the toolbar button command you wish not to execute the command, then release the mouse button while the pointer is off the toolbar button.<br>
+<br>
+The right areas of the status bar provide basic information about the current mode:<br>
+<br>
+<b>Indicator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Description</b><br>
+Block <i>nnn</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Indicates the track block to which the current selection belongs.<br>
+TRANSL/ROTATE&nbsp;&nbsp;&nbsp;
+Indicates whether the scrollbars are configured in <u>Translation mode</u> or in <u>Rotation mode</u>.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Zoom In command (View menu)</b><br>
+<br>
+This command zooms in the document view by a factor of two. A total of 9 zoom levels are available.<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm4.bmp" title="bm4.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+ALT+PGDOWN<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Zoom Out command (View menu)</b><br>
+<br>
+This command zooms out the document view by a factor of two. A total of 9 zoom levels are available.<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm5.bmp" title="bm5.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+ALT+PGUP<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Translation Mode command (View menu)</b><br>
+<br>
+This command selects translation mode. In this mode, the scroll bars behave in their usual way (i.e. they scroll the track view).<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm6.bmp" title="bm6.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+F9<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Rotation Mode command (View menu)</b><br>
+<br>
+This command selects rotation mode. In this mode, the scroll bars control the observer<font face="Times New Roman"><font face="Helv">s view point rather than scrolling the view as usual. The horizontal scroll bar rotates the observer around the track along a horizontal circle, while the vertical scroll bar raises or lowers the viewpoint.<br>
+<br>
+<b>Tips<br>
+</b></font></font><br>
+As T3ED is slightly slower in rotation mode than in translation mode, rotation mode should not remain selected as the default working mode when not necessary.<br>
+<br>
+Raising the viewpoint to its top-most position can be very useful for optimal control of the Move XY tool. Conversely, lowering the viewpoint to the bottom-most position allows optimal control of the Move Z tool, but since it tends to produce a display containing lots of overlapping polygons, it is sometimes best to work with a slightly raised viewpoint.<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm7.bmp" title="bm7.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+ALT+F9<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Resolution submenu (View menu)</b><br>
+<br>
+The Resolution submenu of the view menu can be used to select one of the three available resolutions for viewing the track polygons. The highest resolution is used in the game whenever the car becomes close enough, while the two other resolutions are used to save computing time when the car is still far away.<br>
+<br>
+The lowest resolutions allow faster redrawing of the T3ED screen, but since some track vertices are not visible in these modes it is not recommended to work with them when moving track blocks (the highest resolution should always be used in order to ensure that the track structure is not messed up after a block is moved). Use of the low resolutions is also not recommended because it then becomes impossible to select a vertex which only belongs to a high-resolution polygon.<br>
+<br>
+However, operations such as modifying polygon textures or deleting polygons must be performed in all three resolutions, and therefore require switching between the three available modes.<br>
+<br>
+<table border="2">
+<tr><td><u>Full</u><u></u></td>
+<td>Selects full resolution.</td>
+</tr>
+<tr><td><u>Half</u><u></u></td>
+<td>Selects intermediate resolution.</td>
+</tr>
+<tr><td><u>Low</u><u></u></td>
+<td>Selects low resolution.</td>
+</tr>
+<p><hr><p>
+<tr><td><sup>$</sup><sup>#</sup><b>Full Resolution command (View menu)</b><br>
+<br>
+This command selects the full resolution mode for viewing the track. Although this is the slowest mode, it is the only one in which all track vertices are displayed, and it is therefore strongly recommended to work in this mode when using the editing tools.<br>
+<br>
+Operations such as modifying polygon textures or deleting polygons must be performed in all three available resolutions.<br>
+<br>
+<b>Shortcuts<br>
+</b>Keys:&nbsp;&nbsp;&nbsp;
+ALT+1<br>
+<p><hr><p>
+</td>
+</tr>
+</table>
+<sup>$</sup><sup>#</sup><b>Half Resolution command (View menu)</b><br>
+<br>
+This command selects the half resolution mode for viewing the track. This mode is faster than the full resolution mode, but does not allow correct control of how the editing process affects the track structure. <br>
+<br>
+Operations such as modifying polygon textures or deleting polygons must be performed in all three available resolutions.<br>
+<br>
+<b>Shortcuts<br>
+</b>Keys:&nbsp;&nbsp;&nbsp;
+ALT+2<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Low Resolution command (View menu)</b><br>
+<br>
+This command selects the low resolution mode for viewing the track. This mode is the fastest, but does not allow correct control of how the editing process affects the track structure. <br>
+<br>
+Operations such as modifying polygon textures or deleting polygons must be performed in all three available resolutions.<br>
+<br>
+<b>Shortcuts<br>
+</b>Keys:&nbsp;&nbsp;&nbsp;
+ALT+3<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Show Objects command (View menu)</b><br>
+<br>
+This command enables or disables display of the track objects. The object editing commands become unavailable when objects are not displayed.<br>
+<br>
+NFS3 tracks contain two kinds of objects&nbsp;: the <i>polygon objects</i>, displayed in blue, are directly incorporated into the main track structure and are immovable. The <i>extra objects</i>, displayed in green, are the only ones which allow the detection of a collision in the game, with the effect of either stopping the car (e.g. a tree) or moving the object (e.g. a road sign).<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Show Lanes command (View menu)</b><br>
+<br>
+This command enables or disables display of the polygons making up the lines between road lanes. The road lanes are displayed in brown. Enabling road lanes also causes miscellaneous transparent things (fences on Hometown, etc...) to appear.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Re-center command (View menu)</b><br>
+<br>
+This command recenters the view by placing the currently selected element in the middle of the T3ED window.<br>
+<br>
+<b>Shortcuts<br>
+</b>Keys:&nbsp;&nbsp;&nbsp;
+HOME<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Refresh command (View menu)</b><br>
+<br>
+This command causes redrawing of the T3ED window, and should be used in the event of a display problem.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><sup>K</sup><b>Block Mode command (Edit-Modes menu)</b><br>
+<br>
+This command selects T3ED<font face="Times New Roman"><font face="Helv">s block mode. In this mode, the selected item is a track block, which can be moved around to reshape of the track. In order to avoid breaking the track when a block is moved, smoothing is automatically applied when using the Move XY and Move Z tools in block mode&nbsp;; the smoothing parameters can be adjusted by using the Smoothing command (Edit-Modes menu).<br>
+<br>
+<b>Shortcuts<br>
+</b></font></font>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm8.bmp" title="bm8.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+1<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><sup>K</sup><b>Point Mode command (Edit-Modes menu)</b><br>
+<br>
+This command selects T3ED<font face="Times New Roman"><font face="Helv">s point mode. In this mode, the selected item is a single point, thus allowing precise control of the position of every piece of the track. Points belonging to different structures (objects, track blocks, ...) can sometimes be glued together&nbsp;: in that case, moving a point simultaneously affects all the other points attached to it. The Merge/split tool can be used to detach or attach points freely to each other.<br>
+</font></font><br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm9.bmp" title="bm9.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+2<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Xtended Point Mode command (Edit-Modes menu)</b><br>
+<br>
+This command selects T3ED<font face="Times New Roman"><font face="Helv">s extended point mode. The difference with point mode is that, in extended point mode, the Move XY and Move Z tools use smoothing in order to preserve the track structure. This mode is therefore appropriate for reshaping the track at a scale smaller than that of a block but without having to take care of every single point.<br>
+<br>
+<b>Shortcuts<br>
+</b></font></font>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm10.bmp" title="bm10.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+3<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Object Mode command (Edit-Modes menu)</b><br>
+<br>
+This command selects T3ED<font face="Times New Roman"><font face="Helv">s object mode. In this mode, the selected item is an object (either a polygon object or an extra-object). Object mode can be used only if objects are displayed (see Show Objects command in View menu). Objects can be moved, duplicated or deleted, and even created from scratch.<br>
+In any case, keep in mind that collision detection is only possible with extra-objects.<br>
+<br>
+<b>Shortcuts<br>
+</b></font></font>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm11.bmp" title="bm11.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+4<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Polygon Mode command (Edit-Modes menu)</b><br>
+<br>
+This command selects T3ED<font face="Times New Roman"><font face="Helv">s polygon mode. In this mode, the selected item is a polygon, belonging either to the track itself or to an object. Polygons can be moved, duplicated or deleted. The texture applied to a polygon can be modified by using the Texture command (Edit-Tools menu). Also, when the selected polygon is a high-resolution track polygon, the Polygon flags command (Edit-Tools menu) can be used to modify its behavior when driven over by a car.<br>
+</font></font><br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm12.bmp" title="bm12.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+5<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><sup>K</sup><b>Smoothing Properties command (Edit-Modes menu)</b><br>
+<br>
+This command displays the Smoothing Properties dialog box, which can be used to control the smoothing parameters used by the Move XY and Move Z tools. This command is only available in block mode or in extended-point mode.<br>
+<br>
+<b>Smoothing Properties dialog box - Extended point mode</b><br>
+<br>
+In extended point mode, moving a point affects the whole surrounding area in the following manner&nbsp;: all points which lie close enough to the selected point are moved together with it&nbsp;; the shape of the track is then adjusted over the &quot;smoothing zone&quot; in order to fit with the applied movement. The dialog box allows setting the respective sizes of these two zones by changing the &quot;Width of zone to move&quot; and &quot;Width of smoothing zone&quot; parameters. These parameters are expressed in arbitrary distance units&nbsp;; the length of a track block is about 50 units. The first distance is by default 0, i.e. smoothing begins immediately away from the selected point, which is the most useful setting in usual circumstances.<br>
+<br>
+<b>Smoothing Properties dialog box - Block mode</b><br>
+<br>
+In block mode, T3ED can use two different smoothing methods&nbsp;: normal smoothing or &quot;extra-smoothing&quot;. In normal smoothing mode, a certain portion of the track (by default slightly more than a block) is moved as is, without any deformation&nbsp;; the shape of the track over the smoothing zone is then adjusted in order to fit with the applied movement. Existing turns in the track are preserved by this adjustment&nbsp;: normal smoothing is therefore appropriate for adding new turns without removing the existing ones.<br>
+<br>
+In extra-smoothing mode, the shape of the track is smoothened using polynomial interpolation, without retaining the original turns. All existing turns within the smoothing zone are removed, and replaced by a single bend which connects the new position of the moved block with the rest of the track. Extra-smoothing is therefore appropriate for deeper reshaping operations, such as replacing a sequence of sharp turns by a single wider turn, or even straightening a track portion.<br>
+<br>
+In both cases, the size of the smoothing zone can be modified by using the &quot;Width of smoothing zone&quot; control&nbsp;: the width of the smoothing zone on each side of the selected block is expressed in units of track nodes (one track block corresponds to 8 track nodes). In normal smoothing mode, the size of the central zone which is moved without deformation can be modified using the &quot;Width of zone to move&quot; control (this parameter is not used in extra-smoothing mode where the smoothing always occurs over the whole smoothing zone). Also, note that smoothing only occurs along the selected movement directions&nbsp;: i.e., the Move XY tool does not act on the track altitudes, while the Move Z tool does not affect the XY coordinates.<br>
+<br>
+<i><b>Remarks</b></i><i><br>
+</i>1. When moving track blocks, be very careful not to create a sharp turn in which the track polygons would overlap with each other&nbsp;; this would cause display problems in NFS3. Once the track structure is disorganized, it is impossible to reobtain a normal structure without moving every single point back in place&nbsp;; the only reasonable option is therefore to immediately use the Undo command in order to cancel the changes. In order to avoid this situation, it is advisable to increase the width of the smoothing zone, especially when moving a track block over a long distance. Enabling extra-smoothing is also helpful in many cases. Note that the default smoothing parameters at T3ED startup are only appropriate for moving track blocks over relatively short distances.<br>
+2. When extra-smoothing is enabled, selecting a very large value for the &quot;Width of smoothing zone&quot; parameter makes it possible to very easily straighten the track (e.g. in order to make an oval). When the maximum value of 500 is chosen, moving a single track block immediately smoothens a huge track portion, so that moving two or three suitably chosen track blocks is normally sufficient to obtain a track without any sharp turn (oval, speed ring, etc...). Simply remember that, as the Move XY tool does not affect the altitudes, it is also necessary to repeat the process with the Move Z tool in order to obtain a flat track.<br>
+<br>
+<b>Shortcuts<br>
+</b>Keys:&nbsp;&nbsp;&nbsp;
+ALT+S<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Extra Smoothing command (Edit-Modes menu)</b><br>
+<br>
+This command enables or disables the extra-smoothing option of the Move XY and Move Z tools in block mode. This command is only available in block mode.<br>
+<br>
+In normal smoothing mode, a certain portion of the track is moved as is, without any deformation&nbsp;; the shape of the track over the smoothing zone is then adjusted in order to fit with the applied movement. Existing turns in the track are preserved by this adjustment&nbsp;: normal smoothing is therefore appropriate for adding new turns without removing the existing ones.<br>
+<br>
+In extra-smoothing mode, the shape of the track is smoothened using polynomial interpolation, without retaining the original turns. All existing turns within the smoothing zone are removed, and replaced by a single bend which connects the new position of the moved block with the rest of the track. Extra-smoothing is therefore appropriate for deeper reshaping operations, such as replacing a sequence of sharp turns by a single wider turn, or even straightening a track portion.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Move XY command (Edit-Tools menu)</b><br>
+<br>
+This command selects or deselects the Move XY editing tool. This tool can be used to move items in the horizontal (XY) directions. It is available in all editing modes (but must be reselected every time the editing mode is changed). When the Move XY tool is selected, an item can be moved by clicking on it and dragging the mouse while keeping the left button pressed.<br>
+<br>
+In Point, Object and Polygon modes the behavior is straightforward. In Extended point and Block modes, smoothing is automatically applied in order to make the editing process easier. Also note that in Polygon mode the neighbouring polygons are modified so that moving the selected polygon does not disconnect it from the rest of the structure.<br>
+<br>
+<i><b>Remarks&nbsp;:</b></i><br>
+- In Block mode, two different smoothing methods are available&nbsp;: see <u>Extra-Smoothing command</u> for more information.<br>
+- In Object mode, moving an object along the track over a sufficiently long distance automatically moves the object from one track block to another. On the contrary, a vertex or a polygon keeps belonging to the same track block, no matter how far it is moved.<br>
+<br>
+<i><b>Note about moving track blocks&nbsp;:</b></i><br>
+When moving track blocks, be very careful not to create a sharp turn in which the track polygons would overlap with each other&nbsp;; this would cause display problems in NFS3. Once the track structure is disorganized, it is impossible to reobtain a normal structure without moving every single point back in place&nbsp;; the only reasonable option is therefore to immediately use the Undo command in order to cancel the changes. In order to avoid this situation, it is advisable to increase the width of the smoothing zone, especially when moving a track block over a long distance. Enabling extra-smoothing is also helpful in many cases. Note that the default smoothing parameters at T3ED startup are only appropriate for moving track blocks over relatively short distances.<br>
+<br>
+<i><b>Notes about moving objects&nbsp;:</b></i><br>
+<font face="Helvetica">- Collisions with extra-objects (displayed in green) are only detected over specific track polygons. In order to allow a moved object to be detected, you must modify the track polygon properties accordingly. First choose the High-resolution view, and switch to Polygon mode. Select the track polygon over which the object lies&nbsp;; use the Polygon Flags command in the Edit-Tools menu, and check the &quot;Extra-object collision detection&quot; option. If the object lies across several polygons, repeat this operation for every polygon to enable object detection.<br>
+</font>- Collisions with polygon objects are not handled by NFS3&nbsp;; rather, the track polygons over which the object lies (or beyond) are marked as impassable for the cars. The procedure to change the polygon properties (passable or not, etc...) is the following&nbsp;: first chose the High-resolution view, and switch to Polygon mode. Select the track polygon, and use the Polygon Flags command in the Edit-Tools menu&nbsp;; choose the relevant option in the &quot;Drive-over behavior&quot; list to change the passable status of a polygon. Also note that collisions with impassable polygons are handled only if all neighboring polygons have the &quot;Wall collision detection&quot; flag set&nbsp;; normally this flag is automatically set by T3ED when a polygon is made impassable.<br>
+<font face="Helv"><br>
+<br>
+<b>Shortcuts<br>
+</b></font>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm13.bmp" title="bm13.bmp"><br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Move Z command (Edit-Tools menu)</b><br>
+<br>
+This command selects or deselects the Move Z editing tool. This tool can be used to move items in the vertical direction. It is available in all editing modes (but must be reselected every time the editing mode is changed). When the Move Z tool is selected, an item can be moved by clicking on it and dragging the mouse along the vertical axis while keeping the left button pressed.<br>
+<br>
+In Point, Object and Polygon modes the behavior is straightforward. In Extended point and Block modes, smoothing is automatically applied in order to make the editing process easier. Also note that in Polygon mode the neighbouring polygons are modified so that moving the selected polygon does not disconnect it from the rest of the structure.<br>
+<br>
+<i><b>Remark&nbsp;:</b></i><br>
+- In Block mode, two different smoothing methods are available&nbsp;: see <u>Extra-Smoothing command</u> for more information.<br>
+<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm14.bmp" title="bm14.bmp"><br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Texture command (Edit-Tools menu)</b><br>
+<br>
+This command makes it possible to choose the texture of the currently selected polygon. It is only available in Polygon mode and if a polygon is selected. The first time this command is used after loading a track file, T3ED prompts for a QFS texture file to load&nbsp;; the QFS file-load dialog box lets you choose the appropriate texture file. There are usually four texture files in each track directory&nbsp;: the ones with names ending in <font face="Times New Roman"><font face="Helv">_8<font face="Times New Roman"><font face="Helv"> are in 8-bit color mode, while the others are in 16-bit color mode&nbsp;; the filenames containing a <font face="Times New Roman"><font face="Helv">1<font face="Times New Roman"><font face="Helv"> correspond to night mode, while the others correspond to day mode.<br>
+</font></font></font></font></font></font></font></font><br>
+Loading the textures is a slow process (about 10 seconds), so T3ED displays a progress bar while uncompressing and decoding the selected texture file. Choosing a 8-bit color mode texture file speeds up the process significantly without altering the quality of the displayed textures. The only exception is the Summit track, where the 8-bit textures are coded using a specific compression format which cannot be decoded by T3ED&nbsp;; an error message indicating that the QFS file has an incorrect format will then be displayed, and textures will not be displayed until you manually select another QFS file from within the texture chooser.<br>
+<br>
+After the track textures are loaded, T3ED displays the Texture Chooser dialog box&nbsp;: this dialog box displays a miniature view of the current texture of the selected polygon. This texture can be changed by acting on the scrollbar or by manually entering a texture number. The &quot;Select&quot; button can be used to save the changes made to the polygon texture and close the Texture Chooser&nbsp;; use the &quot;Cancel&quot; button instead if you don<font face="Times New Roman"><font face="Helv">t want the changes to be saved. The &quot;QFS File...&quot; button can be used to reload a different QFS texture file.<br>
+</font></font><br>
+<i><b>Remarks&nbsp;:</b></i><br>
+- Display quality is extremely poor when the currently selected screen resolution has a 8-bit color depth or lower&nbsp;; 15-bit color depth or higher is necessary for properly viewing the textures.<br>
+- The texture numbers displayed in the Texture Chooser are not the same as the texture numbers in the QFS file&nbsp;: a single QFS texture can correspond to several different track textures depending on how it is oriented, tiled, etc... This also explains why different texture numbers can yield the same miniature view.<br>
+- When the QFS file cannot be loaded, the textures are not displayed (except for road-lane textures which are not contained in the QFS file and will always remain displayed). To display textures you must then manually select a QFS file by clicking on the &quot;QFS File...&quot; button in the Texture chooser dialog box. <br>
+<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm15.bmp" title="bm15.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+T<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Merge/Split command (Edit-Tools menu)</b><br>
+<br>
+This command selects or deselects the Merge/Split editing tool. This tool is only available in Point mode or in Polygon mode. <i><b>It is currently only implemented for Point mode</b></i><i>.</i><br>
+<br>
+This tool can be used to merge vertices together, or on the contrary to split a vertex in order to separate the various polygons which share it.<br>
+<br>
+<b>Merge function (Point mode)</b>&nbsp;:<br>
+This tool can be used to glue several vertices together in order to ensure that the polygons containing them are suitably connected. After this operation is performed, the structure will remain connected until the vertex is split back into pieces using the Split function&nbsp;: the merged vertices become, for all practical purposes, a single point. To merge two vertices, first select a point (using the left mouse button as usual), then press the Control key and click on another point (using the left mouse button)&nbsp;: this point is then moved to the position of the first point, and the two points become merged.<br>
+<br>
+<b>Split function (Point mode)&nbsp;:</b><br>
+This tool can be used to split a vertex, in order to disconnect the various polygons to which it belongs. This makes it possible to move some of these polygons independently of the others. In order to split a point, simply click on it with the right mouse button. The various polygon vertices which were merged then become separated (each created vertex is moved in the general direction of the center of the corresponding polygon). It is possible to use the Merge function in order to partially re-connect the split structure.<br>
+<br>
+<i><b>Remark&nbsp;:</b></i><i><br>
+</i>Whenever possible, the Split function attempts to preserve the multi-resolution structure of the track blocks. Namely, when T3ED detects that two track polygons both involving the selected point and belonging to different resolutions actually contain each other, then these two track polygons remain connected in order to facilitate the track structure editing process.<br>
+<br>
+<b>Merge function (Polygon mode)&nbsp;:</b> not yet implemented.<br>
+<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm18.bmp" title="bm18.bmp"><br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Delete command (Edit-Tools menu)</b><br>
+<br>
+This command can be used to delete the currently selected object or polygon. It is only available in Object and Polygon modes and when an item is selected. Note that the last track polygon of a track block cannot be deleted, and that deleting the last polygon of an object automatically deletes the object.<br>
+<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm16.bmp" title="bm16.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+DELETE<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>New/Duplicate command (Edit-Tools menu)</b><br>
+<br>
+This command can be used to duplicate the currently selected object or polygon. It is only available in Object and Polygon modes.<br>
+<br>
+In <b>Polygon mode</b>, the New/Duplicate command is only available when a polygon is selected. It then has the effect of duplicating the selected polygon, preserving all its properties (texture, ...). The newly created copy is slightly shifted, and is disconnected from all existing polygons so it can be easily moved. In order to facilitate the addition of new track portions, the multiple resolutions are automatically handled&nbsp;: namely, when a high-resolution track polygon is duplicated, copies of it are also created in medium and low resolutions&nbsp;; when a medium-resolution track polygon is duplicated, a copy of it is also created in low resolution. Therefore, track polygons always ought to be created in high resolution, before their medium and low-resolution versions are merged two by two in order to obtain a smaller number of polygons in medium and low-resolution. Also note the following consequence&nbsp;: the created polygons share the same vertices, so moving the high-resolution version also affects the two lower-resolution polygons created simultaneously, but any change of texture will need to be repeated three times.<br>
+<br>
+<font face="Helvetica"><i><b>Note&nbsp;: </b></i></font>The correct procedure to add more polygons to the track structure is the following&nbsp;:<br>
+1. Switch to high-resolution view and polygon mode.<br>
+2. Select a track polygon reasonably similar to the ones you want to add, <i>in the same track block</i>.<br>
+3. Duplicate it as many times as needed using the Duplicate tool.<br>
+4. Move all the new polygons around until their general disposition is satisfying. Beware of not flipping a polygon upside down, because the two sides of a polygon are not at all equivalent.<br>
+5. Switch to point mode and select the Split/Merge tool.<br>
+6. Merge the vertices of the new polygons with the existing frame by successively clicking on an existing vertex and control-clicking on all new vertices to be attached to it.<br>
+7. Switch to half-resolution view&nbsp;; in order to speed up the in-game display, merge pairs of adjacent polygons to form larger polygons (since the Merge tool for polygons has not yet been implemented in this version of T3ED, this is not yet possible&nbsp;: an alternative is to delete some unimportant polygons from the half-resolution view).<br>
+8. Repeat step 7 in low-resolution view.<font face="Helv"><br>
+<br>
+In <b>Object mode</b></font>, the New/Duplicate command is always available. If an object is selected, then this object is duplicated. The newly created object has exactly the same properties as the original object, and lies at exactly the same place&nbsp;; the new copy will therefore have to be moved elsewhere. <br>
+If no object is selected, the New/Duplicate command attempts to create a new object in the currently selected block. This object initially consists of a single rectangle&nbsp;; more polygons can later be added by using the Duplicate command in Polygon mode together with the Merge tool in Point mode. Before creating a new object, T3ED displays a dialog box which lets you choose the object type, as well as the texture of the created object polygon.<br>
+<br>
+<br>
+<b>Shortcuts<br>
+</b>Toolbar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img data="bm17.bmp" title="bm17.bmp"><br>
+Keys:&nbsp;&nbsp;&nbsp;
+CTRL+V<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Properties command (Edit-Tools menu)</b><br>
+<br>
+This command has not yet been implemented.<br>
+<br>
+<b>Shortcuts<br>
+</b>Keys:&nbsp;&nbsp;&nbsp;
+ALT+ENTER<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Polygon Flags command (Edit-Tools menu)</b><br>
+<br>
+This command can be used to modify the behavior of a high-resolution track polygon when a car drives over it. It is only available in Polygon mode and when a high-resolution track polygon is selected. T3ED then displays the Polygon Virtual Road Flags dialog box, which lets you modify the following settings&nbsp;:<br>
+<br>
+<i>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Helv">Wall collision detection (virtual road boundary)&nbsp;:</font></i><br>
+This option must be checked if the polygon is passable and any of the neighboring track polygons is not passable. Otherwise, NFS3 is unable to detect any collision with an invisible wall and the car will be free to move into a neighboring impassable polygon.<br>
+<br>
+<i>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Helv">Extra-object collision detection&nbsp;:</font></i><br>
+This option must be checked if the polygon is passable and if any extra-object lies nearby. Otherwise, NFS3 is unable to detect any collision with an extra-object and the car will be free to move across trees and other obstacles.<br>
+<br>
+<i>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Helv">Drive-over behavior&nbsp;:</font></i><br>
+Choose an item in the list in order to describe how cars should behave when they pass over the polygon. Values 0 and 14 correspond to impassable polygons, while all others correspond to passable polygons. This list also lets you choose whether grass, snow, dust... should be projected when a car passes.<br>
+<br>
+<b>NOTE&nbsp;: </b>If you wish to make passable polygons which previously weren<font face="Times New Roman"><font face="Helv">t passable, it is likely that you will have to adjust the width of the virtual road in order to get rid of the invisible walls restraining the car<font face="Times New Roman"><font face="Helv">s movements on either side of the road&nbsp;: for this, use the Adjust Road Width command in the Edit-Tools menu.<br>
+</font></font></font></font><br>
+<b>Shortcuts<br>
+</b>Keys:&nbsp;&nbsp;&nbsp;
+CTRL+ENTER<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><sup>K</sup><b>Adjust Road Width command (Edit-Tools menu)</b><br>
+<br>
+This command must be used to adjust the width of the virtual road in order to get rid of the invisible walls restraining the car<font face="Times New Roman"><font face="Helv">s movements on either side of the road (the track polygons also need to be made passable using the Polygon Flags command).<br>
+<br>
+This command affects all of the track, and needs to be repeated every time you make the track wider by a significant amount (ideally it should only be used just before saving a modified track). As this function deeply affects the track structure and cannot be reversed easily once the changes are saved, T3ED asks for confirmation before proceeding.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup></font></font><sup>K</sup><b>Erase All command (Edit-Tools menu)</b><br>
+<br>
+This command can be used to erase selectively the track<font face="Times New Roman"><font face="Helv">s shape, objects or textures. The following track components can be deleted&nbsp;:<br>
+<br>
+- Track shape (XY)&nbsp;: this option removes all turns from the track, shaping it into a large circle instead.<br>
+<br>
+- Road elevations&nbsp;: this option removes all slopes from the track, but only affects the mean elevation of each track node&nbsp;: all small bumps will be kept, and the surrounding scenery retains its relative elevation.<br>
+</font></font><br>
+- Scenery elevations&nbsp;: this option flattens the whole track 3D structure (but not the objects), setting its Z coordinate to equal that of the corresponding track node&nbsp;: the slopes of the track are kept, but the scenery and small bumps are flattened. When combined with the previous option, this flattens everything.<br>
+<br>
+- Lanes, fences &amp; sound sources&nbsp;: this option removes the miscellaneous track polygons corresponding to road lanes and fences, as well as the sound sources all over the track.<br>
+<br>
+- Polygon objects &amp; light sources&nbsp;: this option removes all polygon objects (displayed in blue), as well as the light sources.<br>
+<br>
+- Extra objects&nbsp;: this option removes all extra objects (displayed in green)&nbsp;; the global animated objects are not affected.<br>
+<br>
+- Global animated objects&nbsp;: this option removes all global animated objects from the track (not displayed by T3ED). If this option is enabled, then it will not be possible to undo the changes&nbsp;; making a backup copy of the track is therefore recommended.<br>
+<br>
+- Road textures&nbsp;: this option sets the textures of all passable road polygons to a given value (modifiable using the corresponding input box and Browse button). This also affects low- and medium-resolution polygons, although the heuristics for guessing their passable or non-passable state sometimes fail.<br>
+<br>
+- Scenery textures&nbsp;: this option sets the textures of all non-passable road polygons to a given value (modifiable using the corresponding input box and Browse button). This also affects low- and medium-resolution polygons, although the heuristics for guessing their passable or non-passable state sometimes fail. The objects are not affected.<br>
+<br>
+Combining all these options, it is possible to remove virtually everything from a track, making it possible to restart almost from scratch.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Help Topics command (Help menu)<br>
+</b><br>
+Use this command to display a list of available help topics.<br>
+<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>About T3ED command (Help menu)<br>
+</b><br>
+Use this command to display the copyright notice and version number of your copy of T3ED.<br>
+<p><hr><p>
+<sup>$</sup><sup>#</sup><b>Context Help command <br>
+</b><img data="bm21.bmp" title="bm21.bmp"><br>
+<br>
+Use the Context Help command to obtain help on some portion of T3ED. When you choose the Toolbar's Context Help button, the mouse pointer will change to an arrow and question mark. Then click somewhere in the T3ED window, such as another Toolbar button. The Help topic will be shown for the item you clicked.<br>
+<br>
+<b>Shortcut<br>
+</b>Keys:&nbsp;&nbsp;&nbsp;
+SHIFT+F1<br>
+<p><hr><p>
+<sup>#</sup><b>Title Bar</b><font face="Tms Rmn"><br>
+<br>
+</font><font face="Helv">The title bar is located along the top of a window. It contains the name of the application and document. <br>
+<p><hr><p>
+<sup>#</sup></font><b>Scroll bars</b><br>
+<br>
+Displayed at the right and bottom edges of the document window. The scroll boxes inside the scroll bars indicate your vertical and horizontal location in the document. You can use the mouse to scroll to other parts of the document. The arrow keys can also be used for the same purpose.<br>
+<br>
+In <u>translation mode</u>, the scroll bars act in the usual way, by simply scrolling the track view. <br>
+<br>
+In <u>rotation mode</u>, the scroll bars are used to rotate the observer<font face="Times New Roman"><font face="Helv">s view point.<br>
+<p><hr><p>
+<sup>#</sup></font></font><b>Close command (Control menus)<br>
+</b><br>
+Use this command to close the active window or dialog box.<br>
+<br>
+<br>
+<b>Shortcuts<br>
+</b>Keys: &nbsp;&nbsp;
+ALT+F4 closes the T3ED window or a dialog box.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p><hr><p>
+<sup>#</sup><b>Modifying the Document<br>
+</b><br>
+To edit a track, you need to use a combination of a selection mode and an editing tool. The available selection modes are listed in the <u>Edit-Modes menu</u>, and the available editing tools are listed in the <u>Edit-Tools menu</u>. In order to facilitate the editing process, the view parameters can be adjusted by using the commands in the <u>View menu</u>.<br>
+<p><hr><p>
+<sup>#</sup><b>No Help Available</b><font face="Tms Rmn"><br>
+<br>
+<font face="Helv">No help is available for this area of the window.<br>
+<p><hr><p>
+<sup>#</sup></font></font><b>No Help Available<br>
+</b><font face="Tms Rmn"><br>
+<font face="Helv">No help is available for this message box.<br>
+<p><hr><p>
+</div></body>
+</html>
+
+<style>#divhlpmain img{max-width:1000px}#divhlpmain canvas{max-width:400px}</style>
+<script>
+var g_wmf_injected=false; var g_wmf_list=[];
+function init_index(){
+function getWindowHeight(){
+    var windowHeight = 0;
+    if (typeof(window.innerHeight) == 'number'){
+        windowHeight = window.innerHeight;
+    }else{
+        var ieStrict = document.documentElement.clientHeight; 
+        var ieQuirks = document.body.clientHeight;
+        windowHeight = (ieStrict > 0) ? ieStrict : ieQuirks;
+    }
+	if(!windowHeight) windowHeight=0;
+    return windowHeight;
+}
+function getScrollTop(){
+    var scrollTop;
+	if(document.body && document.body.scrollTop){
+		scrollTop = document.body.scrollTop;
+	}else if(document.documentElement && document.documentElement.scrollTop){
+		scrollTop = document.documentElement.scrollTop;
+	}
+	if(!scrollTop) scrollTop=0;
+    return scrollTop;
+} 
+function getOffset(b){
+    var a = 0;
+    var c = 0;
+    while (b && !isNaN(b.offsetLeft) && !isNaN(b.offsetTop)) {
+        a += b.offsetLeft;
+        c += b.offsetTop;
+        b = b.offsetParent;
+    }     
+    return {
+        left: a,
+        top: c
+    }
+}
+function getfileext(s){
+	if(!s) s='';
+	var arr=s.split('.');
+	if(arr.length>1){
+		return arr[arr.length-1].toLowerCase();
+	}
+	return '';
+}
+function inject(s){
+	var o = document.createElement('scri' + 'pt');
+	o.setAttribute('src', s);
+	o.setAttribute('type', 'text/javascript');
+	document.body.appendChild(o);
+}	
+var gwaok=false;
+if(window.WebAssembly) gwaok=true;
+function proc_loadimg(){
+	var wh=getWindowHeight();
+	var st=getScrollTop();
+	var dt=st-(wh*2);
+	var db=st+wh+(wh*2);
+	var dy,data,c,ext;	
+	var a=document.getElementsByTagName('IMG');	
+	for(var i = 0; i < a.length; i++){ 
+		if(a[i].src)continue;
+		data=a[i].getAttribute('data');
+		if(!data)continue;
+		c=getOffset(a[i]);
+		if (c.top>=dt && c.top<=db){
+			a[i].src=data;
+			ext=getfileext(data);
+			if(ext=='wmf' || (gwaok && (ext=='shg'|| ext=='dib' || ext=='emf' || ext=='mrb'))){
+				g_wmf_list.push(a[i]);
+				if(!g_wmf_injected){
+					g_wmf_injected=true;					
+					if(gwaok){
+						inject('/chmviewer/js/all_wmf_wasm.js?t=1');
+					}else{
+						inject('/chmviewer/js/all_wmf.js');
+					}
+				}
+			}
+		}
+	}	
+}
+function proc_fix1(){
+	var a=document.getElementsByTagName('SPAN');	
+	for(var i = 0; i < a.length; i++){ 		
+		if(a[i].style.backgroundColor=='rgb(0, 0, 0)'){
+			if(a[i].parentNode.tagName=='FONT'){
+				if(a[i].parentNode.color=='#000000'){
+					a[i].style.backgroundColor='#FFFFFF';
+				}
+			}
+		}
+	}
+	var a=document.getElementsByTagName('FONT');	
+	for(var i = 0; i < a.length; i++){ 		
+		if(a[i].color=='#000000'){
+			if(a[i].parentNode.tagName=='SPAN'){
+				if(a[i].parentNode.style.backgroundColor=='rgb(0, 0, 0)'){
+					a[i].parentNode.style.backgroundColor='#FFFFFF';
+				}
+			}
+		}
+	}
+}
+	var timer1;
+	window.onscroll=function(){
+		clearTimeout(timer1);
+		timer1=setTimeout(function(){
+			proc_loadimg();
+		},50);
+	}
+	proc_loadimg();
+	proc_fix1();
+}
+init_index();
+</script>

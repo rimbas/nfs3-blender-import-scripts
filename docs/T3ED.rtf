@@ -1,0 +1,1792 @@
+{\rtf1\ansi\deff4
+{\fonttbl{\f0\froman Tms Rmn;}{\f1\froman Symbol;}{\f2\fswiss Helv;}{\f3\fmodern Courier;}{\f4\froman Times New Roman;}{\f5\fnil Arial;}{\f6\fnil MS Serif;}{\f7\fnil MS Sans Serif;}{\f8\fnil Times;}{\f9\fswiss Helvetica;}{\f10\fnil System;}{\f11\fmodern Courier New;}}
+{\stylesheet{\fs24 \snext0 Normal;}
+}\pard\plain
+{\up $}
+{\up #}
+\pard\sl235 {\up K}
+\f2\b\fs24 T3ED Help Index\fs20 
+\par \plain\f9\fs20 
+\par \b This is Vers{\up K}
+ion 0.06 of T3ED, released on July 16, 1999.\plain\f9\fs20 
+\par T3ED is Copyright (c) Denis Auroux, 1998-99  (e-mail\'a0: auroux@math.polytechnique.fr).
+\par Special thanks to Vitaly Kootin for some NFSHS file format i{\up K}
+nformation.
+\par 
+\par \f2\b How To ...
+\par \plain\f2\fs20 \tab \uldb What\f4 \'92\f2 s new in this version ?\plain\f2\fs20 \ul 
+\par \tab \plain\f2\uldb\fs20 Downloading the latest version of T3ED\plain\f2\fs20 \ul 
+\par \tab \plain\f2\uldb\fs20 Frequently asked questions\plain\f2\fs20 \ul 
+\par \tab \plain\f2\uldb\fs20 NFS3 Tracks Overview\plain\f2\fs20 \ul 
+\par \tab \plain\f2\uldb\fs20 NFS3 Track File Formats\plain\f2\fs20 \ul 
+\par \pard\sl235 \ul \tab \plain\f2\uldb\fs20 NFS HS Track File Formats\plain\f2\fs20 \ul 
+\par \plain\f2\fs20 
+\par \b Commands
+\par \plain\f2\fs20 \tab \uldb File menu\plain\f2\fs20 
+\par \tab \uldb View menu\plain\f2\fs20 
+\par \tab \uldb Edit-Modes menu\plain\f2\fs20 
+\par \tab \uldb Edit-Tools menu\plain\f2\fs20 
+\par \tab \uldb Help menu\plain\f2\fs20 
+\par \tab \uldb Toolbar\plain\f2\fs20 
+\par 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b\fs24 What\f4 \'92\f2 s new in this version\'a0?\fs20 
+\par \plain\f9\fs20 
+\par \b This is Version 0.06 of T3ED, released on July 16, 1999.\plain\f9\fs20 
+\par T3ED is Copyright (c) Denis Auroux, 1998-99  (e-mail\'a0: auroux@math.polytechnique.fr).
+\par 
+\par \b Added in Version 0.06\'a0:\plain\f9\fs20 
+\par - Erase all function.
+\par - New handling of track polygons\'a0; should fix a lot of bugs\'a0; adding new track sections should now work correctly (within the game engine\f4 \'92\f9 s limitations)\'a0; see the specific \uldb \f2 help page\plain\f2\fs20 \f9  on this feature.
+\par \pard\sl235 - Additions to the NFS HS file format specifications by Vitaly Kootin.
+\par 
+\par \b Added in Version 0.05\'a0:\plain\f9\fs20 
+\par - Support of NFS High Stakes track files (special thanks to Vitaly Kootin for some info about file formats)
+\par 
+\par \b Added in Version 0.04\'a0:\plain\f9\fs20 
+\par - Adjust road width command (to remove the uncrossable walls on either side of the track).
+\par - Light sources are moved (when using Move tools in block or extended point modes).
+\par - File format specs additions (in part by Vitaly Kootin).
+\par \pard\sl235 
+\par \b Added in Version 0.03\'a0:\plain\f9\fs20 
+\par - \uldb Track file format specifications\plain\f9\fs20 .
+\par - Delete command for polygons.
+\par - Duplicate command for polygons (multi-resolution) (see the \uldb \f2 FAQ\plain\f2\fs20  about adding new road sections)\f9 .
+\par - Support of road lane polygon textures.
+\par - Polygon virtual road flags dialog box\'a0: allows control of object and wall collisions (see the \uldb \f2 FAQ\plain\f2\fs20  for more details).
+\par \f9 - Merge tool in Point mode.
+\par - Split tool in Point mode.
+\par - Completed help file.
+\par \pard\sl235 
+\par \b Added in Version 0.02\'a0:\plain\f9\fs20 
+\par - Smoothing properties dialog box for Block mode and Extended Point mode.
+\par - Extra smoothing option for the Move XY and Move Z tools in Block mode\f2 .
+\par - Move XY and Move Z tools also work in Polygon mode.
+\par \f9 - Delete command for objects.
+\par - Duplicate command for objects.
+\par - Creation of new objects (using the New/Duplicate command with no selected object).
+\par - Texture browser and polygon texture selection.
+\par - Help file (still incomplete).
+\par \pard\sl235 
+\par \b Features still missing\'a0:\plain\f9\fs20 
+\par - Optional modeless texture display palette in Polygon mode
+\par - Special light effects (handled as points [move] and as objects [move, delete/duplicate]).
+\par - Rotating tool for object mode.
+\par - Improved handling of objects when track blocks are moved.
+\par - Multiple selection (in Point, Object and Polygon modes).
+\par - Properties dialog boxes (all modes).
+\par - Tool for banking the road.
+\par 
+\par \b Extra suggestions\'a0:\plain\f9\fs20 
+\par - object action after crash (road signs and some fences lie down when touched)
+\par \pard\sl235 - "magnet" function to keep objects on the ground
+\par - special light effects positions\'a0; replay camera positions
+\par - modifying texture affectation table
+\par - opponent car AI data (optimal speed, etc...)
+\par - conversion between NFS3 and NFSHS formats
+\par 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \f2\b\fs24 Downloading the latest version of T3ED\fs20 
+\par \plain\f9\fs20 
+\par \b This is Version 0.06 of T3ED, released on July 16, 1999.
+\par \plain\f9\fs20 T3ED is Copyright (c) Denis Auroux, 1998-99  (e-mail\'a0: auroux@math.polytechnique.fr).
+\par 
+\par The latest version of T3ED is available from the new official T3ED site at
+\par 
+\par \tab http://www.math.polytechnique.fr/cmat/auroux/nfs/
+\par 
+\par New versions will also be announced and made available from NFSCheats (http://www.nfscheats.com/).
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \f2\b\fs24 NFS3 Tracks Overview\plain\f9\fs20 
+\par 
+\par This help page describes the basic concepts involved in the structure of a NFS3 track. For technical information on the NFS3 file formats, please refer to the page on \uldb \f2 NFS3 Track File Formats\plain\f2\fs20 .\ul 
+\par \plain\f9\fs20 
+\par \b Track structure\plain\f9\fs20 
+\par NFS3 tracks are subdivided into track blocks (ca. 200-300 of them), each of which consists of track vertices, polygons, objects and virtual road data. The corresponding data are mostly stored in a file with extension .FRD, and also in a companion file with .COL extension.
+\par \pard\sl235 
+\par \b Vertices\plain\f9\fs20 
+\par These are the points which make up the track. They can belong either to the main track structure, or to an "extra object" (see below).
+\par 
+\par \b Polygons\plain\f9\fs20 
+\par A track block consists of three series of polygons, corresponding to various resolutions (the low and medium resolutions are only used to save computing time when the car is still far away). To every polygon corresponds a texture, and the high-resolution series of polygons is also associated with virtual road information.
+\par \pard\sl235 
+\par \b Objects\plain\f9\fs20 
+\par There are two types of objects\'a0: the \i polygon objects\plain\f9\fs20  (displayed in blue in T3ED) make use of the same list of vertices as the main track structure, while the \i extra objects\plain\f9\fs20  (displayed in green in T3ED) have separate vertex information structures. The polygon objects are fixed and cannot be collided with, while the extra objects feature collision detection and can be animated as well.
+\par 
+\par \b Virtual Road\plain\f9\fs20 
+\par The virtual road is all the information used by NFS3 in order to compute the behavior of the various cars (player, police, opponents or traffic). This includes, in particular, a sequence of "virtual nodes" stored in the associated .COL file\'a0; virtual forward and normal vectors associated to every high resolution track polygon\'a0; etc...
+\par \pard\sl235 
+\par \b Textures\plain\f9\fs20 
+\par The track textures are stored in a companion file with .QFS extension. Four files are provided for each track\'a0: the files whose names end with a \f4 \'91\f9 0\f4 \'92\f9  correspond to normal racing, while those which contain a \f4 \'91\f9 1\f4 \'92\f9  correspond to mirrored tracks. The files with a \f4 \'91\f9 _8\f4 \'92\f9  suffix in their name correspond to 256-color textures, while the others correspond to 65536-color textures.
+\par 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \f2\b\fs24 NFS3 Track File Formats - V0.04, (c) Denis Auroux 1998-99\plain\f9\fs20 
+\par 
+\par This help page describes the structure of NFS3 track files. It is intended as reference information for other NFS3 developers\'a0; if you don\f4 \'92\f9 t intend to program your own track editor, then the \uldb \f2 NFS3 Tracks Overview\plain\f2\fs20  page is probably more appropriate.
+\par 
+\par \i Some of the information in this document was contributed by Vitaly Kootin.\plain\f2\fs20 
+\par 
+\par \b DISCLAIMER\'a0: \plain\f2\fs20 The information below is unofficial, and may be inexact by some aspects. It is only intended as reference information to help other NFS3 developers, and comes with no warranty. It may not be used for commercial purposes. It is forbidden to distribute a modified version of this document.
+\par \pard\sl235 
+\par \b Contents\'a0:\plain\f2\fs20 
+\par \tab \uldb Basic structures\plain\f2\fs20 
+\par \tab \uldb Track blocks\plain\f2\fs20 
+\par \tab \uldb Polygon blocks\plain\f2\fs20 
+\par \tab \uldb Extra-object blocks\plain\f2\fs20 
+\par \tab \uldb FRD files\plain\f2\fs20 
+\par \tab \uldb COL files\plain\f2\fs20 
+\par 
+\par 
+\par {\up #}
+\b\fs24 I. Basic structures\plain\f2\fs20 
+\par 
+\par \b 1. FLOATPT structure\plain\f2\fs20  (size\'a0: 12 bytes)\b 
+\par \plain\f2\fs20 
+\par \pard\sl235\fi715 \f3 typedef struct FLOATPT \{\-
+\par     float x,z,y;
+\par \'7d FLOATPT;
+\par \pard\sl235 \f2 
+\par This structure is used to store the three coordinates of a vertex. Each of the components is stored as a floating-point number (IEEE single-precision format). The x and y axes are horizontal, while the z axis is vertical and points upwards.
+\par 
+\par \b 2. INTPT structure\plain\f2\fs20  (size\'a0: 12 bytes)\b 
+\par \plain\f2\fs20 
+\par \pard\sl235\fi715 \f3 typedef struct INTPT \{\-
+\par     long x,z,y;
+\par \'7d INTPT;
+\par \pard\sl235 \f2 
+\par This is another way to store the three coordinates of a vertex (less frequently used than the FLOATPT structure). Each of the components is stored as a 32-bit integer, and must be divided by 2^16 in order to obtain the corresponding floating-point value (in other words, the coordinates are 16.16 fixed precision numbers).
+\par 
+\par \b 3. POLYGONDATA structure\plain\f2\fs20  (size\'a0: 14 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct POLYGONDATA \{\-
+\par     short vertex[4];
+\par     short texture;
+\par     short unknown1;
+\par     unsigned char flags;
+\par     unsigned char unknown2;
+\par \'7d POLYGONDATA;
+\par \pard\sl235 \f2 
+\par This structure describes a polygon. The \f3 vertex\f2  member refers to four entries in the vertex table associated with the polygon (either the vertex table of the TRKBLOCK structure in the case of a POLYBLOCK polygon, or that of the XOBJDATA structure in the case of an XOBJDATA polygon), describing the coordinates of the four polygon vertices. The \f3 texture\f2  member points to one of  TEXTUREBLOCK structures in the FRD file and describes the polygon texture. The significance of the \f3 unknown1\f2  and \f3 unknown2\f2  members apparently has to do with animated textures (resp. first texture number and animation speed\'a0?) or with the special road lane textures. A non-zero value of \f3 flags&0x04\f2  indicates that the polygon has an animated texture, and a non-zero value of \f3 flags&0x10\f2  indicates that the polygon is two-sided.
+\par \pard\sl235 
+\par \f9 
+\par {\up #}
+\b\fs24 II. Track blocks\plain\f9\fs20 
+\par 
+\par \b 1. TRKBLOCK structure \plain\f9\fs20 (variable size)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct TRKBLOCK
+\par \{\-
+\par     struct FLOATPT ptCentre;
+\par     struct FLOATPT ptBounding[4];
+\par     long nVertices;
+\par     long nHiResVert,nLoResVert,nMedResVert;
+\par     long nVerticesDup;
+\par     long nObjectVert;
+\par     struct FLOATPT vertices[nVertices];
+\par \pard\sl235\li715     long shadingVertices[nVertices];
+\par \pard\sl235\fi715     struct NEIGHBORDATA nbdData[0x12C];
+\par     long nStartPosition;
+\par     long nPositions;
+\par     long nPolygons,nVroad,nXobj,nPolyobj;
+\par     long nSoundsrc,nLightsrc;
+\par     struct POSITIONDATA posData[nPositions];
+\par     struct POLYVROADDATA polyData[nPolygons];
+\par     struct VROADDATA vroadData[nVroad];
+\par     struct REFXOBJ xobj[nXobj];
+\par     struct REFPOLYOBJ polyobj[nPolyobj];
+\par     char padding[];
+\par     struct SOUNDSRC soundsrc[nSoundsrc];
+\par     struct LIGHTSRC lightsrc[nLightsrc];
+\par \pard\sl235\fi715 \'7d TRKBLOCK;
+\par \pard\sl235 \f9 
+\par This structure describes a track block\'a0; it contains the track vertices, virtual road information, and miscellaneous reference tables, but does not include the track polygons nor the objects. The \f3 ptCentre\f9  member provides the coordinates of a central reference point around which the block is built. The \f3 ptBounding\f9  member provides the coordinates of four bounding points for the block vertices\'a0: these points delimit a horizontal rectangle inside which all the block\f4 \'92\f9 s elements fit.
+\par \pard\sl235 
+\par The \f3 nVertices\f9  and \f3 nVerticesDup\f9  values are always equal, and give the total number of vertices stored in the \f3 vertices\f9  member of the TRKBLOCK structure. Vertices \f3 0\f9  to \f3 nObjectVert-1\f9  are the vertices used by the polygon objects (see OBJPOLYBLOCK structure). Vertices \f3 nObjectVert\f9  to \f3 nLoResVert-1\f9  are used in chunks 0 and 1 of the POLYBLOCK structure, and correspond to the track vertices in low resolution. Vertices \f3 nLoResVert\f9  to \f3 nMedResVert-1\f9  are the additional vertices used in chunks 2 and 3 of the POLYBLOCK structure, and correspond to the track vertices in medium resolution (the low-resolution vertices are also used in medium resolution). Vertices \f3 nMedResVert\f9  to \f3 nHiResVert-1\f9  are the additional vertices used in chunks 4 and 5 of the POLYBLOCK structure, and correspond to the track vertices in high resolution (the low- and medium-resolution vertices are also used in high resolution). Finally, vertices \f3 nHiResVert\f9  to \f3 nVertices-1\f9  are used in chunk 6 of the POLYBLOCK structure, and correspond to the road lanes\'a0; after each road lane, a hole is usually left with four unreferenced vertices. The \f3 shadingVertices\f9  member describes the shading applied to each vertex\'a0: for each vertex, the least significant byte is the blue component, the next byte is the green component, the next byte is the red component, and finally the most significant byte is the alpha value.
+\par \pard\sl235 
+\par The \f3 nStartPosition\f9  member indicates where the block is located along the track, in units of "nodes" (see the COLVROAD structure in COL file). Normally each block corresponds to 8 node positions, except the last one\'a0: the number of nodes in the block is given by the \f3 nPositions\f9  member. The \f3 nPolygons\f9  member indicates the total number of high-resolution track polygons (i.e. the same as the size of chunk 4 of the POLYBLOCK structure). The \f3 nXobj\f9  member indicates the total number of non-animated (type 4) extra-objects stored in the four extra-object chunks associated with the track block. The \f3 nPolyobj\f9  member indicates the total number of objects (both polygon-objects and extra-objects) in object chunk 0 (this normally corresponds to length of OBJPOLYBLOCK chunk 0 in the POLYBLOCK structure, except if there are only extra-objects).
+\par \pard\sl235 
+\par In addition, the \f3 nPositions\f9 , \f3 nPolygons\f9 , \f3 nVroad\f9 , \f3 nXobj\f9 , \f3 nPolyobj\f9 , \f3 nSoundsrc\f9  and \f3 nLightsrc\f9  members describe the number of entries in the various corresponding substructures (see below). As the REFPOLYOBJ structure exists in two variants (16-byte or 20-byte long depending on object type), extra padding is added in the .FRD file just after the \f3 polyobj\f9  substructure, in order to obtain a total size of \f3 20*nPolyobj\f9  in all cases for the REFPOLYOBJ table. Apart from this there is no padding anywhere.
+\par \pard\sl235 
+\par \b 2. NEIGHBORDATA structure\plain\f9\fs20  (size\'a0: 4 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct NEIGHBORDATA \{\-
+\par     short block;
+\par     short unused;
+\par \'7d NEIGHBORDATA;
+\par \pard\sl235 \f9 
+\par This structure is used to list the block numbers corresponding to the neighbors of the currently described block, starting with the closest ones. There are always 0x12C such entries in the TRKBLOCK structure, but for obvious reasons most of these entries are unused and just contain -1 in the \f3 block\f9  member.
+\par 
+\par \b 3. POSITIONDATA structure\plain\f9\fs20  (size\'a0: 8 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct POSITIONDATA \{\-
+\par     short polygon;
+\par     unsigned char nPolygons;
+\par     char unknown;
+\par     short extraNeighbor[2];
+\par \'7d POSITIONDATA;
+\par \pard\sl235 \f9 
+\par This structure is used to indicate which track polygons are attached to a given node. The \f3 polygon\f9  member refers to an entry in the POLYVROADDATA structure (or in chunk 4 of the POLYBLOCK structure)\'a0; all entries between this one and the one pointed to in the following POSITIONDATA structure correspond to the high-resolution track polygons attached to the same node. The \f3 nPolygons\f9  member indicates the number of polygons attached to this node. The two \f3 extraNeighbor\f9  values are usually equal to -1, but can be used to specify up to two neighbouring nodes other than the previous node and the following node (e.g. if there are shortcuts).
+\par \pard\sl235 
+\par \b 4. POLYVROADDATA structure\plain\f9\fs20  (size\'a0: 8 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct POLYVROADDATA \{\-
+\par     unsigned char vroadEntry;
+\par     unsigned char flags;
+\par     unsigned char unknown[6];
+\par \'7d POLYVROADDATA;
+\par \pard\sl235 \f9 
+\par This structure describes the virtual road properties of a track polygon\'a0: each entry corresponds to a polygon in chunk 4 of the POLYBLOCK structure (high-resolution track polygons). The \f3 vroadEntry\f9  member refers to a VROADDATA structure which describes the virtual road vectors associated with the polygon. 
+\par The \f3 flags\f9  member describes the behavior of the polygon\'a0: a non-zero value of \f3 flags&0x80\f9  indicates that collisions with walls should be handled, i.e. that some of the neighboring polygons are not passable. A non-zero value of \f3 flags&0x40\f9  indicates that collisions with extra-objects should be handled, i.e. that some extra-objects might be present over the polygon. The next two bits in \f3 flags\f9  are unused. Finally, \f3 flags&0x0f\f9  describes the behavior of the polygon when driven over\'a0: values of 0 and 14 correspond to a polygon over which cars cannot pass\'a0; a value of 2 corresponds to a polygon which emits gravel when driven over\'a0; values 4 and 11 correspond to emission of leaves, 5 and 13 to emission of dust, 9 and 15 to emission of snow. All other values correspond to plain passable polygons.
+\par \pard\sl235 
+\par \b 5. VROADDATA structure\plain\f9\fs20  (size\'a0: 12 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct VROADDATA \{\-
+\par     short xNorm,zNorm,yNorm;
+\par     short xForw,zForw,yForw;
+\par \'7d VROADDATA;
+\par \pard\sl235 \f9 
+\par This structure describes the virtual road vectors associated with a track polygon\'a0; several track polygons can share the same VROADDATA structure. The \f3 xNorm,zNorm,yNorm\f9  members describe the coordinates of the normal vector (normalized to length 2^15) while the \f3 xForw,zForw,yForw\f9  members contain the coordinates of the forward vector (normalized to length 2^15).
+\par 
+\par \b 6. REFXOBJ structure\plain\f9\fs20  (size\'a0: 20 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct REFXOBJ \{\-
+\par     struct INTPT pt;
+\par     short unknown1;
+\par     short globalno;
+\par     short unknown2;
+\par     char crossindex;
+\par     char unknown3;
+\par \'7d REFXOBJ;
+\par \pard\sl235 \f9 
+\par This structure lists the properties of an extra-object. There is one entry for each non-animated (type 4) extra-object, regardless of the chunk to which it belongs\'a0; there are no entries for animated objects. The \f3 pt\f9  member contains the coordinates of the object\f4 \'92\f9 s reference point (see XOBJDATA structure). The \f3 globalno\f9  member is a unique sequence number characterizing the object among all of the track\f4 \'92\f9 s extra-objects. The \f3 crossindex\f9  member indicates the position of the extra-object in the first POLYOBJ chunk\'a0; it is equal to 0 when the object does not belong to the first chunk.
+\par \pard\sl235 
+\par \b 7. REFPOLYOBJ structure\plain\f9\fs20  (size\'a0: 16 or 20 bytes)
+\par 
+\par This structure, which lists the properties of an object, exists in two versions\'a0: the version for polygon objects is 16-bytes long and has the following structure\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct REFPOLYOBJ \{\-
+\par     short entrysize;
+\par     char type;
+\par     char no;
+\par     struct INTPT pt;
+\par \'7d REFPOLYOBJ;\f9 
+\par \pard\sl235 
+\par For polygon objects, the \f3 entrysize\f9  member equals 16 and the \f3 type\f9  member equals 1. The \f3 no\f9  member is a serial number among the block\f4 \'92\f9 s objects\'a0; it is apparently not used by NFS3. The used numbers are not consecutive because the four POLYOBJ chunks are interleaved and only the first chunk is described by the REFPOLYOBJ structures. The \f3 pt\f9  member contains the reference position of the object.
+\par 
+\par In the case of extra-objects, the structure is 20-bytes long\'a0:
+\par \pard\sl235 
+\par \pard\sl235\li715 \f3 typedef struct REFPOLYOBJ \{\-
+\par     short entrysize;
+\par     char type;
+\par     char no;
+\par     struct INTPT pt;
+\par     long crossindex;
+\par \'7d REFPOLYOBJ;\f9 
+\par \pard\sl235 
+\par The \f3 entrysize\f9  member is now equal to 20, and the \f3 type\f9  member equals 4 (there are no animated extra-objects in the first chunk). The added \f3 crossindex\f9  member indicates the number of the corresponding REFXOBJ structure.
+\par 
+\par There is one REFPOLYOBJ structure (of either type) for every object (either polygon object or extra-object) in the first POLYOBJ chunk. The three other POLYOBJ chunks are not listed. Also note that, unlike the POLYOBJ chunk, this structure remains present even when there are only extra-objects. The various REFPOLYOBJ structures of a track block are stored consecutively in the .FRD file\'a0; the .FRD files contains padding just after the REFPOLYOBJ structures, in order to obtain a total size of \f3 20*nPolyobj\f9  in all cases for the REFPOLYOBJ table.
+\par \pard\sl235 
+\par \b 8. SOUNDSRC structure \plain\f9\fs20 (size\'a0: 16 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct SOUNDSRC \{\-
+\par     struct INTPT refpoint;
+\par     long type;
+\par \'7d SOUNDSRC;\f9 
+\par \pard\sl235 
+\par This structure describes the position and type of a sound source (water stream, etc...).
+\par 
+\par \b 9. LIGHTSRC structure \plain\f9\fs20 (size\'a0: 16 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct LIGHTSRC \{\-
+\par     struct INTPT refpoint;
+\par     long type;
+\par \'7d LIGHTSRC;\f9 
+\par \pard\sl235 
+\par This structure describes the position and type of a light source (special lighting effect).
+\par 
+\par 
+\par {\up #}
+\b\fs24 III. Polygon blocks\plain\f9\fs20 
+\par 
+\par \b 1. POLYGONBLOCK structure \plain\f9\fs20 (variable size)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct POLYGONBLOCK \{\-
+\par     struct POLYGONCHUNK poly[7];
+\par     struct OBJPOLYBLOCK obj[4]; 
+\par \'7d POLYGONBLOCK;\f9 
+\par \pard\sl235 
+\par This structure lists the polygons making up a track block\'a0; the \f3 vertex\f9  members of the contained POLYGONDATA structures refer to the vertex table of the corresponding TRKBLOCK. The POLYGONBLOCK structure contains seven POLYGONCHUNK substructures listing the track polygons, while the polygon objects are stored in the four OBJPOLYBLOCK substructures. Polygon chunk 0 lists the low-resolution track polygons\'a0; chunk 2 lists the medium-resolution track polygons\'a0; chunk 4 lists the high-resolution track polygons\'a0; and chunk 6 lists the polygons making up the lines between road lanes. Chunks 1, 3 and 5 are unused in most cases\'a0; occasionally they contain polygons making up fences and other transparent stuff\'a0: chunk 1 corresponds to low resolution, chunk 3 to medium resolution, and chunk 5 to high resolution. Also note that the OBJPOLYBLOCK substructures are non-empty only if there are polygon objects\'a0; if there are only extra-objects in an object chunk, the OBJPOLYBLOCK structure is left empty (the first object chunk is anyway described in the TRKBLOCK structure).
+\par \pard\sl235 
+\par \b 2. POLYGONCHUNK structure\plain\f9\fs20  (variable size)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct POLYGONCHUNK \{\-
+\par     long sz,szdup;
+\par     struct POLYGONDATA poly[sz];
+\par \'7d POLYGONCHUNK;
+\par \pard\sl235 \f9 
+\par The \f3 sz\f9  member lists the number of polygons in the polygon chunk\'a0; if it equals zero, then only the \f3 sz\f9  member is stored and the structure is only 4 bytes long. If \f3 sz\f9  is non-zero, its value is duplicated in the \f3 szdup\f9  member. The \f3 poly\f9  member then lists the polygons themselves.
+\par 
+\par \b 3. OBJPOLYBLOCK structure\plain\f9\fs20  (variable size)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct OBJPOLYBLOCK \{\-
+\par     long nPolygons;
+\par     long nObjects;
+\par     struct POLYOBJDATA obj[nObjects];
+\par \'7d OBJPOLYBLOCK;\f9 
+\par \pard\sl235 
+\par The \f3 nPolygons\f9  member contains the total number of polygons referenced in the various polygon objects of the OBJPOLYBLOCK structure. If it equals zero, then only the \f3 nPolygons\f9  member is stored and the structure is only 4 bytes long. This is in particular the case when all objects are extra-objects. If \f3 nPolygons\f9  is non-zero, the \f3 nObjects\f9  member indicates the total number of objects in the chunk (both polygon objects and extra-objects), and the objects themselves are stored in the \f3 obj\f9  substructure.
+\par \pard\sl235 
+\par \b 4. POLYOBJDATA structure \plain\f9\fs20 (variable size)
+\par 
+\par This structure exists in two different versions. In the case of extra-objects, the structure is 4-bytes long\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct POLYOBJDATA \{\-
+\par     long type;
+\par \'7d POLYOBJDATA;\f9 
+\par \pard\sl235 
+\par The \f3 type\f9  member equals 4 for a basic extra-object, and 3 for an animated extra-object. Since extra-objects are stored in separate XOBJDATA structures, the POLYOBJDATA structure contains no other information in that case. For polygon objects, the structure contains more information\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct POLYOBJDATA \{\-
+\par     long type;
+\par     long numpoly;
+\par     struct POLYGONDATA poly[numpoly];
+\par \'7d POLYOBJDATA;\f9 
+\par \pard\sl235 
+\par The \f3 type\f9  member equals 1 for a polygon object. The \f3 numpoly\f9  member lists the number of polygons in the object, and the polygons themselves are stored in the \f3 poly\f9  substructure.
+\par 
+\par 
+\par {\up #}
+\b\fs24 IV. Extra-object blocks\plain\f9\fs20 
+\par 
+\par \b 1. XOBJBLOCK structure \plain\f9\fs20 (variable size)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct XOBJBLOCK \{\-
+\par     long nobj;
+\par     struct XOBJDATA obj[nobj];
+\par \'7d XOBJBLOCK;\f9 
+\par \pard\sl235 
+\par This structure is used to store extra-objects. There are actually four XOBJBLOCKs for every track block, each corresponding to one of the four object chunks. The FRD file also contains an extra XOBJBLOCK devoted to global animated extra-objects.
+\par 
+\par \b 2. XOBJDATA structure \plain\f9\fs20 (variable size)
+\par 
+\par This structure is used to describe an extra-object\'a0; it exists in two different versions, one for static objects (type 4) and one for animated objects (type 3). In the case of static objects, the structure is the following\'a0:
+\par \pard\sl235 
+\par \pard\sl235\li715 \f3 typedef struct XOBJDATA \{\-
+\par     long type;
+\par     long crossno;
+\par     long unknown;
+\par     struct FLOATPT ptRef;
+\par     long unknown2;
+\par     long nVertices;
+\par     struct FLOATPT vert[nVertices];
+\par     long shadingVertices[nVertices];
+\par     long nPolygons;
+\par     struct POLYGONDATA polyData[nPolygons];
+\par \'7d XOBJDATA;
+\par \pard\sl235 \f9 
+\par The \f3 type\f9  member equals 4 for static extra-objects. The \f3 crossno\f9  member references the REFXOBJ structure corresponding to the object in the TRKBLOCK structure of the appropriate track block. The \f3 ptRef\f9  member contains the coordinates of the object\f4 \'92\f9 s reference point. The \f3 nVertices\f9  value is the number of vertices contained in the extra-object\'a0; the coordinates of these vertices are stored in the \f3 vert\f9  member. All coordinates are \i relative to the reference point\plain\f9\fs20 . The \f3 shadingVertices\f9  member describes the shading applied to each vertex\'a0: the least significant byte is the blue component, the next byte is the green component, the next byte is the red component, and finally the most significant byte is the alpha value. The \f3 nPolygon\f9  value is the number of polygons making up the extra-object, and the polygons themselves are stored in the \f3 polyData\f9  member.
+\par \pard\sl235 
+\par For animated extra-objects, the XOBJDATA structure becomes\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct XOBJDATA \{\-
+\par     long type;
+\par     long crossno;
+\par     long unknown;
+\par     short unknown2[9];
+\par     char type3,objno;
+\par     short nAnimLength,unknown3;
+\par     struct ANIMDATA animData[nAnimLength];
+\par     long nVertices;
+\par     struct FLOATPT vert[nVertices];
+\par     long shadingVertices[nVertices];
+\par     long nPolygons;
+\par     struct POLYGONDATA polyData[nPolygons];
+\par \'7d XOBJDATA;
+\par \pard\sl235 \f9 
+\par The \f3 type\f9  member equals 3 for animated extra-objects. The \f3 type3\f9  member also equals 3, while the\f3  objno\f9  member contains the object\f4 \'92\f9 s sequence number inside the track block. The \f3 nAnimLength\f9  member stores the length of the animation sequence\'a0; the successive object positions are stored in the ANIMDATA substructures contained in the \f3 animData\f9  member.
+\par 
+\par The \f3 nVertices\f9  value is the number of vertices in the object\'a0; the coordinates of these vertices are stored in the \f3 vert\f9  member. All coordinates are \i relative to the reference points specified in the animation data\plain\f9\fs20 . The \f3 nPolygon\f9  value is the number of polygons making up the object, and the polygons themselves are stored in the \f3 polyData\f9  member.
+\par \pard\sl235 
+\par \b 3. ANIMDATA structure\plain\f9\fs20  (size\'a0: 20 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct ANIMDATA \{\-
+\par     struct INTPT pt;
+\par     float costheta,sintheta;
+\par \'7d ANIMDATA;\f9 
+\par \pard\sl235 
+\par This structure describes the position of an animated extra-object. The \f3 pt\f9  member provides the position of the object\f4 \'92\f9 s reference point (it is similar to the \f3 ptRef\f9  member of a static extra-object XOBJDATA structure, but in the case of an animated object the reference point moves during animation). The \f3 costheta\f9  and \f3 sintheta\f9  members describe the rotation to be applied to the object (this rotation always occurs in the XY plane, the Z coordinate is not affected).
+\par \pard\sl235 
+\par 
+\par {\up #}
+\b\fs24 V. FRD files\plain\f9\fs20 
+\par 
+\par \b 1. FRD file structure\plain\f9\fs20 
+\par 
+\par \pard\sl235\li715 \f3 typedef struct FRDFILE \{\-
+\par     char header[28];
+\par     long nBlocks;
+\par     struct TRKBLOCK trk[nBlocks+1];
+\par     struct POLYGONBLOCK poly[nBlocks+1];
+\par     struct XOBJBLOCK xobj[4*(nBlocks+1)+1];
+\par     long nTextures;
+\par     struct TEXTUREBLOCK texture[nTextures];
+\par \'7d FRDFILE;\f9 
+\par \pard\sl235 
+\par FRD files start with a 28-byte header, followed by the number of the last track block. The actual number of blocks is \f3 nBlocks+1\f9  rather than \f3 nBlocks\f9 . The first TRKBLOCK structure is at offset 32 in the file\'a0; the TRKBLOCK structures are followed by the POLYGONBLOCK structures (one per track block), and the XOBJBLOCK structures (four per track block, plus one for global objects). These data are followed by the number \f3 nTextures\f9  of track textures, and by TEXTUREBLOCK structures which describe how these textures are obtained from the bitmaps stored in the QFS files.
+\par \pard\sl235 
+\par \b 2. TEXTUREBLOCK structure\plain\f9\fs20  (size\'a0: 47 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct TEXTUREBLOCK \{\-
+\par     short width,height;
+\par     long unknown;
+\par     float corners[4][2];
+\par     long unknown2;
+\par     char islane;
+\par     short texture;
+\par \'7d TEXTUREBLOCK;\f9 
+\par \pard\sl235 
+\par This structure stores the properties of a track texture\'a0; the polygon textures described in POLYGONDATA structures always refer to one of these structures rather than directly to a QFS bitmap. The \f3 width\f9  and \f3 height\f9  members indicate the size of the bitmap in pixels. The \f3 corners\f9  member is a series of four planar coordinates, used to describe the positions of the four texture corners with respect to the QFS bitmap\'a0; these coordinates are often larger than 1, which makes it possible to tile several copies of a QFS bitmap into a single track texture. The \f3 islane\f9  member equals 1 if this texture is used to display road lanes (in which case it is \i not\plain\f9\fs20  connected to a QFS file texture), and 0 in all other cases. Finally, the \f3 texture\f9  member indicates the relevant entry in the QFS file (except in the case of road lane textures where it represents the number of the relevant predefined texture).
+\par \pard\sl235 
+\par The textures used for road lanes (i.e. those for which \f3 islane\f9  equals 1) correspond to 14 standard predefined textures rather than QFS textures\'a0: texture 0 is a yellow solid line, texture 1 is a yellow dotted line, texture 2 is a double yellow solid line, textures 3 and 4 are double yellow lines (one solid line with one dashed line). Textures 5 to 9 are identical to textures 0 to 4 but are white instead of yellow. Textures 10 and 11 are solid tire marks, 12 and 13 are lighter tire marks.
+\par \pard\sl235 
+\par \b WARNING\'a0\plain\f9\fs20 : the TEXTUREBLOCK structure causes byte-alignment problems with the default options of most compilers, as its members are not aligned on even addresses\'a0; beware of this when writing track editing software.
+\par 
+\par 
+\par {\up #}
+\b\fs24 VI. COL files\plain\f9\fs20 
+\par 
+\par \b 1. COL file structure\plain\f9\fs20 
+\par 
+\par \pard\sl235\li715 \f3 typedef struct COLFILE \{\-
+\par     char collID[4];
+\par     long version;
+\par     long fileLength;
+\par     long nBlocks;
+\par     long xbTable[nBlocks];
+\par     struct XBCOLBLOCK xb[nBlocks];
+\par \'7d COLFILE;\f9 
+\par \pard\sl235 
+\par The COL file has a structure comparable to the COL files of NFS2, but nearly all XBCOLBLOCK structures have changed. The only really useful information in COL files is the virtual road information, which is not redundant with what can be found in FRD files\'a0; the other structures are used to describe animated global objects, and their interest is no longer clear now that extra-objects can be animated too... however it turns out that some of the NFS3 tracks have their global objects described in the COL file rather than in the FRD file, so the description below is still necessary.
+\par \pard\sl235 
+\par The \f3 collID\f9  member contains the characters \f4 \'91\f9 COLL\f4 \'92\f9 \'a0; the \f3 version\f9  member equals 11. The \f3 fileLength\f9  member contains the length of the COL file. The file contents are stored in XBCOLBLOCK structures, which serve various purposes depending on their XBID identifier. The offset of each XBCOLBLOCK structure in the COL file is stored in the \f3 xbTable\f9  member\'a0; these offsets are \i relative to the beginning of the XB table\plain\f9\fs20 , so one must add 16 in order to get an absolute offset in the COL file.
+\par \pard\sl235 
+\par The number of blocks is either 2 if there are no global objects in the COL file, or 4 or 5 if there are global objects. The first block is used for a texture table, providing the conversion between QFS bitmaps and animated COL object textures\'a0; it is always present, even when there are no animated COL objects, and its contents are not related in any way with the texture table stored in the FRD file. The next blocks are only present if there are animated COL objects\'a0: first a block containing the 3D structures of the COL objects, followed by one or two blocks containing the objects themselves. The last block, which is always present, contains important virtual road information.
+\par \pard\sl235 
+\par \b 2. XBCOLBLOCK structure\plain\f9\fs20  (variable size)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct XBCOLBLOCK \{\-
+\par     long size;
+\par     short xbid;
+\par     short nrec;
+\par     struct (COLTEXTUREINFO|
+\par             COLSTRUCT3D|
+\par             COLOBJECT|
+\par             COLVROAD) data[nrec];
+\par \'7d XBCOLBLOCK;\f9 
+\par \pard\sl235 
+\par The \f3 size\f9  member contains the total length in bytes of the XBCOLBLOCK. The \f3 xbid\f9  member is an identifier which describes the meaning of the block\f4 \'92\f9 s contents\'a0; the \f3 nrec\f9  member contains the number of data records in the XBCOLBLOCK. The meaning of these data records depends on the XBID value.
+\par 
+\par The following XBCOLBLOCK types are legal in NFS3 COL files (in their order of apparition in the COL file)\'a0:
+\par 
+\par \b a) COL texture information (XBID 2)\plain\f9\fs20  (8-byte data records)\b 
+\par \pard\sl235 \plain\f9\fs20 
+\par \pard\sl235\li715 \f3 typedef struct COLTEXTUREINFO \{\-
+\par     short texture;
+\par     short unknown1;
+\par     short unknown2;
+\par     short unknown3;
+\par \'7d COLTEXTUREINFO;\f9 
+\par \pard\sl235 
+\par These records store the description of a COL texture in terms of a QFS bitmap. The \f3 texture\f9  member refers to an entry in the QFS file.
+\par 
+\par \b b) COL 3D-structure information (XBID 8)\plain\f9\fs20  (variable size records)\b 
+\par \plain\f9\fs20 
+\par Before describing a COL 3D-structure record, we start with two auxiliary structures (vertices and polygons)\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct COLVERTEX \{\-
+\par     struct FLOATPT pt;
+\par     long unknown;
+\par \'7d COLVERTEX;
+\par \pard\sl235 \f9 
+\par This structure describes a vertex of a COL 3D structure. The \f3 pt\f9  member contains coordinates relative to the reference position stored in the COL object information block.
+\par 
+\par \pard\sl235\li715 \f3 typedef struct COLPOLYGON \{\-
+\par     short texture;
+\par     char vert[4];
+\par \'7d COLPOLYGON;
+\par \pard\sl235 \f9 
+\par This structure describes a polygon of a COL 3D structure. The \f3 texture\f9  member refers to an element in the COL texture information block, while the \f3 v\f9  member contains the numbers of the four vertices making up the polygon.
+\par 
+\par \pard\sl235\li715 \f3 typedef struct COLSTRUCT3D \{\-
+\par     long size;
+\par     short nVert,nPoly;
+\par     struct COLVERTEX vertex[nVert];
+\par     struct COLPOLYGON polygon[nPoly];
+\par \'7d COLSTRUCT3D;\f9 
+\par \pard\sl235 
+\par The \f3 size\f9  member stores the size of the data record\'a0; the \f3 nVert\f9  and \f3 nPoly\f9  members contain the numbers of vertices and polygons respectively. The vertices and polygons themselves are stored in the \f3 vertices\f9  and \f3 polygon\f9  members.
+\par 
+\par \b c) COL object information (XBID 7 or 18)\plain\f9\fs20  (variable size records)\b 
+\par \plain\f9\fs20 
+\par These data records contain the description of a COL object\'a0; however the 3D structures (vertices and polygons) themselves are stored in the COL 3D structure block. There are two versions depending on whether the object is static or animated. For static objects the structure is the following\'a0:
+\par \pard\sl235 
+\par \pard\sl235\li715 \f3 typedef struct COLOBJECT \{\-
+\par     short size;
+\par     char type;
+\par     char struct3D;
+\par     struct INTPT ptRef;
+\par \'7d COLOBJECT;\f9 
+\par \pard\sl235 
+\par For static objects, the \f3 size\f9  member is equal to 16 and the \f3 type\f9  member is 1. The \f3 struct3D\f9  member refers to the relevant data record in the previous XBCOLBLOCK (3D structure information), and the \f3 ptRef\f9  member contains the object\f4 \'92\f9 s reference position.
+\par 
+\par For animated objects, the structure becomes 
+\par 
+\par \pard\sl235\li715 \f3 typedef struct COLOBJECT \{\-
+\par     short size;
+\par     char type;
+\par     char struct3D;
+\par     short animLength;
+\par     short unknown;
+\par     struct ANIMDATA animData[animLength];
+\par \'7d COLOBJECT;\f9 
+\par \pard\sl235 
+\par For animated objects, the \f3 size\f9  member contains the size of the record, and the \f3 type\f9  member is 3. The \f3 struct3D\f9  member refers to the relevant data record in the previous XBCOLBLOCK (3D structure information). The \f3 animLength\f9  member contains the length of the object\f4 \'92\f9 s animation, and the successive object positions are sored in the \f3 animData\f9  member (the ANIMDATA structures are the same ones as in the description of animated FRD extra-objects).
+\par \pard\sl235 
+\par \b d) COL virtual-road information (XBID 15)\plain\f9\fs20  (36-byte data records)\b 
+\par \plain\f9\fs20 
+\par The following structure is used to store a vector in a COL file\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct COLVECTOR \{\-
+\par     signed char x,z,y,unused;
+\par \'7d COLVECTOR;\f9 
+\par \pard\sl235 
+\par The three vector components are normalized so the vector has length 128.
+\par 
+\par \pard\sl235\li715 \f3 typedef struct COLVROAD \{\-
+\par \tab struct INTPT refPt;
+\par \tab long unknown;
+\par \tab struct COLVECTOR normal,forward,right;
+\par \tab long leftWall,rightWall;
+\par \'7d COLVROAD;\f9 
+\par \pard\sl235 
+\par There is one COL virtual-road data record for each track node\'a0; there are usually 8 track nodes (and therefore 8 COLVROAD records) for each FRD track block (see the \f3 nStartPos\f9  and \f3 nPositions\f9  members in TRKBLOCK structures).
+\par 
+\par The \f3 refPt\f9  member stores the coordinates of the node\f4 \'92\f9 s reference point (a point along the road). The \f3 normal\f9  vector points upwards, the \f3 forward\f9  vector points forward, the \f3 right\f9  vector points to the right.
+\par \pard\sl235 The \f3 leftWall\f9  and \f3 rightWall\f9  members indicate the distance between the node\f4 \'92\f9 s reference point and the left and right track walls (this distance is counted along the direction pointed by the \f3 right\f9  vector)\'a0; as cars can\f4 \'92\f9 t cross these track walls, it is necessary to ensure that all passable road polygons lie inbetween.
+\par 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \f2\b\fs24 NFS HS Track File Formats - V0.03, (c) Denis Auroux and Vitaly Kootin 1999\plain\f9\fs20 
+\par 
+\par This help page describes the structure of NFS High Stakes track files.
+\par 
+\par \f2\b DISCLAIMER\'a0: \plain\f2\fs20 The information below is unofficial, and may be inexact by some aspects. It is only intended as reference information to help other NFS developers, and comes with no warranty. It may not be used for commercial purposes. It is forbidden to distribute a modified version of this document.
+\par 
+\par \b Contents\'a0:\plain\f2\fs20 
+\par \pard\sl235 \tab \uldb Basic structures\plain\f2\fs20 
+\par \tab \uldb Block headers\plain\f2\fs20 
+\par \tab \uldb Track block data\plain\f2\fs20 
+\par \tab \uldb FRD file\plain\f2\fs20 
+\par 
+\par 
+\par {\up #}
+\b\fs24 I. Basic structures\plain\f2\fs20 
+\par 
+\par \b 1. FLOATPT structure\plain\f2\fs20  (size\'a0: 12 bytes)\b 
+\par \plain\f2\fs20 
+\par \pard\sl235\fi715 \f3 typedef struct FLOATPT \{\-
+\par     float x,z,y;
+\par \'7d FLOATPT;
+\par \pard\sl235 \f2 
+\par This structure is used to store the three coordinates of a vertex. Each of the components is stored as a floating-point number (IEEE single-precision format). The x and y axes are horizontal, while the z axis is vertical and points upwards.
+\par 
+\par \b 2. INTPT structure\plain\f2\fs20  (size\'a0: 12 bytes)\b 
+\par \plain\f2\fs20 
+\par \pard\sl235\fi715 \f3 typedef struct INTPT \{\-
+\par     long x,z,y;
+\par \'7d INTPT;
+\par \pard\sl235 \f2 
+\par This is another way to store the three coordinates of a vertex (less frequently used than the FLOATPT structure). Each of the components is stored as a 32-bit integer, and must be divided by 2^16 in order to obtain the corresponding floating-point value (in other words, the coordinates are 16.16 fixed precision numbers).
+\par 
+\par \b 3. POLYGONDATA structure\plain\f2\fs20  (size\'a0: 13 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct POLYGONDATA \{\-
+\par     short vertex[4];
+\par     short texture;
+\par     short flags;
+\par     unsigned char animInfo;
+\par \'7d POLYGONDATA;
+\par \pard\sl235 \f2 
+\par This structure describes a polygon. The \f3 vertex\f2  member refers to four entries in the vertex table associated with the polygon (either the vertex table of the TRKBLOCK structure in the case of a POLYBLOCK polygon, or that of the XOBJDATA structure in the case of an XOBJDATA polygon), describing the coordinates of the four polygon vertices. The \f3 texture\f2  member directly references a texture in the QFS file.
+\par 
+\par If \f3 texture\f2  is greater than 2047, it is to be interpreted as a road lane texture (dotted or solid line,
+\par \pard\sl235 yellow or white)\'a0: after subtracting 2048 to the texture number one gets the code of the road lane texture (see NFS3). Otherwise, the texture number directly points to an entry in the QFS file. However, some of the textures in the QFS file are to be skipped, namely those which contain after their local palette a comment (i.e. a piece starting with header ID 0x6F) whose text is the string "<mirrored>"\'a0; the correct texture is therefore the \f3 texture\f2 -th bitmap of the QFS file which does not have the "<mirrored>" comment.
+\par \pard\sl235 
+\par Unlike NFS3 where the first vertex of a track polygon is forward left, followed by forward right, backward right and backward left, the NFS HS ordering is forward right, forward left, backward left, backward right (the mirror image).
+\par 
+\par The flags are as follows\'a0: \f11 (flags>>2)&3\f2  indicates the multiple of 90\'b0 by which the texture should be rotated (0 for no rotation, 1 for 90\'b0, 2 for 180\'b0, 3 for 270\'b0)\'a0; a non-zero value of \f11 flags&0x10 \f2 indicates that the texture is horizontally flipped\'a0; a non-zero value of \f11 flags&0x20 \f2 indicates that the texture is vertically flipped. The value of \f11 (flags>>6)&7\f2  indicates the scaling factor\'a0: 0 is no scaling\'a0; 1 means that the texture is tiled twice horizontally\'a0; 2 that the texture is tile twice vertically\'a0; 3 indicates 4x horizontal tiling, 4 indicates 4x vertical tiling. Finally, a non-zero value of \f11 flags&0x8000\f2  indicates that the polygon is one-sided. 
+\par \pard\sl235 
+\par The texture is animated if the \f11 animInfo\f2  member is non-zero\'a0; in that case the LSB part indicates the length of the animation, and the MSB part indicates the periodicity.
+\par 
+\par \b 4. ARRAYPTR structure\plain\f2\fs20  (size\'a0: 8 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct ARRAYPTR \{\-
+\par     long nObjects;
+\par     void* pObjects;
+\par \'7d ARRAYPTR;
+\par \pard\sl235 \f2 
+\par This structure is used to describe a collection of objects\'a0: the \f3 nObjects\f2  member contains the number of objects, while the \f3 pObjects\f2  member merely contains a 32-bit space to be filled with a pointer to the objects themselves (which are stored elsewhere in the file).
+\par \f9 
+\par 
+\par {\up #}
+\b\fs24 II. Block headers\plain\f9\fs20 
+\par 
+\par \b 1. VROADBLOCK structure \plain\f9\fs20 (size\'a0: 84 bytes)
+\par 
+\par This structure stores the virtual road data (road position, width, orientation) for a track position.
+\par \pard\sl235 
+\par \pard\sl235\li715 \f3 typedef struct VROADBLOCK \{\-
+\par     struct FLOATPT nodePt;
+\par     struct FLOATPT normal,forward,right;
+\par     float leftWall,rightWall;
+\par     float unknown[2];
+\par     short extraNeighbors[2];
+\par     long unknown[4];  // first 2 are lane widths, last 2 are flags
+\par \'7d VROADBLOCK;\f9 
+\par \pard\sl235 
+\par There is one virtual-road block record for each track node\'a0; there are usually 8 track nodes (and therefore 8 VROADBLOCK records) for each FRD track block.
+\par 
+\par The \f3 refPt\f9  member stores the coordinates of the node\f4 \'92\f9 s reference point (a point along the road). The \f3 normal\f9  vector points upwards, the \f3 forward\f9  vector points forward, the \f3 right\f9  vector points to the right\'a0; their components are now three floating-point numbers, with normalization to unit length (note that these values are multiples of 1/128). The \f3 leftWall\f9  and \f3 rightWall\f9  members indicate the distance between the node\f4 \'92\f9 s reference point and the left and right track walls (this distance is counted along the direction pointed by the \f3 right\f9  vector).
+\par \pard\sl235 
+\par The two \f3 extraNeighbor\f9  values are usually equal to -1, but can be used to specify up to two neighbouring nodes other than the previous node and the following node (e.g. if there are shortcuts).
+\par 
+\par \b 2. TRKBLOCK structure \plain\f9\fs20 (size\'a0: 1512 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct TRKBLOCK
+\par \{\-
+\par     long nPolygons[11];
+\par     POLYGONDATA* pPolygons[11];
+\par     long nVertices;
+\par     long nHiResVert,nLoResVert,nMedResVert;
+\par     long nVerticesDup;
+\par     long nObjectVert;
+\par     FLOATPT* vertices;
+\par \pard\sl235\li715     long* shadingVertices;
+\par \pard\sl235\fi715     struct FLOATPT ptCentre;
+\par     struct FLOATPT ptBounding[4];
+\par     struct NEIGHBORDATA nbdData[300];
+\par     struct ARRAYPTR xobj[4];
+\par     long nVroad;
+\par     struct FLOATPT minPt,maxPt;
+\par     POLYVROADDATA* pVroad;
+\par     long nPositions;
+\par     struct ARRAYPTR refxobj;
+\par     struct ARRAYPTR refobj0;
+\par     struct ARRAYPTR soundsrc;
+\par     struct ARRAYPTR lightsrc;
+\par     long neighbors[8];
+\par \'7d TRKBLOCK;
+\par \pard\sl235 \f9 
+\par This structure describes a track block\'a0; it describes how many items of each type the block contains, and provides pointers to these data. Note that in order to speed up file access the data structure stored in the FRD file contains 32-bit memory pointers\'a0; these values are to be ignored and replaced by return values of subsequent malloc() calls at load time.
+\par 
+\par The structure starts with eleven polygon chunks\'a0: seven for the track structure, and four for the track\f4 \'92\f9 s polygon objects. Polygon chunk 0 lists the low-resolution track polygons\'a0; chunk 2 lists the medium-resolution track polygons\'a0; chunk 4 lists the high-resolution track polygons\'a0; and chunk 6 lists the polygons making up the lines between road lanes. Chunks 1, 3 and 5 contain polygons making up fences and other transparent stuff\'a0: chunk 1 corresponds to low resolution, chunk 3 to medium resolution, and chunk 5 to high resolution. Chunks 7, 8, 9 and 10 correspond to the polygon objects. The\f3  nPolygons\f9  member contains the number of polygons in each chunk, while the \f3 pPolygons\f9  member provides room for pointer storage.
+\par \pard\sl235 
+\par The \f3 nVertices\f9  and \f3 nVerticesDup\f9  values are always equal, and give the total number of vertices to be stored in the \f3 vertices\f9  member of the TRKBLOCK structure. Vertices \f3 0\f9  to \f3 nObjectVert-1\f9  are the vertices used by the polygon objects (chunks 7,8,9,10). Vertices \f3 nObjectVert\f9  to \f3 nLoResVert-1\f9  are used in polygon chunks 0 and 1, and correspond to the track vertices in low resolution. Vertices \f3 nLoResVert\f9  to \f3 nMedResVert-1\f9  are the additional vertices used in chunks 2 and 3, and correspond to the track vertices in medium resolution (the low-resolution vertices are also used in medium resolution). Vertices \f3 nMedResVert\f9  to \f3 nHiResVert-1\f9  are the additional vertices used in chunks 4 and 5, and correspond to the track vertices in high resolution (the low- and medium-resolution vertices are also used in high resolution). Finally, vertices \f3 nHiResVert\f9  to \f3 nVertices-1\f9  are used in chunk 6, and correspond to the road lanes. The \f3 shadingVertices\f9  member describes the shading applied to each vertex\'a0: for each vertex, the least significant byte is the blue component, the next byte is the green component, the next byte is the red component, and finally the most significant byte is the alpha value. The structure contains two pointers used to access the vertex coordinate table and the vertex shading table.
+\par \pard\sl235 
+\par The \f3 ptCentre\f9  member provides the coordinates of a central reference point around which the block is built. The \f3 ptBounding\f9  member provides the coordinates of four bounding points for the block vertices\'a0: these points delimit a horizontal rectangle inside which all the block\f4 \'92\f9 s elements fit.
+\par 
+\par The four \f3 xobj\f9  array-pointers indicate how many extra-objects are contained in each of the four extra-object chunks associated with the track block, and provide the corresponding pointer space.
+\par \pard\sl235 
+\par The \f3 nVroad\f9  member indicates how many POLYVROADDATA structures are used in the block to describe the virtual road parameters of the track polygons\'a0; the \f3 pVroad\f9  member provides pointer space.
+\par 
+\par Normally each block corresponds to 8 node positions, except the last one\'a0: the number of nodes in the block is given by the \f3 nPositions\f9  member. The node positions refer to the VROADBLOCK records at the beginning of the FRD file.
+\par 
+\par The four array-pointers \f3 refxobj, refobj0, soundsrc\f9  and \f3 lightsrc\f9  are used to access the various corresponding substructures of types REFXOBJ, REFPOLYOBJ, SOUNDSRC and LIGHTSRC respectively (see below). The number of REFXOBJ entries is the number of non-animated (type 4) extra-objects stored in the four extra-object chunks associated with the track block. The number of REFPOLYOBJ entries is the total number of objects (both polygon-objects and extra-objects) in object chunk 0. 
+\par \pard\sl235 
+\par The \f3 neighbors\f9  member lists blocks with which the current block is in direct contact. Usually these are the previous block and the following block. The unused entries contain -1.
+\par 
+\par The \f11 minPt\f9  and \f11 maxPt\f9  members, whose z coordinates are unused, store in their x components respectively the minimum and maximum x coordinates of any vertex belonging to a non-type14 high-resolution road polygon (i.e. a polygon for which there is a POLYVROADDATA entry). Similarly the y components of \f11 minPt\f9  and \f11 maxPt\f9  contain the minimum and maximum y coordinates of any vertex belonging to a non-type14 high resolution road polygon. These two members are used by the POLYVROADDATA entries.
+\par \pard\sl235 
+\par \b 3. NEIGHBORDATA structure\plain\f9\fs20  (size\'a0: 4 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct NEIGHBORDATA \{\-
+\par     short block;
+\par     short unused;
+\par \'7d NEIGHBORDATA;
+\par \pard\sl235 \f9 
+\par This structure is used to list the block numbers corresponding to the neighbors of the currently described block, starting with the closest ones. There are always 300 such entries in the TRKBLOCK structure, but for obvious reasons most of these entries are unused and just contain -1 in the \f3 block\f9  member.
+\par 
+\par 
+\par {\up #}
+\b\fs24 III. Track block data\plain\f9\fs20 
+\par 
+\par \b 1. TRKBLOCKDATA structure\plain\f9\fs20  (size\'a0: variable)
+\par 
+\par This structure stores the various data blocks referenced by the TRKBLOCK structure (above).
+\par \pard\sl235 
+\par \pard\sl235\li715 \f3 typedef struct TRKBLOCKDATA \{\-
+\par     struct FLOATPT vertices[];
+\par     long shadingVertices[];
+\par     struct POLYVROADDATA vroad[];
+\par     struct REFXOBJ refxobj[];
+\par     struct REFPOLYOBJ refobj0[];
+\par     char padding[];
+\par     struct SOUNDSRC soundsrc[];
+\par     struct LIGHTSRC lightsrc[];
+\par     struct POLYGONDATA polygons[11][];
+\par     struct XOBJCHUNK xobj[4];
+\par \'7d TRKBLOCKDATA;
+\par \pard\sl235 \f9 
+\par The number of \f3 vertices\f9  and \f3 shadingVertices\f9  entries corresponds to the \f3 nVertices\f9  member of the TRKBLOCK structure. These contain respectively the coordinates and shading RGBA values of the track vertices.
+\par 
+\par The number of POLYVROADDATA structures (see below) is given by the \f3 nVroad\f9  member of the TRKBLOCK structure.
+\par 
+\par The number of REFXOBJ, REFPOLYOBJ, SOUNDSRC and LIGHTSRC structures (see below) is given by the corresponding array-pointers in the TRKBLOCK structure.
+\par \pard\sl235 
+\par The REFPOLYOBJ structures have variable size (16 or 20 bytes)\'a0; the .FRD file contains padding just after the REFPOLYOBJ structures, in order to obtain a total size of \f3 20*nPolyobj\f9  in all cases for the REFPOLYOBJ table.
+\par 
+\par The \f3 polygons\f9  member contains 11 series of POLYGONDATA structures, making up the 11 polygon chunks of the track block. The length of each chunk is given at the beginning of the TRKBLOCK structure. These structures contain all polygons both for the track structure and polygon objects.
+\par \pard\sl235 
+\par The four \f3 xobj\f9  members contain the block\f4 \'92\f9 s extra-objects (4 chunks). The number of XOBJHEAD and XOBJDATA structures for each chunk are the number of objects of each xobj chunk, stored in the \f3 xobj\f9  array-pointers of the TRKBLOCK structure.
+\par 
+\par \b 2. POLYVROADDATA structure\plain\f9\fs20  (size\'a0: 24 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct POLYVROADDATA \{\-
+\par     unsigned char minY,maxY,minX,maxX;
+\par     char isEdge[4];
+\par     char flags;
+\par     char unknown;
+\par     short polygon;
+\par     short xNorm,zNorm,yNorm;
+\par     short xForw,zForw,yForw;
+\par \'7d POLYVROADDATA;
+\par \pard\sl235 \f9 
+\par This structure describes the virtual road properties of a track polygon (i.e. a polygon in chunk 4). There is one entry for each driveable polygon (non-driveable polygons of type 14 do not have an entry). The polygon\f4 \'92\f9 s position in chunk 4 is given by the \f3 polygon\f9  member. The \f3 xNorm,zNorm,yNorm\f9  members describe the coordinates of the normal vector (normalized to length 2^15) while the \f3 xForw,zForw,yForw\f9  members contain the coordinates of the forward vector (normalized to length 2^15).
+\par \pard\sl235 
+\par The \f3 minY,maxY,minX,maxX\f9  members give bounds on the x and y coordinates of the four vertices making up the polygon, and are used by NFSHS to determine which polygon the car hits as it moves. These values are scaled relatively to the \f11 minPt\f9  and \f11 maxPt\f9  members of the corresponding TRKBLOCK structure, by a linear transformation\'a0: 0 stands for the \f11 minPt\f9  value, and 255 stands for the \f11 maxPt\f9  value. For example, denoting by v[i] the four vertices of the polygon,
+\par \pard\sl235 
+\par \pard\sl235\fi715 \f3 minX = 255*(min(v[i].x,i=0..3) - minPt.x) / (maxPt.x - minPt.x)\f9 
+\par \pard\sl235 
+\par The \f3 isEdge\f9  array indicates along which of the sides of the polygon there are neighboring track polygons\'a0: the first value corresponds to the front edge, followed by the left edge, the back edge, and the right edge. These values are 0xFF if there is no adjacent track polygon along this edge, 0 if there is one.
+\par 
+\par The \f3 flags\f9  member describes the behavior of the polygon\'a0: a non-zero value of \f3 flags&0x80\f9  indicates that collisions with walls should be handled, i.e. that some of the neighboring polygons are not passable. A non-zero value of \f3 flags&0x40\f9  indicates that collisions with extra-objects should be handled, i.e. that some extra-objects might be present over the polygon. \f3 Flags&0x20\f9  seems to be set for the first row of polygons in a track block. Finally, \f3 flags&0x0f\f9  describes the behavior of the polygon when driven over\'a0: a value of 0 corresponds to a polygon over which cars cannot pass (14 is unused in NFSHS, see above)\'a0; a value of 2 corresponds to a polygon which emits gravel when driven over\'a0; values 4 and 11 correspond to emission of leaves, 5 and 13 to emission of dust, 9 and 15 to emission of snow. All other values correspond to plain passable polygons.
+\par \pard\sl235 
+\par \b 3. REFXOBJ structure\plain\f9\fs20  (size\'a0: 20 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct REFXOBJ \{\-
+\par     struct INTPT pt;
+\par     short unknown;
+\par     short globalno;
+\par     char unknown[4];
+\par \'7d REFXOBJ;
+\par \pard\sl235 \f9 
+\par This structure lists the properties of an extra-object. There is one entry for each non-animated (type 4) extra-object, regardless of the chunk to which it belongs\'a0; there are no entries for animated objects. The \f3 pt\f9  member contains the coordinates of the object\f4 \'92\f9 s reference point (see XOBJDATA structure). The \f3 globalno\f9  member is a unique sequence number characterizing the object among all of the track\f4 \'92\f9 s extra-objects. There are also entries for type 6 objects\'a0; however these objects are not stored among the track block\f4 \'92\f9 s extra-objects, so type 6 entries should mostly be ignored.
+\par \pard\sl235 
+\par \b 4. REFPOLYOBJ structure\plain\f9\fs20  (size\'a0: 16 or 20 bytes)
+\par 
+\par This structure, which lists the properties of an object, exists in two versions\'a0: the version for polygon objects is 16-bytes long and has the following structure\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct REFPOLYOBJ \{\-
+\par     short head;
+\par     char type;
+\par     char no;
+\par     struct INTPT pt;
+\par \'7d REFPOLYOBJ;\f9 
+\par \pard\sl235 
+\par For polygon objects, the \f3 head\f9  member equals 4 and the \f3 type\f9  member equals 1. The \f3 no\f9  member is a serial number among the block\f4 \'92\f9 s objects\'a0; it is apparently not used by NFS. The \f3 pt\f9  member contains the reference position of the object.
+\par 
+\par In the case of non-animated extra-objects, the structure is 20-bytes long\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct REFPOLYOBJ \{\-
+\par     short head;
+\par     char type;
+\par     char no;
+\par     struct INTPT pt;
+\par     char crossindex; // ?
+\par     char unknown[3];
+\par \'7d REFPOLYOBJ;\f9 
+\par \pard\sl235 
+\par The \f3 head\f9  member is still equal to 4, and the \f3 type\f9  member equals 2 or 4. The \f3 crossindex\f9  member refers to the corresponding REFXOBJ entry (?)
+\par 
+\par There is one REFPOLYOBJ structure (of either type) for every object (either polygon object or extra-object) in the first object chunk. The three other chunks are not listed. The various REFPOLYOBJ structures of a track block are stored consecutively in the .FRD file\'a0; the .FRD files contains padding just after the REFPOLYOBJ structures, in order to obtain a total size of \f3 20*nPolyobj\f9  in all cases for the REFPOLYOBJ table. 
+\par \pard\sl235 
+\par There are also variants for type 3 and 6 extra-objects\'a0; type 6 extra-objects have 16 bytes like for polygon objects\'a0; type 3 objects contain animation data (see XOBJDATA below) which quickly fills up the space for REFPOLYOBJ structures, so that most of the table is actually lost. In any case, this table is not used by NFS, so it can safely be erased.
+\par 
+\par \b 5. SOUNDSRC structure \plain\f9\fs20 (size\'a0: 16 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct SOUNDSRC \{\-
+\par     struct INTPT refpoint;
+\par     long type;
+\par \'7d SOUNDSRC;\f9 
+\par \pard\sl235 
+\par This structure describes the position and type of a sound source (water stream, etc...).
+\par 
+\par \b 6. LIGHTSRC structure \plain\f9\fs20 (size\'a0: 16 bytes)
+\par 
+\par \pard\sl235\fi715 \f3 typedef struct LIGHTSRC \{\-
+\par     struct INTPT refpoint;
+\par     long type;
+\par \'7d LIGHTSRC;\f9 
+\par \pard\sl235 
+\par This structure describes the position and type of a light source (special lighting effect).
+\par \b 
+\par 7. XOBJCHUNK structure \plain\f9\fs20 (variable size)
+\par 
+\par This structure stores the data of an extra-object chunk (4 chunks per track block, plus two more chunks at the end of the file for global objects). It has the following structure\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct XOBJCHUNK \{\-
+\par     struct XOBJHEAD xobj[];
+\par     struct XOBJDATA xobjdata[];
+\par \'7d XOBJCHUNK;
+\par \pard\sl235 \f9 
+\par The number of XOBJHEAD and XOBJDATA structures are given in the TRKBLOCK header structure.
+\par 
+\par \b 8. XOBJHEAD structure \plain\f9\fs20 (52 bytes long)
+\par \b 
+\par \plain\f9\fs20 This structure is used to describe an extra-object\'a0; it exists in different versions, depending on the object\f4 \'92\f9 s type\'a0: static object (type 2 or 4), animated object (type 3), static global object (type 1), complex-behavior global object (type 6). The structure is the following (52 bytes long)\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct XOBJHEAD \{\-
+\par     long type;
+\par     long crossno;
+\par     long unknown;
+\par     struct FLOATPT ptRef;
+\par     long dataSize;
+\par     void *data;
+\par     long nVertices;
+\par     FLOATPT* vertices;
+\par     long* shadingVertices;
+\par     long nPolygons;
+\par     POLYGONDATA* polygons;
+\par \'7d XOBJHEAD;
+\par \pard\sl235 \f9 
+\par The \f3 type\f9  member equals 2 or 4 for static extra-objects, 3 for animated objects, 1 for static global objects, 6 for complex-behavior objects. The only difference between type 2 and type 4 objects is that type 2 objects do not appear in the REFXOBJ table (they cannot be collided with). Type 3 objects do not appear in the REFXOBJ table either\'a0; they are non-interactive animated objects, i.e. they follow a prescribed trajectory that can\f4 \'92\f9 t be affected by cars. Type 1 objects are static objects like type 2 objects, but do not belong to any track block (they\f4 \'92\f9 re used in the final xobj chunks of the FRD file). Finally, type 6 objects are static objects which can be knocked over by the cars, resulting in a complex behavior\'a0: e.g. the crates in Route Adonf, cones in raceway tracks, etc...\'a0; these objects are stored in the final xobj chunks of the FRD file, although they are referred to in the REFXOBJ tables of the individual track blocks (they\f4 \'92\f9 re not present in the xobj data of the block but postponed to the end of the file instead).
+\par \pard\sl235 
+\par The \f3 crossno\f9  member is only used for objects which appear in the REFXOBJ table, i.e. type 4 static objects (and type 6 global objects)\'a0; it then references the entry in the REFXOBJ structure corresponding to the object. 
+\par 
+\par The \f3 ptRef\f9  member contains the coordinates of the object\f4 \'92\f9 s reference point (only in the case of type 2, 4 or 6\'a0; for type 3 a sequence of animation positions is used instead, and type 1 objects have global coordinates). 
+\par 
+\par The \f3 dataSize\f9  member contains the length in bytes of the object\f4 \'92\f9 s type-specific extra data, only non-zero for type 3 and 6 objects\'a0; the data is to be accessed via the \f11 data\f9  pointer member. For type 3 objects this data contains the animation\f4 \'92\f9 s successive positions, and for type 6 objects this data is always 72 bytes long and stores the object\f4 \'92\f9 s position and orientation.
+\par \pard\sl235 
+\par The \f3 nVertices\f9  value is the number of vertices contained in the extra-object\'a0; the coordinates of these vertices are to be stored in the \f3 vertices\f9  member (pointer space only). All coordinates are \i relative to the reference point\plain\f9\fs20 , except for type 1 global objects where these are absolute coordinates. The \f3 shadingVertices\f9  member is pointer space to store the shading applied to each vertex. The \f3 nPolygon\f9  value is the number of polygons making up the extra-object, and the polygons themselves are to be accessed via the \f3 polygons\f9  pointer. 
+\par \pard\sl235 
+\par \b 9. XOBJDATA structure \plain\f9\fs20 (variable size)
+\par 
+\par The XOBJDATA structure is\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct XOBJDATA \{\-
+\par     struct SPECIFICDATA data;
+\par     struct FLOATPT vertices[];
+\par     long shadingVertices[];
+\par     struct POLYGONDATA polygons[];
+\par \'7d XOBJDATA;
+\par \pard\sl235 \f9 
+\par The sizes of these tables are contained in the corresponding XOBJHEAD structure (\f3 nVertices\f9  and \f3 nPolygons\f9  members). All coordinates are \i relative to the reference point\plain\f9\fs20  (except for type 1 objects). 
+\par 
+\par The \f11 data\f9  member is empty for type 1, 2 or 4 objects (static objects). In the case of an animated (type 3) object, the specific data structure is\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct SPECIFICDATA \{\-
+\par     short head;
+\par     char type;
+\par     char no;
+\par     short animLength;
+\par     short unknown;
+\par     struct ANIMDATA animData[animLength];
+\par \'7d SPECIFICDATA;
+\par \pard\sl235 \f9 
+\par The extra information describing the animation looks much like a REFPOLYOBJ structure\'a0: \f3 head\f9  equals 4, \f3 type\f9  equals 3, \f3 no\f9  is an object number. The \f3 animLength\f9  member indicates how many ANIMDATA structures are stored.
+\par 
+\par In the case of a type 6 object (last chunk only), it becomes\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct SPECIFICDATA \{\-
+\par     struct FLOATPT ptRef;
+\par     float weight;
+\par     struct FLOATPT Xdir,Ydir,Zdir;
+\par     struct FLOATPT dimensions;
+\par     long unknown;
+\par     short unknown2,unknown3;
+\par \'7d SPECIFICDATA;
+\par \pard\sl235 \f9 
+\par The \f3 ptRef\f9  field contains the object\f4 \'92\f9 s reference point (it is used instead of the one given in the XOBJHEAD)\'a0; the \f3 weight\f9  member contains the object\f4 \'92\f9 s weight. The three vectors \f3 Xdir, Ydir, Zdir\f9  indicate the orientation of the object and contain respectively the world coordinates of the X, Y and Z axes of the object\f4 \'92\f9 s coordinate frame. These vectors are mutually orthogonal and have unit length. The components of the \f3 dimensions\f9  member provide information on the object\f4 \'92\f9 s size along the various axes. The value of \f3 unknown2\f9  is related to the object\f4 \'92\f9 s shape (cube, pyramid, ...)
+\par \pard\sl235 
+\par \b 9. ANIMDATA structure\plain\f9\fs20  (size\'a0: 20 bytes)
+\par 
+\par \pard\sl235\li715 \f3 typedef struct ANIMDATA \{\-
+\par     struct INTPT pt;
+\par     float costheta,sintheta;
+\par \'7d ANIMDATA;\f9 
+\par \pard\sl235 
+\par This structure describes the position of an animated extra-object. The \f3 pt\f9  member provides the position of the object\f4 \'92\f9 s reference point (it is similar to the \f3 ptRef\f9  member of a static extra-object XOBJDATA structure, but in the case of an animated object the reference point moves during animation). The \f3 costheta\f9  and \f3 sintheta\f9  members describe the rotation to be applied to the object (this rotation always occurs in the XY plane, the Z coordinate is not affected).
+\par \pard\sl235 
+\par 
+\par {\up #}
+\b\fs24 IV. FRD file structure\plain\f9\fs20 
+\par 
+\par \pard\sl235\li715 \f3 typedef struct FRDFILE \{\-
+\par     char header[28];
+\par     long nLastBlock;
+\par     long nNodes;
+\par     struct VROADBLOCK vroad[nNodes];
+\par     struct TRKBLOCK trk[nLastBlock+1];
+\par     struct TRKBLOCKDATA data[nLastBlock+1];
+\par     struct GLOBALXOBJ global_xobj[2];
+\par     // anything else\'a0?
+\par \'7d FRDFILE;\f9 
+\par \pard\sl235 
+\par FRD files start with a 28-byte header, followed by the number of the last track block. The actual number of blocks is \f3 nLastBlock+1\f9 . Besides the data corresponding to blocks (as described above), the final part of the FRD file is devoted to global (animated) objects. The following structure is used\'a0:
+\par 
+\par \pard\sl235\li715 \f3 typedef struct GLOBALXOBJ \{\-
+\par     long nObj;
+\par     struct XOBJHEAD xobj[nObj];
+\par     struct XOBJDATA xobjdata[nObj];
+\par \'7d GLOBALXOBJ;\f9 
+\par \pard\sl235 
+\par This is the typical place where animated objects are stored\'a0; object types are widely variable in these two final XOBJ chunks. The first chunk can contain objects of type 1 or 3\'a0; the second one can contain objects of type 6.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \f2\b\fs24 Frequently Asked Questions\fs20 
+\par \plain\f9\fs20 
+\par \uldb \b General questions\plain\f9\b\fs20 \uldb 
+\par Editing tips\plain\f9\b\fs20 \uldb 
+\par Troubleshooting\plain\f9\b\fs20 \plain\f9\uldb\fs20 
+\par \plain\f9\fs20 
+\par 
+\par {\up #}
+\i\b 1. General questions\plain\f9\i\fs20 
+\par \plain\f9\fs20 
+\par \b When does the final version of T3ED come out\'a0?\plain\f9\fs20 
+\par It all depends on how much time I can spare for working on T3ED. No further release is planned before October 1, 1999.
+\par 
+\par \b Does T3ED require any specific DLLs in order to work\'a0?\plain\f9\fs20 
+\par Some Microsoft DLLs are required by T3ED : notably MFC42.DLL and MSVCRT.DLL. These files are very widespread and it is extremely likely that they are already installed on your system. If not, they are quite easy to find as they are distributed with many recent programs, and they might even be available on Microsoft\f4 \'92\f9 s web site.
+\par \pard\sl235 
+\par \b Where do I find the track files I\f4 \'92\f9 m supposed to edit in T3ED\'a0?\plain\f9\fs20 
+\par The track files are located in the GAMEDATA\'5cTRACKS\'5cTRK00x subdirectories of your NFS3 installation directory. If there is no GAMEDATA\'5cTRACKS subdirectory in your NFS3 directory, you must reinstall NFS3 in order to have the tracks loaded from the hard disk rather than from the CD-ROM.
+\par In NFS High Stakes, track files are similarly located in the subdirectories of the DATA\'5cTRACKS subdirectory of your NFS HS installation directory.
+\par \pard\sl235 
+\par \b Can I have both edited tracks and the original tracks at the same time in NFS\'a0?\plain\f9\fs20 
+\par No. Unlike cars, tracks cannot be added to NFS, so any edited track has to replace an original track.
+\par 
+\par \b How can I revert back to the original tracks\'a0?\plain\f9\fs20 
+\par Simply copy the .FRD and .COL files from the GAMEDATA\'5cTRACKS\'5cTRK00x subdirectory of your NFS3 CD-ROM back into the corresponding subdirectory of your hard disk NFS3 installation directory. In order to be able to modify again these files with T3ED, you will need to remove the Read-only attribute set by Windows when they\f4 \'92\f9 re copied from the CD-ROM.
+\par \pard\sl235 In NFS High Stakes, proceed similarly with the DATA\'5cTRACKS\'5c... subdirectories\'a0; there is no .COL file, so only the .FRD file needs to be replaced.
+\par 
+\par \b How can I distribute a modified track\'a0?\plain\f9\fs20 
+\par Just create a ZIP file containing both the .FRD and .COL files. People will be able to install the modified tracks simply by unzipping that file in the correct directory. In NFS HS there is no .COL file, so you just need to distribute the .FRD file.
+\par 
+\par \b Is it possible to convert NFS2 tracks to NFS3\'a0?\plain\f9\fs20 
+\par \pard\sl235 This is an extremely complicated task which requires the development of specific tools. Vitaly Kootin (vitaly_necromancer@yahoo.com) is working on this.
+\par 
+\par \b Is it possible to convert NFS3 tracks to NFS HS and vice-versa\'a0?\plain\f9\fs20 
+\par Although this is much easier than conversion between NFS2 and NFS3, this feature is not yet offered in T3ED because of the large number of remaining bugs in the conversion code. It might become available in a later release.
+\par 
+\par \b Can I create a new track from scratch\'a0?\plain\f9\fs20 
+\par \pard\sl235 This is not possible with T3ED, since it is not possible to modify the table of track textures or the track length. However you can use the "Erase All" function in the Edit-Tools menu to remove nearly everything from an existing track, which allows you to start again almost from scratch.
+\par 
+\par {\up #}
+\i\b 2. Editing tips\plain\f9\fs20 
+\par 
+\par \b How can I make an oval (or a high-speed ring, or a straightened track)\'a0?\plain\f9\fs20 
+\par First select Block mode in the Edit-Modes menu, and use the Smoothing properties dialog box (Alt-S) in order to activate the Extra-Smoothing option and to select a large value for the width of the smoothing zone (500 ought to be fine). Select the Move XY tool. By clicking on a track block and slightly dragging the mouse, you can remove all turns over a huge track section at once. Repeat this process two or three times on various track blocks in order to smoothen all the track. Next, select the Move Z tool, and repeat the process to remove the slopes.
+\par \pard\sl235 In v0.06 there is a new easier way to make a circle track\'a0: simply use the "Erase All" function in the Edit-Tools menu to remove the track shape and road elevations.
+\par 
+\par \b Is it possible to modify textures or create new textures\'a0?\plain\f9\fs20 
+\par T3ED is not a texture editor. You need to download a texture converter such as the QFS Editing Suite (available at http://www.math.polytechnique.fr/cmat/auroux/nfs/), which will let you convert QFS files into plain Windows bitmaps that you can edit using your favorite software.
+\par \pard\sl235 
+\par \b I moved an extra-object, and the cars pass through it as if didn't exist...\plain\f9\fs20 
+\par Collisions with extra-objects (displayed in green) are only detected over specific track polygons. In order to allow a moved object to be detected, you must modify the track polygon properties accordingly. First choose the High-resolution view, and switch to Polygon mode. Select the track polygon over which the object lies\'a0; use the Polygon Flags command in the Edit-Tools menu (or press Control+Enter), and check the "Extra-object collision detection" option. If the object lies across several polygons, repeat this operation for every polygon to enable object detection.
+\par \pard\sl235 
+\par \b I moved a polygon object, and I get an invisible wall where it used to be...\plain\f9\fs20 
+\par Collisions with polygon objects are not handled by NFS\'a0; rather, the track polygons over which the object lies (and the ones beyond in the case of a fence or a wall) are marked as impassable for the cars. The procedure to change the polygon properties (passable or not, etc...) is the following\'a0: first chose the High-resolution view, and switch to Polygon mode. Select the track polygon, and use the Polygon Flags command in the Edit-Tools menu (or press Control+Enter)\'a0; choose the relevant option in the "Drive-over behavior" list to change the passable status of a polygon. Also note that collisions with impassable polygons are handled only if all neighboring polygons have the "Wall collision detection" flag set\'a0; normally this flag is automatically set by T3ED when a polygon is made impassable. Also use the Adjust Road Width command in the Edit-Tools menu to adjust the virtual road width.
+\par \pard\sl235 
+\par \b Is it possible to add extra road sections\'a0?\plain\f9\fs20 
+\par It is not possible to extend the number of track blocks in the track. However it is now possible to add road polygons to a track block. This is an advanced feature, not intended for beginner users. See the specific \uldb \f2 help page\plain\f2\fs20 \f9  on this feature.
+\par 
+\par \b When I race in NFS, my car is stopped by an invisible wall even after making all polygons passable.\plain\f9\fs20 
+\par In addition to the passable/impassable flag for each track polygon, NFS also puts invisible walls on both sides of the track in order to delimitate the driveable area. A track polygon, even if marked passable, can be driven over only if it lies between the two boundaries. To adjust the track width, use the Adjust Road Width command in the Edit-Tools menu. Also see the page on See the specific \uldb \f2 adding track polygons\plain\f2\fs20 \f9  page for more tips.
+\par \pard\sl235 
+\par {\up #}
+\i\b 3. Troubleshooting\plain\f9\fs20 
+\par 
+\par \b I get an error message when attempting to save a modified track. What happens\'a0?\plain\f9\fs20 
+\par T3ED is not able to create the modified track files. First of all, check that you are not trying to save your track on the CD-ROM drive. Also, both the .FRD and .COL files must have the Read-only flag cleared\'a0; be especially careful with this if you have copied the files back from their CD-ROM version. The Read-only status of a file can be modified in its properties box, obtained by right-clicking on the file.
+\par \pard\sl235 In some instances, the track files of NFS HS come with the Read-only flag set\'a0: you need to clear this flag before you can overwrite the tracks.
+\par 
+\par \b The textures displayed in the texture browser look very bad. What can I do\'a0?\plain\f9\fs20 
+\par Check that your Windows display is configured with a sufficient color depth. High-color or true-color modes (at least 16-bit depth, i.e. 65536 colors) are required in order for the texture browser to display textures correctly. In 256-color mode you will get garbled textures, even if you try working with the 8-bit textures.
+\par \pard\sl235 
+\par \b I can\f4 \'92\f9 t view the textures because the QFS file has the wrong format. What happens\'a0?\plain\f9\fs20 
+\par Some of the QFS texture files have an abnormal compression format, and cannot be decoded by T3ED. This is in particular the case with the 8-bit mode textures for the Summit track. When this happens, you should try loading a different texture file. In particular the 16-bit mode texture files take longer to load, but do not suffer from this problem.
+\par 
+\par \b Why can\f4 \'92\f9 t I use some of the tools\'a0?\plain\f9\fs20 
+\par \pard\sl235 Since this is still a preliminary version of T3ED, some features are not yet implemented. Also, most commands are only available in specific editing modes (e.g. texture browsing is only possible in polygon mode).\b 
+\par 
+\par When I race in NFS, there are lots of display bugs. Why\'a0?\plain\f9\fs20 
+\par First of all you should be aware that display bugs are partly unavoidable, because the track file formats are not yet fully understood and some of the necessary information is not known. However, the following general tips can be helpful\'a0:
+\par \pard\sl235 - Never create sharp bends in the track which would cause some of the track polygons to overlap with each other. If you accidentally create such a sharp turn, you should use the Undo command to restore a correct track structure, and modify the Smoothing properties in order to increase the amount of smoothing.
+\par - Use block mode whenever possible rather than the extended point mode. Block mode is the only mode in which all the relevant virtual road information gets updated when you move things around.
+\par \pard\sl235 - Avoid creating slopes that are too steep, or things will tend to disappear in front of you when you race the modified track.
+\par 
+\par \b When I race in NFS, my car is stopped by an invisible wall even after making all polygons passable.\plain\f9\fs20 
+\par See above, in \i Editing tips\plain\f9\fs20  section.
+\par 
+\par \b It doesn\f4 \'92\f9 t work, what can I do\'a0?\plain\f9\fs20 
+\par You can send me a precise description of your problem by e-mail (auroux@math.polytechnique.fr). Due to my limited available time, I will only help people who state clearly their problem and whose questions are not answered in this help file. If you get an error message, please state its exact contents. If you get suspicious behaviour, please indicate exactly what actions you performed and what happened.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 {\up K}
+\f2\b Adding track polygons
+\par \plain\f2\fs20 
+\par \f9 The procedure to add track polygons has been changed since previous versions, and is now slightly less flexible but is now almost bug-free (now it should work\'a0!)\'a0:
+\par 
+\par 1. Switch to high-resolution view and point mode\'a0; select the Split/Merge tool.
+\par 2. Split the vertices around the polygons you want to duplicate.
+\par 3. Switch to polygon mode\'a0; select the polygon you want to duplicate, and use the Edit-Tools Duplicate to split it into as many pieces as necessary. In order to avoid bugs, it is no longer possible to move a polygon from a track node (a "row") to another one.
+\par \pard\sl235 3. Switch back to point mode\'a0; move and merge the vertices to fit the intended disposition.
+\par 4. Switch back to polygon mode\'a0; set the passable/non-passable properties for each newly created polygon, if they differ from those of the originally duplicated polygon\'a0; similarly for the textures. In the case of a High Stakes track, don\f4 \'92\f9 t forget to properly check the "no forward/backward neighbor" buttons in the Polygon Properties dialog box if necessary.
+\par 5. Switch to half-resolution view, and modify its contents if necessary (polygon deletion and duplication work like in versions up to 0.05).
+\par \pard\sl235 6. Repeat the previous step in low-resolution view.
+\par 
+\par NOTE\'a0: the structure of the track polygons imposed by the NFS game engine is extremely strict. You should always ensure the following\'a0:
+\par 
+\par - each of the 8 track nodes within each track block should correspond to a single row of polygons, ordered from left to right and adjacent to each other along a common edge. Starting with v0.06, T3ED ensures this automatically in most cases, but you should be careful when importing tracks edited with older versions.
+\par \pard\sl235 - each track polygon should be facing upwards and with the correct orientation. Once again, this is automatic in version 0.06 and above, but you should be careful when importing tracks edited with older versions.
+\par - the track polygon type (Polygon Flags dialog box) should be set to 0 for non-passable polygons lying in the middle of the track, and to 14 instead for non-passable polygons lying to the side of the track\'a0; the polygons with type not equal to 14 should form a single row for each track node.
+\par \pard\sl235 - each passable polygon should have the collision detection flags set correctly\'a0; in NFSHS the absence of passable neighbor also has to be indicated (in the Polygon Flags dialog box for forward and backward neighbors\'a0; automatically handled for left and right neighbors).
+\par - the road width should be adjusted in order to avoid invisible walls.
+\par 
+\par If any of the above fails, the track is likely to contain invisible walls and other bugs\'a0; remember, adding track polygons is a complicated process, so be sure to check carefully what you do.
+\par \pard\sl235 
+\par A final note\'a0: if you want to create a track which branches into two separate ways, it is still necessary to keep track polygons between the two parts of the track (remember each track node should be a single row of adjacent polygons)\'a0; you can either give them the proper textures, or even in some cases make them transparent (select a proper empty texture).
+\par 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \f2\b File menu commands\plain\f2\fs20 
+\par 
+\par The File menu offers the following commands:
+\par 
+\par \trowd\trgaph105\trleft-106 \cellx1835\cellx8615\pard\intbl\sl235 \uldb Open\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \plain\f2\fs20 Opens an existing track file.
+\par\intbl \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx8615\pard\intbl\sl235 \uldb Save\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \plain\f2\fs20 Saves the opened track using the same file name.
+\par\intbl \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx8615\pard\intbl\sl235 \uldb Save As\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \plain\f2\fs20 Saves the opened track to a specified file name.
+\par\intbl \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx8615\pard\intbl\sl235 \uldb Exit\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \plain\f2\fs20 Exits T3ED.
+\par\intbl \cell\intbl\row
+\pard\sl235 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b View menu commands\plain\f2\fs20 
+\par 
+\par The View menu offers the following commands:
+\par 
+\par \trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Toolbar\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \plain\f2\fs20 Shows or hides the toolbar.
+\par\intbl \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Status Bar\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Shows or hides the status bar.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Zoom In\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Zoom in.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Zoom Out\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Zoom out.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Translation mode\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Sets the translation mode\'a0: the scrollbars can be used to scroll the track view.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Rotation mode\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Sets the rotation mode\'a0: the scrollbars control the observer\f4 \'92\f2 s viewpoint.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Resolution\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Choose one of the three possible display resolutions.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Show Objects\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Shows or hides the track objects\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Show Lanes\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Shows or hides the road lanes\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Re-center\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Center view on the current selection\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Refresh\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Redraw screen\par\pard \pard\intbl\sl235 \cell\intbl\row
+\pard \page
+{\up $}
+{\up #}
+\pard\sl235 \b Edit-Modes menu commands\plain\f2\fs20 
+\par 
+\par The Edit-Modes menu offers the following commands:
+\par 
+\par \trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Block\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \plain\f2\fs20 Selects block mode (the selection is a whole track block).
+\par\intbl \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Point\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects point mode (the selection is a single point).\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Xtended Point\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects extended point mode (the selection is a single point, with automatic smoothing).\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Object\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects object mode (the selection is an object).\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Polygon\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects polygon mode (the selection is a polygon).\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Smoothing\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Modify the smoothing parameters for block mode or extended point mode.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Extra Smoothing\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Enable or disable extra smoothing for the move tools in block mode.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\pard \page
+{\up $}
+{\up #}
+\pard\sl235 \b Edit-Tools menu commands\plain\f2\fs20 
+\par 
+\par The Edit-Tools menu offers the following commands:
+\par 
+\par \trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Undo\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \plain\f2\fs20 Cancels the last modification of the track.
+\par\intbl \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Move XY\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects the Move XY tool\'a0: drag the mouse in order to move the selection along horizontal directions.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Move Z\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects the Move Z tool\'a0: drag the mouse in order to move the selection along the vertical direction.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Delete\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Delete an object or a polygon.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb New/Duplicate\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Create or duplicate an object or a polygon.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Merge/Split\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects the Merge/Split tool\'a0: control-left-click in order to merge vertices or adjacent polygons\'a0; right-click in order to split vertices (\i This command has not yet been implemented for polygons\plain\f2\fs20 ).\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Texture\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 View and modify the texture of a polygon.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Properties\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Display the properties of currently selected object (\i This command is not yet implemented\plain\f2\fs20 ).\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Polygon flags\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Modify the virtual road properties of a track polygon (collision detection, passability, ...)\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Adjust road width\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Adjust the virtual road width to remove the invisible walls on either side of the track.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Erase all\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Clear selectively track shape, objects and textures.\par\pard \pard\intbl\sl235 \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 \cell\intbl\row
+\pard \page
+{\up $}
+{\up #}
+\pard\sl235 \b Help menu commands\plain\f2\fs20 
+\par 
+\par The Help menu offers the following commands: 
+\par 
+\par \trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235 \uldb Help Topics\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Offers you an index to topics on which you can get help.
+\par\intbl \cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1835\cellx9205\pard\intbl\sl235\li715\fi-715 \pard\intbl\sl235 \uldb About\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Displays the version number of this application.
+\par\intbl \cell\intbl\row
+\pard\sl235\li715\fi-715 
+\par 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Open command (File menu)\plain\f2\fs20 
+\par 
+\par Use this command to open an existing track file. A dialog box will appear to let you choose the file to open. 
+\par 
+\par \b IMPORTANT\'a0: \plain\f2\i\fs20 Although you are prompted only for a .FRD track file, T3ED also simultaneously loads a companion file with .COL extension, which contains miscellaneous track data. If the .COL file is not available, T3ED will be unable to open the track file.\plain\f2\fs20 
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm0.bmp\}
+\par Keys:\tab CTRL+O
+\par \pard\sl235\li355 
+\par \page
+{\up #}
+\pard\sl235 \b File Open dialog box
+\par \plain\f2\fs20 
+\par The following options allow you to specify which file to open:
+\par \pard\sb55\sl235 \b File Name
+\par \pard\sl235\li355 \plain\f2\fs20 Type or select the filename you want to open.  This box lists files with the extension you select in the List Files of Type box. 
+\par \pard\sb55\sl235 \b List Files of Type
+\par \pard\sl235\li355 \plain\f2\fs20 Select the type of file you want to open:
+\par *.FRD\'a0: NFS3 track files.
+\par \pard\sb55\sl235 \b Drives
+\par \pard\sl235\li355 \plain\f2\fs20 Select the drive in which T3ED stores the file that you want to open. 
+\par \pard\sb55\sl235 \b Directories
+\par \pard\sl235\li355 \plain\f2\fs20 Select the directory in which T3ED stores the file that you want to open.
+\par \pard\sb55\sl235 \b Network...
+\par \pard\sl235\li355 \plain\f2\fs20 Choose this button to connect to a network location, assigning it a new drive letter. 
+\par 
+\par \pard\sl235 \b IMPORTANT\'a0: \plain\f2\i\fs20 Although you are prompted only for a .FRD track file, T3ED also simultaneously loads a companion file with .COL extension, which contains miscellaneous track data. If the .COL file is not available, T3ED will be unable to open the track file.\plain\f2\fs20 
+\par \pard\sl235\li355 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Save command (File menu)\plain\f2\fs20 
+\par 
+\par Use this command to save the edited track to its current name and directory.  If you want to change the name and directory of a track before you save it, choose the \uldb Save As command\plain\f2\fs20 .
+\par 
+\par \b IMPORTANT\'a0: \plain\f2\i\fs20 Besides the .FRD track file, T3ED also simultaneously saves a companion file with .COL extension, which contains miscellaneous track data. If you want to distribute the saved track, you must provide both the .FRD file and the .COL file. Also, both these files must be writeable in order for the save operation to be successful.
+\par \pard\sl235 \plain\f2\fs20 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm1.bmp\}
+\par Keys:\tab CTRL+S
+\par \pard\sl235\li355 
+\par \pard\sl235 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Save As command (File menu)\plain\f2\fs20 
+\par 
+\par Use this command to save and rename the edited track.  T3ED displays the \uldb Save As dialog box\plain\f2\fs20  so you can name your track file.  
+\par 
+\par To save a track with its existing name and directory, use the \uldb Save command\plain\f2\fs20 .
+\par 
+\par \b IMPORTANT\'a0: \plain\f2\i\fs20 Besides the .FRD track file, T3ED also simultaneously saves a companion file with .COL extension, which contains miscellaneous track data. If you want to distribute the saved track, you must provide both the .FRD file and the .COL file. Also, both these files must be writeable in order for the save operation to be successful.
+\par \page
+{\up #}
+\pard\sl235 \plain\f2\b\fs20 File Save As dialog box
+\par \plain\f2\fs20 
+\par The following options allow you to specify the name and location of the file you're about to save:
+\par \pard\sb55\sl235 \b File Name
+\par \pard\sl235\li355 \plain\f2\fs20 Type a new filename to save a track with a different name.  T3ED adds the extension you specify in the Save File As Type box.
+\par \pard\sb55\sl235 \b Drives
+\par \pard\sl235\li355 \plain\f2\fs20 Select the drive in which you want to store the document.
+\par \pard\sb55\sl235 \b Directories
+\par \pard\sl235\li355 \plain\f2\fs20 Select the directory in which you want to store the document.
+\par \pard\sb55\sl235 \b Network...
+\par \pard\sl235\li355 \plain\f2\fs20 Choose this button to connect to a network location, assigning it a new drive letter. 
+\par 
+\par \pard\sl235 \b IMPORTANT\'a0: \plain\f2\i\fs20 Besides the .FRD track file, T3ED also simultaneously saves a companion file with .COL extension, which contains miscellaneous track data. If you want to distribute the saved track, you must provide both the .FRD file and the .COL file. Also, both these files must be writeable in order for the save operation to be successful.
+\par \page
+{\up #}
+\pard\sl235 \plain\f2\b\fs20 1, 2, 3, 4 command (File menu)\plain\f2\fs20 
+\par 
+\par Use the numbers and filenames listed at the bottom of the File menu to open the last four documents you closed.  Choose the number that corresponds with the document you want to open.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Exit command (File menu)\plain\f2\fs20 
+\par 
+\par Use this command to exit T3ED.  T3ED prompts you to save the edited track if changes have been made since the last time it was saved.
+\par \plain\f0\fs20 
+\par \f2\b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Mouse:\tab Double-click the application's Control menu button.
+\par Keys:\tab ALT+F4
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Undo command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par Use this command to reverse the last editing action, if possible. Up to 8 actions can be successively undone. Undoing is no longer possible once the changes have been saved to disk.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm2.bmp\}
+\par Keys:\tab CTRL+Z or
+\par \tab ALT-BACKSPACE
+\par \pard\sl235 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Toolbar command (View menu)\plain\f2\fs20 
+\par 
+\par Use this command to display and hide the Toolbar, which includes buttons for some of the most common commands in T3ED.  A check mark appears next to the menu item when the Toolbar is displayed.
+\par 
+\par See \uldb Toolbar\plain\f2\fs20  for help on using the toolbar.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Toolbar\plain\f2\fs20 
+\par \{bml bm3.bmp\}
+\par 
+\par The toolbar is displayed across the top of the application window, below the menu bar.  The toolbar provides quick mouse access to the most frequently used commands in T3ED.
+\par 
+\par To hide or display the Toolbar, choose Toolbar from the View menu (ALT, V, T).
+\par 
+\par \pard\sl235\brdrb\brdrs\tx1075 \b Click\tab To\plain\f2\fs20 
+\par \pard\sl235\li1075\fi-1075\tx1075 \{bmc bm0.bmp\}\tab Open an existing track.
+\par 
+\par \{bmc bm1.bmp\}\tab Save the active track with its current name.
+\par 
+\par \{bmc bm4.bmp\}\tab Zoom in.
+\par 
+\par \{bmc bm5.bmp\}\tab Zoom out.
+\par 
+\par \{bmc bm6.bmp\}\tab Select \uldb translation mode\plain\f2\fs20 , where the scrollbars scroll the track view.
+\par 
+\par \{bmc bm7.bmp\}\tab Select \uldb rotation mode\plain\f2\fs20 , where the scrollbars control the observer\f4 \'92\f2 s view point.
+\par 
+\par \{bmc bm8.bmp\}\tab Select \uldb block mode\plain\f2\fs20 .
+\par 
+\par \{bmc bm9.bmp\}\tab Select \uldb point mode\plain\f2\fs20 .
+\par 
+\par \{bmc bm10.bmp\}\tab Select \uldb extended point mode\plain\f2\fs20  (single point with automatic smoothing).
+\par \pard\sl235\li1075\fi-1075\tx1075 
+\par \{bmc bm11.bmp\}\tab Select \uldb object mode\plain\f2\fs20 .
+\par 
+\par \{bmc bm12.bmp\}\tab Select \uldb polygon mode\plain\f2\fs20 .
+\par 
+\par \{bmc bm2.bmp\}\tab Reverse the last editing action.
+\par 
+\par \{bmc bm13.bmp\}\tab Select the \uldb move XY tool\plain\f2\fs20 .
+\par 
+\par \{bmc bm14.bmp\}\tab Select the \uldb move Z tool\plain\f2\fs20 .
+\par 
+\par \{bmc bm15.bmp\}\tab View and modify a polygon \uldb texture\plain\f2\fs20 .
+\par 
+\par \{bmc bm16.bmp\}\tab \uldb Delete\plain\f2\fs20  an object or a polygon.
+\par 
+\par \{bmc bm17.bmp\}\tab \uldb Create or duplicate\plain\f2\fs20  an object or a polygon.
+\par 
+\par \{bmc bm18.bmp\}\tab Select the \uldb merge/split\plain\f2\fs20  tool for editing vertices or polygons.
+\par 
+\par \{bmc bm19.bmp\}\tab Display the About dialog box.
+\par \pard\sl235\li1075\fi-1075\tx1075 
+\par \{bmc bm20.bmp\}\tab Contextual help.
+\par 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Status Bar command (View menu)
+\par \plain\f2\fs20 
+\par Use this command to display and hide the Status Bar, which describes the action to be executed by the selected menu item or depressed toolbar button, as well as basic status information. A check mark appears next to the menu item when the Status Bar is displayed.
+\par 
+\par See \uldb Status Bar\plain\f2\fs20  for help on using the status bar.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Status Bar\plain\f2\fs20 
+\par 
+\par The status bar is displayed at the bottom of the T3ED window.  To display or hide the status bar, use the Status Bar command in the View menu.
+\par 
+\par The left area of the status bar describes actions of menu items as you use the arrow keys to navigate through menus.  This area similarly shows messages that describe the actions of toolbar buttons as you depress them, before releasing them.  If after viewing the description of the toolbar button command you wish not to execute the command, then release the mouse button while the pointer is off the toolbar button.
+\par \pard\sl235 
+\par The right areas of the status bar provide basic information about the current mode:
+\par 
+\par \pard\sl235\tx2125 \b Indicator\tab Description\plain\f2\fs20 
+\par \pard\sa115\sl235\li2125\fi-2125\tx2125 Block \i nnn\plain\f2\fs20 \tab Indicates the track block to which the current selection belongs.
+\par TRANSL/ROTATE\tab Indicates whether the scrollbars are configured in \uldb Translation mode\plain\f2\fs20  or in \uldb Rotation mode\plain\f2\fs20 .
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Zoom In command (View menu)\plain\f2\fs20 
+\par 
+\par This command zooms in the document view by a factor of two. A total of 9 zoom levels are available.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm4.bmp\}
+\par Keys:\tab ALT+PGDOWN
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Zoom Out command (View menu)\plain\f2\fs20 
+\par 
+\par This command zooms out the document view by a factor of two. A total of 9 zoom levels are available.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm5.bmp\}
+\par Keys:\tab ALT+PGUP
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Translation Mode command (View menu)\plain\f2\fs20 
+\par 
+\par This command selects translation mode. In this mode, the scroll bars behave in their usual way (i.e. they scroll the track view).
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm6.bmp\}
+\par Keys:\tab F9
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Rotation Mode command (View menu)\plain\f2\fs20 
+\par 
+\par This command selects rotation mode. In this mode, the scroll bars control the observer\f4 \'92\f2 s view point rather than scrolling the view as usual. The horizontal scroll bar rotates the observer around the track along a horizontal circle, while the vertical scroll bar raises or lowers the viewpoint.
+\par 
+\par \b Tips
+\par \plain\f2\fs20 
+\par As T3ED is slightly slower in rotation mode than in translation mode, rotation mode should not remain selected as the default working mode when not necessary.
+\par \pard\sl235 
+\par Raising the viewpoint to its top-most position can be very useful for optimal control of the Move XY tool. Conversely, lowering the viewpoint to the bottom-most position allows optimal control of the Move Z tool, but since it tends to produce a display containing lots of overlapping polygons, it is sometimes best to work with a slightly raised viewpoint.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm7.bmp\}
+\par Keys:\tab ALT+F9
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Resolution submenu (View menu)\plain\f2\fs20 
+\par 
+\par The Resolution submenu of the view menu can be used to select one of the three available resolutions for viewing the track polygons. The highest resolution is used in the game whenever the car becomes close enough, while the two other resolutions are used to save computing time when the car is still far away.
+\par 
+\par The lowest resolutions allow faster redrawing of the T3ED screen, but since some track vertices are not visible in these modes it is not recommended to work with them when moving track blocks (the highest resolution should always be used in order to ensure that the track structure is not messed up after a block is moved). Use of the low resolutions is also not recommended because it then becomes impossible to select a vertex which only belongs to a high-resolution polygon.
+\par \pard\sl235 
+\par However, operations such as modifying polygon textures or deleting polygons must be performed in all three resolutions, and therefore require switching between the three available modes.
+\par 
+\par \trowd\trgaph105\trleft-106 \cellx1075\cellx7255\pard\intbl\sl235 \uldb Full\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects full resolution.\cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1075\cellx7255\pard\intbl\sl235\li715\fi-715 \pard\intbl\sl235 \uldb Half\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects intermediate resolution.\cell\intbl\row
+\trowd\trgaph105\trleft-106 \cellx1075\cellx7255\pard\intbl\sl235\li715\fi-715 \pard\intbl\sl235 \uldb Low\plain\f2\fs20 \uldb \cell\pard \pard\intbl\sl235 \pard\intbl\sl235\li715\fi-715 \plain\f2\fs20 Selects low resolution.\cell\intbl\row
+\pard \page
+{\up $}
+{\up #}
+\pard\sl235 \b Full Resolution command (View menu)\plain\f2\fs20 
+\par 
+\par This command selects the full resolution mode for viewing the track. Although this is the slowest mode, it is the only one in which all track vertices are displayed, and it is therefore strongly recommended to work in this mode when using the editing tools.
+\par 
+\par Operations such as modifying polygon textures or deleting polygons must be performed in all three available resolutions.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Keys:\tab ALT+1
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Half Resolution command (View menu)\plain\f2\fs20 
+\par 
+\par This command selects the half resolution mode for viewing the track. This mode is faster than the full resolution mode, but does not allow correct control of how the editing process affects the track structure. 
+\par 
+\par Operations such as modifying polygon textures or deleting polygons must be performed in all three available resolutions.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Keys:\tab ALT+2
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Low Resolution command (View menu)\plain\f2\fs20 
+\par 
+\par This command selects the low resolution mode for viewing the track. This mode is the fastest, but does not allow correct control of how the editing process affects the track structure. 
+\par 
+\par Operations such as modifying polygon textures or deleting polygons must be performed in all three available resolutions.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Keys:\tab ALT+3
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Show Objects command (View menu)\plain\f2\fs20 
+\par 
+\par This command enables or disables display of the track objects. The object editing commands become unavailable when objects are not displayed.
+\par 
+\par NFS3 tracks contain two kinds of objects\'a0: the \i polygon objects\plain\f2\fs20 , displayed in blue, are directly incorporated into the main track structure and are immovable. The \i extra objects\plain\f2\fs20 , displayed in green, are the only ones which allow the detection of a collision in the game, with the effect of either stopping the car (e.g. a tree) or moving the object (e.g. a road sign).
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Show Lanes command (View menu)\plain\f2\fs20 
+\par 
+\par This command enables or disables display of the polygons making up the lines between road lanes. The road lanes are displayed in brown. Enabling road lanes also causes miscellaneous transparent things (fences on Hometown, etc...) to appear.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Re-center command (View menu)\plain\f2\fs20 
+\par 
+\par This command recenters the view by placing the currently selected element in the middle of the T3ED window.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Keys:\tab HOME
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Refresh command (View menu)\plain\f2\fs20 
+\par 
+\par This command causes redrawing of the T3ED window, and should be used in the event of a display problem.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 {\up K}
+\b Block Mode command (Edit-Modes menu)\plain\f2\fs20 
+\par 
+\par This command selects T3ED\f4 \'92\f2 s block mode. In this mode, the selected item is a track block, which can be moved around to reshape of the track. In order to avoid breaking the track when a block is moved, smoothing is automatically applied when using the Move XY and Move Z tools in block mode\'a0; the smoothing parameters can be adjusted by using the Smoothing command (Edit-Modes menu).
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm8.bmp\}
+\par Keys:\tab CTRL+1
+\par \pard\sl235 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 {\up K}
+\b Point Mode command (Edit-Modes menu)\plain\f2\fs20 
+\par 
+\par This command selects T3ED\f4 \'92\f2 s point mode. In this mode, the selected item is a single point, thus allowing precise control of the position of every piece of the track. Points belonging to different structures (objects, track blocks, ...) can sometimes be glued together\'a0: in that case, moving a point simultaneously affects all the other points attached to it. The Merge/split tool can be used to detach or attach points freely to each other.
+\par \pard\sl235 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm9.bmp\}
+\par Keys:\tab CTRL+2
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Xtended Point Mode command (Edit-Modes menu)\plain\f2\fs20 
+\par 
+\par This command selects T3ED\f4 \'92\f2 s extended point mode. The difference with point mode is that, in extended point mode, the Move XY and Move Z tools use smoothing in order to preserve the track structure. This mode is therefore appropriate for reshaping the track at a scale smaller than that of a block but without having to take care of every single point.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm10.bmp\}
+\par Keys:\tab CTRL+3
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Object Mode command (Edit-Modes menu)\plain\f2\fs20 
+\par 
+\par This command selects T3ED\f4 \'92\f2 s object mode. In this mode, the selected item is an object (either a polygon object or an extra-object). Object mode can be used only if objects are displayed (see Show Objects command in View menu). Objects can be moved, duplicated or deleted, and even created from scratch.
+\par In any case, keep in mind that collision detection is only possible with extra-objects.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm11.bmp\}
+\par Keys:\tab CTRL+4
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Polygon Mode command (Edit-Modes menu)\plain\f2\fs20 
+\par 
+\par This command selects T3ED\f4 \'92\f2 s polygon mode. In this mode, the selected item is a polygon, belonging either to the track itself or to an object. Polygons can be moved, duplicated or deleted. The texture applied to a polygon can be modified by using the Texture command (Edit-Tools menu). Also, when the selected polygon is a high-resolution track polygon, the Polygon flags command (Edit-Tools menu) can be used to modify its behavior when driven over by a car.
+\par \pard\sl235 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Toolbar:\tab \{bmc bm12.bmp\}
+\par Keys:\tab CTRL+5
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 {\up K}
+\b Smoothing Properties command (Edit-Modes menu)\plain\f2\fs20 
+\par 
+\par This command displays the Smoothing Properties dialog box, which can be used to control the smoothing parameters used by the Move XY and Move Z tools. This command is only available in block mode or in extended-point mode.
+\par 
+\par \b Smoothing Properties dialog box - Extended point mode\plain\f2\fs20 
+\par 
+\par In extended point mode, moving a point affects the whole surrounding area in the following manner\'a0: all points which lie close enough to the selected point are moved together with it\'a0; the shape of the track is then adjusted over the "smoothing zone" in order to fit with the applied movement. The dialog box allows setting the respective sizes of these two zones by changing the "Width of zone to move" and "Width of smoothing zone" parameters. These parameters are expressed in arbitrary distance units\'a0; the length of a track block is about 50 units. The first distance is by default 0, i.e. smoothing begins immediately away from the selected point, which is the most useful setting in usual circumstances.
+\par \pard\sl235 
+\par \b Smoothing Properties dialog box - Block mode\plain\f2\fs20 
+\par 
+\par In block mode, T3ED can use two different smoothing methods\'a0: normal smoothing or "extra-smoothing". In normal smoothing mode, a certain portion of the track (by default slightly more than a block) is moved as is, without any deformation\'a0; the shape of the track over the smoothing zone is then adjusted in order to fit with the applied movement. Existing turns in the track are preserved by this adjustment\'a0: normal smoothing is therefore appropriate for adding new turns without removing the existing ones.
+\par \pard\sl235 
+\par In extra-smoothing mode, the shape of the track is smoothened using polynomial interpolation, without retaining the original turns. All existing turns within the smoothing zone are removed, and replaced by a single bend which connects the new position of the moved block with the rest of the track. Extra-smoothing is therefore appropriate for deeper reshaping operations, such as replacing a sequence of sharp turns by a single wider turn, or even straightening a track portion.
+\par \pard\sl235 
+\par In both cases, the size of the smoothing zone can be modified by using the "Width of smoothing zone" control\'a0: the width of the smoothing zone on each side of the selected block is expressed in units of track nodes (one track block corresponds to 8 track nodes). In normal smoothing mode, the size of the central zone which is moved without deformation can be modified using the "Width of zone to move" control (this parameter is not used in extra-smoothing mode where the smoothing always occurs over the whole smoothing zone). Also, note that smoothing only occurs along the selected movement directions\'a0: i.e., the Move XY tool does not act on the track altitudes, while the Move Z tool does not affect the XY coordinates.
+\par \pard\sl235 
+\par \pard\sl355 \i\b Remarks\plain\f2\i\fs20 
+\par \pard\sl235 \plain\f2\fs20 1. When moving track blocks, be very careful not to create a sharp turn in which the track polygons would overlap with each other\'a0; this would cause display problems in NFS3. Once the track structure is disorganized, it is impossible to reobtain a normal structure without moving every single point back in place\'a0; the only reasonable option is therefore to immediately use the Undo command in order to cancel the changes. In order to avoid this situation, it is advisable to increase the width of the smoothing zone, especially when moving a track block over a long distance. Enabling extra-smoothing is also helpful in many cases. Note that the default smoothing parameters at T3ED startup are only appropriate for moving track blocks over relatively short distances.
+\par \pard\sb115\sl235 2. When extra-smoothing is enabled, selecting a very large value for the "Width of smoothing zone" parameter makes it possible to very easily straighten the track (e.g. in order to make an oval). When the maximum value of 500 is chosen, moving a single track block immediately smoothens a huge track portion, so that moving two or three suitably chosen track blocks is normally sufficient to obtain a track without any sharp turn (oval, speed ring, etc...). Simply remember that, as the Move XY tool does not affect the altitudes, it is also necessary to repeat the process with the Move Z tool in order to obtain a flat track.
+\par \pard\sl235 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Keys:\tab ALT+S
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Extra Smoothing command (Edit-Modes menu)\plain\f2\fs20 
+\par 
+\par This command enables or disables the extra-smoothing option of the Move XY and Move Z tools in block mode. This command is only available in block mode.
+\par 
+\par In normal smoothing mode, a certain portion of the track is moved as is, without any deformation\'a0; the shape of the track over the smoothing zone is then adjusted in order to fit with the applied movement. Existing turns in the track are preserved by this adjustment\'a0: normal smoothing is therefore appropriate for adding new turns without removing the existing ones.
+\par \pard\sl235 
+\par In extra-smoothing mode, the shape of the track is smoothened using polynomial interpolation, without retaining the original turns. All existing turns within the smoothing zone are removed, and replaced by a single bend which connects the new position of the moved block with the rest of the track. Extra-smoothing is therefore appropriate for deeper reshaping operations, such as replacing a sequence of sharp turns by a single wider turn, or even straightening a track portion.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Move XY command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command selects or deselects the Move XY editing tool. This tool can be used to move items in the horizontal (XY) directions. It is available in all editing modes (but must be reselected every time the editing mode is changed). When the Move XY tool is selected, an item can be moved by clicking on it and dragging the mouse while keeping the left button pressed.
+\par 
+\par In Point, Object and Polygon modes the behavior is straightforward. In Extended point and Block modes, smoothing is automatically applied in order to make the editing process easier. Also note that in Polygon mode the neighbouring polygons are modified so that moving the selected polygon does not disconnect it from the rest of the structure.
+\par \pard\sl235 
+\par \i\b Remarks\'a0:\plain\f2\fs20 
+\par - In Block mode, two different smoothing methods are available\'a0: see \uldb Extra-Smoothing command\plain\f2\fs20  for more information.
+\par - In Object mode, moving an object along the track over a sufficiently long distance automatically moves the object from one track block to another. On the contrary, a vertex or a polygon keeps belonging to the same track block, no matter how far it is moved.
+\par 
+\par \i\b Note about moving track blocks\'a0:\plain\f2\fs20 
+\par When moving track blocks, be very careful not to create a sharp turn in which the track polygons would overlap with each other\'a0; this would cause display problems in NFS3. Once the track structure is disorganized, it is impossible to reobtain a normal structure without moving every single point back in place\'a0; the only reasonable option is therefore to immediately use the Undo command in order to cancel the changes. In order to avoid this situation, it is advisable to increase the width of the smoothing zone, especially when moving a track block over a long distance. Enabling extra-smoothing is also helpful in many cases. Note that the default smoothing parameters at T3ED startup are only appropriate for moving track blocks over relatively short distances.
+\par \pard\sl235 
+\par \i\b Notes about moving objects\'a0:\plain\f2\fs20 
+\par \f9 - Collisions with extra-objects (displayed in green) are only detected over specific track polygons. In order to allow a moved object to be detected, you must modify the track polygon properties accordingly. First choose the High-resolution view, and switch to Polygon mode. Select the track polygon over which the object lies\'a0; use the Polygon Flags command in the Edit-Tools menu, and check the "Extra-object collision detection" option. If the object lies across several polygons, repeat this operation for every polygon to enable object detection.
+\par \pard\sl235 - Collisions with polygon objects are not handled by NFS3\'a0; rather, the track polygons over which the object lies (or beyond) are marked as impassable for the cars. The procedure to change the polygon properties (passable or not, etc...) is the following\'a0: first chose the High-resolution view, and switch to Polygon mode. Select the track polygon, and use the Polygon Flags command in the Edit-Tools menu\'a0; choose the relevant option in the "Drive-over behavior" list to change the passable status of a polygon. Also note that collisions with impassable polygons are handled only if all neighboring polygons have the "Wall collision detection" flag set\'a0; normally this flag is automatically set by T3ED when a polygon is made impassable.
+\par \pard\sl235 \f2 
+\par 
+\par \b Shortcuts
+\par \pard\sl235\fi275 \plain\f2\fs20 Toolbar:\tab \{bmc bm13.bmp\}
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Move Z command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command selects or deselects the Move Z editing tool. This tool can be used to move items in the vertical direction. It is available in all editing modes (but must be reselected every time the editing mode is changed). When the Move Z tool is selected, an item can be moved by clicking on it and dragging the mouse along the vertical axis while keeping the left button pressed.
+\par 
+\par In Point, Object and Polygon modes the behavior is straightforward. In Extended point and Block modes, smoothing is automatically applied in order to make the editing process easier. Also note that in Polygon mode the neighbouring polygons are modified so that moving the selected polygon does not disconnect it from the rest of the structure.
+\par \pard\sl235 
+\par \i\b Remark\'a0:\plain\f2\fs20 
+\par - In Block mode, two different smoothing methods are available\'a0: see \uldb Extra-Smoothing command\plain\f2\fs20  for more information.
+\par 
+\par 
+\par \b Shortcuts
+\par \pard\sl235\fi275 \plain\f2\fs20 Toolbar:\tab \{bmc bm14.bmp\}
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Texture command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command makes it possible to choose the texture of the currently selected polygon. It is only available in Polygon mode and if a polygon is selected. The first time this command is used after loading a track file, T3ED prompts for a QFS texture file to load\'a0; the QFS file-load dialog box lets you choose the appropriate texture file. There are usually four texture files in each track directory\'a0: the ones with names ending in \f4 \'91\f2 _8\f4 \'92\f2  are in 8-bit color mode, while the others are in 16-bit color mode\'a0; the filenames containing a \f4 \'91\f2 1\f4 \'92\f2  correspond to night mode, while the others correspond to day mode.
+\par \pard\sl235 
+\par Loading the textures is a slow process (about 10 seconds), so T3ED displays a progress bar while uncompressing and decoding the selected texture file. Choosing a 8-bit color mode texture file speeds up the process significantly without altering the quality of the displayed textures. The only exception is the Summit track, where the 8-bit textures are coded using a specific compression format which cannot be decoded by T3ED\'a0; an error message indicating that the QFS file has an incorrect format will then be displayed, and textures will not be displayed until you manually select another QFS file from within the texture chooser.
+\par \pard\sl235 
+\par After the track textures are loaded, T3ED displays the Texture Chooser dialog box\'a0: this dialog box displays a miniature view of the current texture of the selected polygon. This texture can be changed by acting on the scrollbar or by manually entering a texture number. The "Select" button can be used to save the changes made to the polygon texture and close the Texture Chooser\'a0; use the "Cancel" button instead if you don\f4 \'92\f2 t want the changes to be saved. The "QFS File..." button can be used to reload a different QFS texture file.
+\par \pard\sl235 
+\par \i\b Remarks\'a0:\plain\f2\fs20 
+\par - Display quality is extremely poor when the currently selected screen resolution has a 8-bit color depth or lower\'a0; 15-bit color depth or higher is necessary for properly viewing the textures.
+\par - The texture numbers displayed in the Texture Chooser are not the same as the texture numbers in the QFS file\'a0: a single QFS texture can correspond to several different track textures depending on how it is oriented, tiled, etc... This also explains why different texture numbers can yield the same miniature view.
+\par \pard\sl235 - When the QFS file cannot be loaded, the textures are not displayed (except for road-lane textures which are not contained in the QFS file and will always remain displayed). To display textures you must then manually select a QFS file by clicking on the "QFS File..." button in the Texture chooser dialog box. 
+\par 
+\par 
+\par \b Shortcuts
+\par \pard\sl235\fi275 \plain\f2\fs20 Toolbar:\tab \{bmc bm15.bmp\}
+\par Keys:\tab CTRL+T
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Merge/Split command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command selects or deselects the Merge/Split editing tool. This tool is only available in Point mode or in Polygon mode. \i\b It is currently only implemented for Point mode\plain\f2\i\fs20 .\plain\f2\fs20 
+\par 
+\par This tool can be used to merge vertices together, or on the contrary to split a vertex in order to separate the various polygons which share it.
+\par 
+\par \b Merge function (Point mode)\plain\f2\fs20 \'a0:
+\par This tool can be used to glue several vertices together in order to ensure that the polygons containing them are suitably connected. After this operation is performed, the structure will remain connected until the vertex is split back into pieces using the Split function\'a0: the merged vertices become, for all practical purposes, a single point. To merge two vertices, first select a point (using the left mouse button as usual), then press the Control key and click on another point (using the left mouse button)\'a0: this point is then moved to the position of the first point, and the two points become merged.
+\par \pard\sl235 
+\par \b Split function (Point mode)\'a0:\plain\f2\fs20 
+\par This tool can be used to split a vertex, in order to disconnect the various polygons to which it belongs. This makes it possible to move some of these polygons independently of the others. In order to split a point, simply click on it with the right mouse button. The various polygon vertices which were merged then become separated (each created vertex is moved in the general direction of the center of the corresponding polygon). It is possible to use the Merge function in order to partially re-connect the split structure.
+\par \pard\sl235 
+\par \i\b Remark\'a0:\plain\f2\i\fs20 
+\par \plain\f2\fs20 Whenever possible, the Split function attempts to preserve the multi-resolution structure of the track blocks. Namely, when T3ED detects that two track polygons both involving the selected point and belonging to different resolutions actually contain each other, then these two track polygons remain connected in order to facilitate the track structure editing process.
+\par 
+\par \b Merge function (Polygon mode)\'a0:\plain\f2\fs20  not yet implemented.
+\par 
+\par 
+\par \b Shortcuts
+\par \pard\sl235\fi275 \plain\f2\fs20 Toolbar:\tab \{bmc bm18.bmp\}
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Delete command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command can be used to delete the currently selected object or polygon. It is only available in Object and Polygon modes and when an item is selected. Note that the last track polygon of a track block cannot be deleted, and that deleting the last polygon of an object automatically deletes the object.
+\par 
+\par 
+\par \b Shortcuts
+\par \pard\sl235\fi275 \plain\f2\fs20 Toolbar:\tab \{bmc bm16.bmp\}
+\par Keys:\tab DELETE
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b New/Duplicate command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command can be used to duplicate the currently selected object or polygon. It is only available in Object and Polygon modes.
+\par 
+\par In \b Polygon mode\plain\f2\fs20 , the New/Duplicate command is only available when a polygon is selected. It then has the effect of duplicating the selected polygon, preserving all its properties (texture, ...). The newly created copy is slightly shifted, and is disconnected from all existing polygons so it can be easily moved. In order to facilitate the addition of new track portions, the multiple resolutions are automatically handled\'a0: namely, when a high-resolution track polygon is duplicated, copies of it are also created in medium and low resolutions\'a0; when a medium-resolution track polygon is duplicated, a copy of it is also created in low resolution. Therefore, track polygons always ought to be created in high resolution, before their medium and low-resolution versions are merged two by two in order to obtain a smaller number of polygons in medium and low-resolution. Also note the following consequence\'a0: the created polygons share the same vertices, so moving the high-resolution version also affects the two lower-resolution polygons created simultaneously, but any change of texture will need to be repeated three times.
+\par \pard\sl235 
+\par \f9\i\b Note\'a0: \plain\f9\fs20 The correct procedure to add more polygons to the track structure is the following\'a0:
+\par 1. Switch to high-resolution view and polygon mode.
+\par 2. Select a track polygon reasonably similar to the ones you want to add, \i in the same track block\plain\f9\fs20 .
+\par 3. Duplicate it as many times as needed using the Duplicate tool.
+\par 4. Move all the new polygons around until their general disposition is satisfying. Beware of not flipping a polygon upside down, because the two sides of a polygon are not at all equivalent.
+\par \pard\sl235 5. Switch to point mode and select the Split/Merge tool.
+\par 6. Merge the vertices of the new polygons with the existing frame by successively clicking on an existing vertex and control-clicking on all new vertices to be attached to it.
+\par 7. Switch to half-resolution view\'a0; in order to speed up the in-game display, merge pairs of adjacent polygons to form larger polygons (since the Merge tool for polygons has not yet been implemented in this version of T3ED, this is not yet possible\'a0: an alternative is to delete some unimportant polygons from the half-resolution view).
+\par \pard\sl235 8. Repeat step 7 in low-resolution view.\f2 
+\par 
+\par In \b Object mode\plain\f2\fs20 , the New/Duplicate command is always available. If an object is selected, then this object is duplicated. The newly created object has exactly the same properties as the original object, and lies at exactly the same place\'a0; the new copy will therefore have to be moved elsewhere. 
+\par If no object is selected, the New/Duplicate command attempts to create a new object in the currently selected block. This object initially consists of a single rectangle\'a0; more polygons can later be added by using the Duplicate command in Polygon mode together with the Merge tool in Point mode. Before creating a new object, T3ED displays a dialog box which lets you choose the object type, as well as the texture of the created object polygon.
+\par \pard\sl235 
+\par 
+\par \b Shortcuts
+\par \pard\sl235\fi275 \plain\f2\fs20 Toolbar:\tab \{bmc bm17.bmp\}
+\par Keys:\tab CTRL+V
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Properties command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command has not yet been implemented.
+\par 
+\par \b Shortcuts
+\par \pard\sl235\fi275 \plain\f2\fs20 Keys:\tab ALT+ENTER
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Polygon Flags command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command can be used to modify the behavior of a high-resolution track polygon when a car drives over it. It is only available in Polygon mode and when a high-resolution track polygon is selected. T3ED then displays the Polygon Virtual Road Flags dialog box, which lets you modify the following settings\'a0:
+\par 
+\par \pard\sl235\li275\fi-275 \f1\i \'b7\tab \f2 Wall collision detection (virtual road boundary)\'a0:\plain\f2\fs20 
+\par \pard\sl235 This option must be checked if the polygon is passable and any of the neighboring track polygons is not passable. Otherwise, NFS3 is unable to detect any collision with an invisible wall and the car will be free to move into a neighboring impassable polygon.
+\par 
+\par \pard\sl235\li275\fi-275 \f1\i \'b7\tab \f2 Extra-object collision detection\'a0:\plain\f2\fs20 
+\par \pard\sl235 This option must be checked if the polygon is passable and if any extra-object lies nearby. Otherwise, NFS3 is unable to detect any collision with an extra-object and the car will be free to move across trees and other obstacles.
+\par 
+\par \pard\sl235\li275\fi-275 \f1\i \'b7\tab \f2 Drive-over behavior\'a0:\plain\f2\fs20 
+\par \pard\sl235 Choose an item in the list in order to describe how cars should behave when they pass over the polygon. Values 0 and 14 correspond to impassable polygons, while all others correspond to passable polygons. This list also lets you choose whether grass, snow, dust... should be projected when a car passes.
+\par 
+\par \b NOTE\'a0: \plain\f2\fs20 If you wish to make passable polygons which previously weren\f4 \'92\f2 t passable, it is likely that you will have to adjust the width of the virtual road in order to get rid of the invisible walls restraining the car\f4 \'92\f2 s movements on either side of the road\'a0: for this, use the Adjust Road Width command in the Edit-Tools menu.
+\par \pard\sl235 
+\par \b Shortcuts
+\par \pard\sl235\fi275 \plain\f2\fs20 Keys:\tab CTRL+ENTER
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 {\up K}
+\b Adjust Road Width command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command must be used to adjust the width of the virtual road in order to get rid of the invisible walls restraining the car\f4 \'92\f2 s movements on either side of the road (the track polygons also need to be made passable using the Polygon Flags command).
+\par 
+\par This command affects all of the track, and needs to be repeated every time you make the track wider by a significant amount (ideally it should only be used just before saving a modified track). As this function deeply affects the track structure and cannot be reversed easily once the changes are saved, T3ED asks for confirmation before proceeding.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 {\up K}
+\b Erase All command (Edit-Tools menu)\plain\f2\fs20 
+\par 
+\par This command can be used to erase selectively the track\f4 \'92\f2 s shape, objects or textures. The following track components can be deleted\'a0:
+\par 
+\par - Track shape (XY)\'a0: this option removes all turns from the track, shaping it into a large circle instead.
+\par 
+\par - Road elevations\'a0: this option removes all slopes from the track, but only affects the mean elevation of each track node\'a0: all small bumps will be kept, and the surrounding scenery retains its relative elevation.
+\par \pard\sl235 
+\par - Scenery elevations\'a0: this option flattens the whole track 3D structure (but not the objects), setting its Z coordinate to equal that of the corresponding track node\'a0: the slopes of the track are kept, but the scenery and small bumps are flattened. When combined with the previous option, this flattens everything.
+\par 
+\par - Lanes, fences & sound sources\'a0: this option removes the miscellaneous track polygons corresponding to road lanes and fences, as well as the sound sources all over the track.
+\par \pard\sl235 
+\par - Polygon objects & light sources\'a0: this option removes all polygon objects (displayed in blue), as well as the light sources.
+\par 
+\par - Extra objects\'a0: this option removes all extra objects (displayed in green)\'a0; the global animated objects are not affected.
+\par 
+\par - Global animated objects\'a0: this option removes all global animated objects from the track (not displayed by T3ED). If this option is enabled, then it will not be possible to undo the changes\'a0; making a backup copy of the track is therefore recommended.
+\par \pard\sl235 
+\par - Road textures\'a0: this option sets the textures of all passable road polygons to a given value (modifiable using the corresponding input box and Browse button). This also affects low- and medium-resolution polygons, although the heuristics for guessing their passable or non-passable state sometimes fail.
+\par 
+\par - Scenery textures\'a0: this option sets the textures of all non-passable road polygons to a given value (modifiable using the corresponding input box and Browse button). This also affects low- and medium-resolution polygons, although the heuristics for guessing their passable or non-passable state sometimes fail. The objects are not affected.
+\par \pard\sl235 
+\par Combining all these options, it is possible to remove virtually everything from a track, making it possible to restart almost from scratch.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Help Topics command (Help menu)
+\par \plain\f2\fs20 
+\par Use this command to display a list of available help topics.
+\par 
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b About T3ED command (Help menu)
+\par \plain\f2\fs20 
+\par Use this command to display the copyright notice and version number of your copy of T3ED.
+\par \page
+{\up $}
+{\up #}
+\pard\sl235 \b Context Help command 
+\par \plain\f2\fs20 \{bml bm21.bmp\}
+\par 
+\par Use the Context Help command to obtain help on some portion of T3ED.  When you choose the Toolbar's Context Help button, the mouse pointer will change to an arrow and question mark.  Then click somewhere in the T3ED window, such as another Toolbar button.  The Help topic will be shown for the item you clicked.
+\par 
+\par \b Shortcut
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Keys:\tab SHIFT+F1
+\par \page
+{\up #}
+\pard\sl235 \b Title Bar\plain\f0\fs20 
+\par 
+\par \pard\sb35\sa35\li355\fi-355\tx355 \f2 The title bar is located along the top of a window.  It contains the name of the application and document.  
+\par \page
+{\up #}
+\pard\sl235 \b Scroll bars\plain\f2\fs20 
+\par 
+\par Displayed at the right and bottom edges of the document window.  The scroll boxes inside the scroll bars indicate your vertical and horizontal location in the document.  You can use the mouse to scroll to other parts of the document. The arrow keys can also be used for the same purpose.
+\par 
+\par In \uldb translation mode\plain\f2\fs20 , the scroll bars act in the usual way, by simply scrolling the track view. 
+\par 
+\par In \uldb rotation mode\plain\f2\fs20 , the scroll bars are used to rotate the observer\f4 \'92\f2 s view point.
+\par \page
+{\up #}
+\pard\sl235 \b Close command (Control menus)
+\par \plain\f2\fs20 
+\par Use this command to close the active window or dialog box.
+\par 
+\par 
+\par \b Shortcuts
+\par \pard\sl235\li1435\fi-1075\tx1435 \plain\f2\fs20 Keys: \tab ALT+F4 closes the T3ED window or a dialog box.
+\par \pard\sl235 \tab \tab \tab \page
+{\up #}
+\pard\sl235 \b Modifying the Document
+\par \plain\f2\fs20 
+\par To edit a track, you need to use a combination of a selection mode and an editing tool. The available selection modes are listed in the \uldb Edit-Modes menu\plain\f2\fs20 , and the available editing tools are listed in the \uldb Edit-Tools menu\plain\f2\fs20 . In order to facilitate the editing process, the view parameters can be adjusted by using the commands in the \uldb View menu\plain\f2\fs20 .
+\par \page
+{\up #}
+\pard\sl235 \b No Help Available\plain\f0\fs20 
+\par 
+\par \f2 No help is available for this area of the window.
+\par \page
+{\up #}
+\pard\sl235 \b No Help Available
+\par \plain\f0\fs20 
+\par \f2 No help is available for this message box.
+\par \page
+}
