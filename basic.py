@@ -1,6 +1,14 @@
 from io import BytesIO
 from dataclasses import dataclass
 from struct import unpack
+from enum import Enum
+
+class PolygonType(Enum):
+	TRACK = 0
+	TRANSPARENT = 1
+	LANES = 2
+	OBJECT = 3
+	EXTRAOBJECT = 4
 
 def unpack_one(data: BytesIO, length: int, pattern: str):
 	return unpack(pattern, data.read(length))[0]
@@ -182,3 +190,14 @@ class TextureData:
 		isLane = unpack("?", data.read(1))
 		texture = unpack("h", data.read(2))
 		return TextureData(*dim, corners, *unk2, *isLane, *texture)
+
+	def uv_pairs(self):
+		return [(self.corners[i*2], self.corners[i*2+1]) for i in range(4)]
+	
+	def convert_obj(self):
+		uvs = self.uv_pairs()
+		return [(1.0 - uv[0], 1.0 - uv[1]) for uv in uvs]
+	
+	def convert_xobj(self):
+		uvs = self.uv_pairs()
+		return [(uv[0], 1.0 - uv[1]) for uv in uvs]

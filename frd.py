@@ -1,4 +1,5 @@
 from io import BytesIO, SEEK_SET, SEEK_CUR, SEEK_END
+from itertools import chain
 import numpy as np
 
 from basic import *
@@ -22,6 +23,14 @@ class FRD:
 		self.nTextures = unpack("i", bytes.read(4))[0]
 		self.textures = [TextureData.read(bytes) for i in range(self.nTextures)]
 		pass
+
+	def get_used_texture_set(self):
+		#xobjs = set(obj.iter_polys() for xobj in self.xobj for obj in xobj.obj)
+		polygon_iterator = chain(
+			(t for poly in self.poly for t in poly.iter_polys()),
+			(t for xobj in self.xobj for obj in xobj.obj for t in obj.iter_polys()),
+		)
+		return {t.texture for t in polygon_iterator}
 
 class TrackBlock:
 	ptCentre: FloatPoint
@@ -84,7 +93,7 @@ class XobjBlock:
 		self.nobj = unpack_one(data, 4, "l")
 		self.obj = [XobjData(data) for i in range(self.nobj)]
 
-class XobjData:
+class XobjData(VertexOps):
 	def __init__(self, data: BytesIO) -> None:
 		self.type = unpack_one(data, 4, "l")
 		if self.type == 4:
@@ -97,7 +106,7 @@ class XobjData:
 			self.vertices = [FloatPoint.read(data) for i in range(self.nVertices)]
 			self.shadingVertices = [VertexColor.read(data) for i in range(self.nVertices)]
 			self.nPolygons = unpack_one(data, 4, "l")
-			self.polyData = [PolygonData.read(data) for i in range(self.nPolygons)]
+			self.poly = [PolygonData.read(data) for i in range(self.nPolygons)]
 		elif self.type == 3:
 			# animated extra object
 			self.crossno = unpack_one(data, 4, "l")
@@ -114,6 +123,6 @@ class XobjData:
 			self.vertices = [FloatPoint.read(data) for i in range(self.nVertices)]
 			self.shadingVertices = [VertexColor.read(data) for i in range(self.nVertices)]
 			self.nPolygons = unpack_one(data, 4, "l")
-			self.polyData = [PolygonData.read(data) for i in range(self.nPolygons)]
+			self.poly = [PolygonData.read(data) for i in range(self.nPolygons)]
 		else:
 			raise "Unknown extra object type"

@@ -5,6 +5,7 @@ import bpy
 import bmesh
 import sys
 import os
+import json
 from importlib import reload
 import numpy as np
 
@@ -14,6 +15,7 @@ if not dir in sys.path:
     sys.path.append(directory)
 
 import frd
+from basic import PolygonType
 
 if __name__ == "__main__":
         
@@ -40,7 +42,8 @@ if __name__ == "__main__":
         # generate material slots
         material_mapping = {}
         texture_files = set(t.texture for t in nfs_track.textures)
-        for texture_id in texture_files:
+            
+        def create_material(texture_id: int):
             material_name = f"{track_name}_{texture_id:04}"
 
             if material_name in bpy.data.materials:
@@ -77,10 +80,12 @@ if __name__ == "__main__":
                 material.node_tree.links.new(tex_node.outputs[0], principled_bsdf.inputs[0])
                 material.node_tree.links.new(mask_node.outputs[0], principled_bsdf.inputs[21])
             
+        for texture_id in texture_files:
+            create_material(texture_id)
         #print(list(material_mapping.items()))
         
         for i in range(nfs_track.nBlocks+1):
-            if i != 129: continue
+            #if i != 129: continue
             track = nfs_track.trk[i]
             polyblock = nfs_track.poly[i]
             polymesh, transparent, lanes = polyblock.poly[4], polyblock.poly[5], polyblock.poly[6]
@@ -96,8 +101,11 @@ if __name__ == "__main__":
             shading_buffer = track.shading_to_buffer()
             shading = polymesh.to_shading(shading_buffer)
             
-            def create_object(object_name, mesh_object):
-                verts, polys, textures = mesh_object.to_mesh(vertex_buffer)
+            def create_object(object_name, object_type, mesh_object):
+                
+                flipped_quads = object_type == PolygonType.TRACK
+                
+                verts, polys, textures = mesh_object.to_mesh(vertex_buffer, flipped_quads)
                 mesh = bpy.data.meshes.new(object_name)
                 obj = bpy.data.objects.new(object_name, mesh)
                 material_index_mapping = {}
@@ -108,45 +116,58 @@ if __name__ == "__main__":
 
                 col.objects.link(obj)
                 mesh.from_pydata(verts, [], polys)
+                #mesh.from_pydata(verts, [], [])
                 mesh.uv_layers.new(name="UVMap")
 
                 bm = bmesh.new()
                 bm.from_mesh(mesh)
                 bm.faces.ensure_lookup_table()
                 uv_layer = bm.loops.layers.uv[0]
-                breakpoint
-
+                
                 for polygon_index, polygon in enumerate(mesh_object.poly):
                     face = bm.faces[polygon_index]
                     face.material_index = material_index_mapping[polygon.texture]
                     
-                    uvprops = atlas[polygon.texture].corners
+                    textureBlock = atlas[polygon.texture]
+                    
+                    match object_type: 
+                        case PolygonType.TRACK:
+                            #uvs = textureBlock.convert_xobj()
+                            #uvs = textureBlock.convert_obj()
+                            uvs = textureBlock.uv_pairs()
+                        case PolygonType.OBJECT:
+                            uvs = textureBlock.convert_xobj()
+                        case _:
+                            uvs = textureBlock.uv_pairs()
                     for i, loop in enumerate(face.loops):
-                        print(f"{i:=} {uvprops[i*2]:=} {uvprops[i*2+1]}")
-                        loop[uv_layer].uv = (uvprops[i*2], uvprops[i*2+1])
+                        loop[uv_layer].uv = uvs[i]
                         
+                    if not flipped_quads:
+                        face.normal_flip()
                     
                 bm.to_mesh(mesh)
                 bm.free()
                     
-            #create_object(f"track_{i:04}_hires", polymesh)
+            create_object(f"track_{i:04}_hires", PolygonType.TRACK, polymesh)
             
             if transparent.size > 0:
                 pass
-                #create_object(f"track_{i:04}_transparent", transparent)
+                create_object(f"track_{i:04}_transparent", PolygonType.TRANSPARENT, transparent)
                 
             if lanes.size > 0:
                 pass
-                #create_object(f"track_{i:04}_lanes", lanes)
+                create_object(f"track_{i:04}_lanes", PolygonType.LANES, lanes)
             
             index = 0
             for objPolyBlock in polyblock.obj:
                 if objPolyBlock.nPolygons > 0:
                     for polyObjData in objPolyBlock.obj:
                         if polyObjData.type == 1:
-                            create_object(f"track_{i:04}_poly_{index:02}", polyObjData)
-                            break
+                            create_object(f"track_{i:04}_poly_{index:02}", PolygonType.OBJECT, polyObjData)
+                            #break
                             index += 1
                                 
-            break
+            
         pass
+
+    print("done")
