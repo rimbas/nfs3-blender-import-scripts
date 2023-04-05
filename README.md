@@ -10,7 +10,7 @@
 
 [Denis Auroux Need for Speed resources](http://www.math.polytechnique.fr/cmat/auroux/nfs/)
 
-Do not rename any resulting files.
+Do not rename any resulting files. The extracted directory should be a child of the repository root.
 
 ## 2. Run the atlas UV mapper script to save a combined atlas and UV mapping JSON
 
@@ -18,4 +18,7 @@ Do not rename any resulting files.
 
 ## 3. Run the importer script in Python
 
-Change the `track_id` variable to select which track to import.
+Create and open a `.blend` file in the root of repository.  
+Copy a script from `blender_importer_scripts` into blender.  
+Change the `track_id` variable to select which track to import.  
+Run the script  
