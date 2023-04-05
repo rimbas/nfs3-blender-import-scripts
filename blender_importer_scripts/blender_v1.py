@@ -5,7 +5,6 @@ import bpy
 import bmesh
 import sys
 import os
-from importlib import reload
 import numpy as np
 
 directory = os.path.dirname(bpy.data.filepath)
@@ -16,11 +15,13 @@ if not dir in sys.path:
 import frd
 
 if __name__ == "__main__":
-        
+    
+    """Imports FRD as meshes. Creates individual materials for each texture"""
+
     track_name = "TR06"
     
     print("-------------------------------------------------------------------------------")
-        
+    
     with open(os.path.join(directory, f"{track_name}.FRD"), "rb") as f:
         filedata = f.read()
         

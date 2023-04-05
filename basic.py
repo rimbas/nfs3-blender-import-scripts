@@ -26,7 +26,7 @@ class FloatPoint:
 @dataclass(frozen=True)
 class IntPoint:
 	"""
-	As integer only when stored
+	Is integer only when stored
 	Divide by 2^16 to get floating point value
 	"""
 	x: int
@@ -65,6 +65,10 @@ class PolygonData:
 		vertices = unpack("hhhh", data.read(8))
 		other = unpack("hhBB", data.read(6))
 		return PolygonData(vertices, *other)
+	
+	@property
+	def doublesided(self):
+		return self.flags & 0x10
 
 @dataclass
 class NeighborData:

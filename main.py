@@ -1,14 +1,12 @@
 from frd import FRD
-from texture_analyser import atlas
+
+'''Utility script to view at runtime data in debugger'''
 
 with open("TR02.FRD", "rb") as f:
-	filedata = f.read()
-	atlantica = FRD(filedata)
+	atlantica = FRD(f.read())
 
 with open("TR06.FRD", "rb") as f:
-	filedata = f.read()
-	aquatica = FRD(filedata)
-
+	aquatica = FRD(f.read())
 
 if __name__ == "__main__":
 	#export(aquatica, "aquatica.glb")

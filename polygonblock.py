@@ -13,9 +13,13 @@ class VertexOps:
 			vertex_set.update(polygon.vertex)
 		return vertex_set
 	
-	def to_mesh(self, vertex_buffer: np.ndarray, flipped=False):
+	def to_mesh(self, vertex_buffer: np.ndarray, flipped=False, shading_buffer=None):
 		vertex_set = list(self.get_vertex_set())
 		vertices = vertex_buffer[vertex_set]
+		if shading_buffer is not None:
+			shading = shading_buffer[vertex_set]
+		else:
+			shading = None
 		map = {v: i for i, v in enumerate(vertex_set)}
 
 		polygons = np.zeros((len(self.poly), 4), dtype=np.uint32)
@@ -35,7 +39,7 @@ class VertexOps:
 
 		pass
 
-		return vertices, polygons, textures
+		return vertices, polygons, textures, shading
 	
 	def to_shading(self, shading_buffer: np.ndarray):
 		vertex_set = list(self.get_vertex_set())

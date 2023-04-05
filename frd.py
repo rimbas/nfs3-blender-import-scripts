@@ -126,3 +126,16 @@ class XobjData(VertexOps):
 			self.poly = [PolygonData.read(data) for i in range(self.nPolygons)]
 		else:
 			raise "Unknown extra object type"
+
+	def vertices_to_buffer(self):
+		buffer = np.zeros((self.nVertices, 3), dtype=np.float32)
+		for i, vertex in enumerate(self.vertices):
+			buffer[i] = [vertex.x, vertex.y, vertex.z]
+		return buffer
+	
+	def get_position(self):
+		if self.type == 4:
+			return self.pointReference
+		elif self.type == 3:
+			return self.animData[0].point
+		raise Exception("Type has no reference position data")
