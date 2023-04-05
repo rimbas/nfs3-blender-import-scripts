@@ -10,5 +10,4 @@ __pycache__
 *.kra
 *.kra~
 *.svg
-*.fsh
 *.json
